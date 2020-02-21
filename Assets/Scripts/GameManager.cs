@@ -17,4 +17,6 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    //변경사항 전달이 잘 되는가?
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Actor
   - Platform
+  - Jumper
   layers:
   - Default
   - TransparentFX

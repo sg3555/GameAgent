@@ -88,7 +88,8 @@ public class Drag : MonoBehaviour
         if(!startgame)
         {
             Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector2 temp = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector2 objPosition = new Vector2(Mathf.Floor(temp.x) + 0.5f, Mathf.Floor(temp.y) + 0.5f);
             transform.position = objPosition;
         }
     }

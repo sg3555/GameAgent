@@ -9,6 +9,7 @@ public class Move : MonoBehaviour
     Rigidbody2D rigid;
     Animator anim;  //스프라이트 애니메이션 담당
     public bool startGame; //게임 시작상태 bool
+    Vector2 originPosition;
 
     void Awake()
     {
@@ -18,6 +19,8 @@ public class Move : MonoBehaviour
 
         //게임시작전에 Actor객체를 정적상태로 변경(움직임 방지)
         rigid.bodyType = RigidbodyType2D.Static;
+
+        originPosition = this.gameObject.transform.position;
     }
 
     void FixedUpdate()
@@ -39,7 +42,7 @@ public class Move : MonoBehaviour
     public void ResetGame()
     {
         rigid.bodyType = RigidbodyType2D.Static;
-        gameObject.transform.position = new Vector2(-13, 0.5f);
+        gameObject.transform.position = originPosition;
         startGame = false;
         anim.SetBool("IsMove", false);
     }

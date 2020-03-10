@@ -43,5 +43,5 @@ public class GameManager : MonoBehaviour
             dr.ResetGame();
     }
 
-    //최종수정일 2020.03.04
+    //최종수정일 2020.03.10
 }

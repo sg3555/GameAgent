@@ -1492,6 +1492,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGame: 0
   height: 0
+  layermask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!70 &506379397
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

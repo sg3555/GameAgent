@@ -34,10 +34,14 @@ public class Move : MonoBehaviour
         //점프후 바닥에 착지시 점프애니메이션 종료
         if(rigid.velocity.y<0)
         {
-            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, LayerMask.GetMask("platform"));
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("platform"));
             if (rayHit.collider != null)
                 if(rayHit.distance < 0.5f)
+                {
                     anim.SetBool("IsJump", false);
+                    Debug.Log(rayHit);
+                }
+                    
         }
         
     }
@@ -59,7 +63,7 @@ public class Move : MonoBehaviour
         anim.SetBool("IsMove", false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         //점프
         if(collision.tag.Contains("Jumper") && !anim.GetBool("IsJump") && startGame)

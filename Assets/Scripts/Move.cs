@@ -10,10 +10,14 @@ public class Move : MonoBehaviour
     Rigidbody2D rigid;
     Animator anim;  //스프라이트 애니메이션 담당
     AudioSource audioSource;
+
     public bool startGame; //게임 시작상태 bool
     public float height;
     public float maxSpeed;
     public float animSpeed;
+
+    public BGM bgm;
+    public GameManager gm;
 
     public AudioClip audioJump;
 
@@ -78,6 +82,14 @@ public class Move : MonoBehaviour
         startGame = false;
         anim.SetBool("IsMove", false);
         anim.SetBool("IsJump", false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag.Contains("DeadZone"))
+        {
+            gm.stopGame();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

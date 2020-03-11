@@ -117,7 +117,6 @@ public class Drag : MonoBehaviour
     public void StartMove()
     {
         //rigidbody타입 변경(Dynamic상태를 방치하면 캐릭터가 밟을 때 미세하게 움직임
-        colid.isTrigger = false;
         rigid.bodyType = RigidbodyType2D.Static;
         startgame = true;
 
@@ -134,8 +133,6 @@ public class Drag : MonoBehaviour
     //Stop버튼을 눌렀을 경우
     public void StopMove()
     {
-        //다시 타일을 움직일 수 있는 상태로 변경
-        rigid.bodyType = RigidbodyType2D.Dynamic;
         startgame = false;
         if (this.tag.Contains("Jumper"))
         {
@@ -147,7 +144,6 @@ public class Drag : MonoBehaviour
     //Reset버튼을 눌렀을 경우
     public void ResetGame()
     {
-        rigid.bodyType = RigidbodyType2D.Dynamic;
         startgame = false;
 
         //타일들의 위치를 게임 시작 직후의 위치로 변경

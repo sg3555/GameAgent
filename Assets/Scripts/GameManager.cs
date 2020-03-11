@@ -8,10 +8,13 @@ public class GameManager : MonoBehaviour
     //public bool Reset;
     public Move Actor;
     public Drag[] MovableTile;
+    public BGM bgm;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -25,7 +28,7 @@ public class GameManager : MonoBehaviour
         Actor.StartMove();
         foreach (Drag dr in MovableTile)
             dr.StartMove();
-
+        bgm.SetVolume(1.0f);
     }
 
     public void stopGame()
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
         Actor.ResetGame();
         foreach (Drag dr in MovableTile)
             dr.StopMove();
+        bgm.SetVolume(0.3f);
 
     }
 
@@ -41,7 +45,10 @@ public class GameManager : MonoBehaviour
         Actor.ResetGame();
         foreach (Drag dr in MovableTile)
             dr.ResetGame();
+        bgm.SetVolume(0.3f);
     }
+
+    
 
     //최종수정일 2020.03.10 오후 19:47
 }

@@ -6,30 +6,37 @@ using UnityEngine;
 //버튼을 누르면 캐릭터가 움직이는 Actor객체의 스크립트
 public class Move : MonoBehaviour
 {
-    Vector2 originPosition;
-    Rigidbody2D rigid;
+    Vector2 originPosition; //캐릭터 최초위치
+    Rigidbody2D rigid; //물리엔진
     Animator anim;  //스프라이트 애니메이션 담당
-    AudioSource audioSource;
+    AudioSource audioSource; //소리제어자
+    Collider2D colid; //충돌제어자
+    SpriteRenderer sprit; //스프라이트제어자
 
     public bool startGame; //게임 시작상태 bool
-    public float height;
-    public float maxSpeed;
-    public float animSpeed;
+    public float height; //점프 높이
+    public float maxSpeed; //최대 속도
+    public float animSpeed; //애니메이션 속도
+    public bool clear; //클리어 여부 
+    public GameManager gm; //게임매니저 함수를 쓰기위한 객체
 
-    public BGM bgm;
-    public GameManager gm;
-
-    public AudioClip audioJump;
+    public AudioClip audioJump; //점프 효과음
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+        colid = GetComponent<Collider2D>();
+        sprit = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
         startGame = false;
+        clear = false;
         height = 18;
         originPosition = this.gameObject.transform.position;
-        
     }
 
     void FixedUpdate()
@@ -39,10 +46,15 @@ public class Move : MonoBehaviour
             rigid.AddForce(Vector2.right * 0.1f, ForceMode2D.Impulse);
 
         //최대속력 설정
-        if (rigid.velocity.x > maxSpeed)
+        if (rigid.velocity.x > maxSpeed && !clear)
             rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
-        else if (rigid.velocity.x < -maxSpeed)
+        else if (rigid.velocity.x < -maxSpeed && !clear)
             rigid.velocity = new Vector2(-maxSpeed, rigid.velocity.y);
+        //클리어 시 걸음속도 조절
+        else if (rigid.velocity.x > maxSpeed && clear)
+            rigid.velocity = new Vector2(maxSpeed / 2, rigid.velocity.y);
+        else if (rigid.velocity.x < -maxSpeed && clear)
+            rigid.velocity = new Vector2(-maxSpeed / 2, rigid.velocity.y);
 
         //점프후 바닥에 착지시 점프애니메이션 종료
         if (rigid.velocity.y < 0)
@@ -51,8 +63,7 @@ public class Move : MonoBehaviour
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector2.down, 1, LayerMask.GetMask("Platform"));
             if (rayHit.collider != null)
                 if (rayHit.distance < 0.5f)
-                    anim.SetBool("IsJump", false);
-                    
+                    anim.SetBool("IsJump", false);       
         }
 
         //이동값(Vector변화량)에 따른 애니메이션 제어
@@ -64,6 +75,12 @@ public class Move : MonoBehaviour
         }
         else
             anim.SetBool("IsMove", false);
+
+        //클리어시 국기봉에서 내려오는 모션
+        if(clear&& transform.position.y >= -5.5)
+        {
+            transform.Translate(new Vector3(0, -0.15f, 0));
+        }
 
     }
 
@@ -77,19 +94,52 @@ public class Move : MonoBehaviour
     //게임 리셋
     public void ResetGame()
     {
+        gameObject.layer = 0;
         rigid.bodyType = RigidbodyType2D.Static;
-        gameObject.transform.position = originPosition;
-        startGame = false;
         anim.SetBool("IsMove", false);
         anim.SetBool("IsJump", false);
+        anim.SetBool("IsDead", false);
+        colid.isTrigger = false;
+        gameObject.transform.position = originPosition;
+        startGame = false; 
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag.Contains("DeadZone"))
+        //사망
+        if(collision.tag.Contains("Damage") && gameObject.layer == 0)
         {
-            gm.stopGame();
+            startGame = false;
+            rigid.bodyType = RigidbodyType2D.Static;
+            anim.SetBool("IsDead", true);
+            gm.deadAction();
+            gameObject.layer = 10;
+            colid.isTrigger = true;
+            Invoke("bound", 0.5f);
         }
+            
+
+        //골인
+        if(collision.tag.Contains("Finish"))
+        {
+            gm.goalAction();
+            startGame = false;
+            clear = true;
+            rigid.bodyType = RigidbodyType2D.Kinematic;
+            rigid.velocity = Vector2.zero;
+            anim.SetBool("IsJump", false);
+            anim.SetBool("IsGoal", true);
+            Invoke("flip", 1.2f);
+        }
+
+        //문안으로 들어가면 클리어 화면 출력
+        if (collision.tag.Contains("Disappear"))
+        {
+            gameObject.SetActive(false);
+            gm.clearScreen();
+        }
+            
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -103,10 +153,35 @@ public class Move : MonoBehaviour
         }
     }
 
+    //효과음 재생용
     void PlaySound(AudioClip action)
     {
         audioSource.clip = action;
         audioSource.Play();
+    }
+
+    //사망모션1
+    void bound()
+    {
+        rigid.bodyType = RigidbodyType2D.Dynamic;
+        rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+    }
+
+    //클리어모션1
+    void flip()
+    {
+        sprit.flipX = true;
+        transform.Translate(new Vector3(0.9f, 0, 0));
+        Invoke("gotodoor", 0.5f);
+    }
+
+    //클리어모션2
+    void gotodoor()
+    {
+        rigid.bodyType = RigidbodyType2D.Dynamic;
+        anim.SetBool("IsGoal", false);
+        sprit.flipX = false;
+        startGame = true;
     }
 
 }

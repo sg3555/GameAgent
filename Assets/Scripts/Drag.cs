@@ -9,10 +9,10 @@ public class Drag : MonoBehaviour
     bool startgame; //게임시작 bool
     Vector2 originposition, pastposition;   //각각 최초위치, 마우스를 놓기전 위치
     bool deadlock;  //타일이 다른 객체에 겹치는것을 방지하기 위한 교착상태 bool
-    SpriteRenderer thissprite;
-    SpriteRenderer[] tiles; //자식객체의 타일들
-    Rigidbody2D rigid;
-    Collider2D colid;
+    SpriteRenderer thissprite; //간판전용 스프라이트구동기
+    SpriteRenderer[] tiles; //플랫폼전용 스프라이트구동기
+    Rigidbody2D rigid; //물리엔진
+    Collider2D colid; //충돌자
 
     private void Awake()
     {
@@ -20,10 +20,14 @@ public class Drag : MonoBehaviour
         tiles = gameObject.GetComponentsInChildren<SpriteRenderer>();
         colid = GetComponent<Collider2D>();
         thissprite = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        //게임시작시 최초위치 설정(나중에 UI인벤토리에 넣으면 수정해아 함)
         originposition = this.gameObject.transform.position;
         deadlock = false;
         startgame = false;
-        
     }
 
     //타일이 다른 객체에 겹쳤을 경우

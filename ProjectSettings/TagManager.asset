@@ -8,6 +8,8 @@ TagManager:
   - Platform
   - Jumper
   - DeadZone
+  - Disappear
+  - Damage
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - 
   - Platform
   - Actor
-  - 
-  - 
+  - AfterHit
+  - Damage
   - 
   - 
   - 

@@ -27,7 +27,11 @@ public class UpArrow : MonoBehaviour, IInventortItem
         gameObject.SetActive(false);
     }
 
-
+    public void OnDrop()
+    {
+        Debug.Log("drop");
+        gameObject.SetActive(true);
+    }
 
 
 
@@ -43,10 +47,11 @@ public class UpArrow : MonoBehaviour, IInventortItem
     {
         timer += Time.deltaTime;
 
-        if (timer > waitingTime)
+        if (timer > waitingTime && timer < 2.02f)
         {
+            Debug.Log(timer);
             inventory.AddItem(this);
-            timer = 0;
+            //timer = 0;
         }
     }
 }

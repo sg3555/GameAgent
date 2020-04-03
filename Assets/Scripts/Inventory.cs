@@ -11,6 +11,8 @@ public class Inventory : MonoBehaviour
 
     public event EventHandler<InventoryEventArgs> ItemAdded;
 
+    public event EventHandler<InventoryEventArgs> ItemRemoved;
+
     public void AddItem(IInventortItem item)
     {
         if(mItems.Count < SLOTS)
@@ -25,4 +27,18 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void RemoveItem(IInventortItem item)
+    {
+        if (mItems.Contains(item))
+        {
+            Debug.Log("Remove");
+            mItems.Remove(item);
+            item.OnDrop();
+
+            if (ItemRemoved != null)
+            {
+                ItemRemoved(this, new InventoryEventArgs(item));
+            }
+        }
+    }
 }

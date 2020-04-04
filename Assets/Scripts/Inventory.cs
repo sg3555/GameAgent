@@ -7,17 +7,22 @@ public class Inventory : MonoBehaviour
 {
     private const int SLOTS = 14;
 
-    private List<IInventortItem> mItems = new List<IInventortItem>();
+    private List<IInventoryItem> mItems = new List<IInventoryItem>();
 
     public event EventHandler<InventoryEventArgs> ItemAdded;
 
     public event EventHandler<InventoryEventArgs> ItemRemoved;
 
-    public void AddItem(IInventortItem item)
+    public void AddItem(IInventoryItem item)
     {
         if(mItems.Count < SLOTS)
         {
             mItems.Add(item);
+            foreach(var i in mItems)
+            {
+                Debug.Log(i);
+            }
+
             item.OnPickup();
 
             if (ItemAdded != null)
@@ -27,7 +32,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void RemoveItem(IInventortItem item)
+    public void RemoveItem(IInventoryItem item)
     {
         if (mItems.Contains(item))
         {

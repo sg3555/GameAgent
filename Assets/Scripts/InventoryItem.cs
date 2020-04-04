@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IInventortItem
+public interface IInventoryItem
 {
     string Name { get; }
     Sprite Image { get; }
@@ -13,10 +13,10 @@ public interface IInventortItem
 
 public class InventoryEventArgs : EventArgs
 {
-    public InventoryEventArgs(IInventortItem item)
+    public InventoryEventArgs(IInventoryItem item)
     {
         Item = item;
     }
 
-    public IInventortItem Item;
+    public IInventoryItem Item;
 }

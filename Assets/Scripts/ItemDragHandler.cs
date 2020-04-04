@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 {
-    public IInventortItem Item { get; set; }
+    public IInventoryItem Item { get; set; }
     public Inventory inventory;
     public void OnDrag(PointerEventData eventData)
     {

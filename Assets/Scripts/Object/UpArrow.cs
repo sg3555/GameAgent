@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpArrow : MonoBehaviour, IInventortItem
+public class UpArrow : MonoBehaviour, IInventoryItem
 {
     public Inventory inventory;
     public string Name
@@ -36,22 +36,22 @@ public class UpArrow : MonoBehaviour, IInventortItem
 
 
     // 실행 후 2초 뒤 화살표를 인벤토리에 넣음
-    float timer;
-    int waitingTime;
-    private void Start()
-    {
-        timer = 0.0f;
-        waitingTime = 2;
-    }
-    void Update()
-    {
-        timer += Time.deltaTime;
+    //float timer;
+    //int waitingTime;
+    //private void Start()
+    //{
+    //    timer = 0.0f;
+    //    waitingTime = 2;
+    //}
+    //void Update()
+    //{
+    //    timer += Time.deltaTime;
 
-        if (timer > waitingTime && timer < 2.02f)
-        {
-            Debug.Log(timer);
-            inventory.AddItem(this);
-            //timer = 0;
-        }
-    }
+    //    if (timer > waitingTime && timer < 2.02f)
+    //    {
+    //        Debug.Log(timer);
+    //        inventory.AddItem(this);
+    //        //timer = 0;
+    //    }
+    //}
 }

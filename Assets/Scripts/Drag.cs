@@ -14,6 +14,9 @@ public class Drag : MonoBehaviour
     Rigidbody2D rigid; //물리엔진
     Collider2D colid; //충돌자
 
+    bool isInventory;
+    public Inventory inventory;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -28,6 +31,7 @@ public class Drag : MonoBehaviour
         originposition = this.gameObject.transform.position;
         deadlock = false;
         startgame = false;
+        isInventory = false;
     }
 
     //타일이 다른 객체에 겹쳤을 경우
@@ -35,11 +39,19 @@ public class Drag : MonoBehaviour
     {
         if(!startgame)
         {
-            //자식객체의 각 타일들을 붉은 색으로 바꾸고
-            foreach (SpriteRenderer objec in tiles)
-                objec.color = new Color(1, 0, 0);
-            //교착상태 bool을 true로 변경
-            deadlock = true;
+            if (collision.gameObject.tag == "Inventory")
+            {
+                Debug.Log(collision);
+                isInventory = true;
+            }
+            else
+            {
+                //자식객체의 각 타일들을 붉은 색으로 바꾸고
+                foreach (SpriteRenderer objec in tiles)
+                    objec.color = new Color(1, 0, 0);
+                //교착상태 bool을 true로 변경
+                deadlock = true;
+            }
         }
         
     }
@@ -53,6 +65,7 @@ public class Drag : MonoBehaviour
             foreach (SpriteRenderer objec in tiles)
                 objec.color = new Color(255, 255, 255);
             deadlock = false;
+            isInventory = false;
         }
         
     }
@@ -62,11 +75,19 @@ public class Drag : MonoBehaviour
     {
         if(!startgame)
         {
-            foreach (SpriteRenderer objec in tiles)
-                objec.color = new Color(1, 0, 0);
-            deadlock = true;
+            if (collision.gameObject.tag == "Inventory")
+            {
+                Debug.Log(collision);
+                isInventory = true;
+            }
+            else
+            {
+                foreach (SpriteRenderer objec in tiles)
+                    objec.color = new Color(1, 0, 0);
+                deadlock = true;
+            }
+            
         }
-        
     }
 
     //위 OnCollisionExit2D와 동일
@@ -79,6 +100,7 @@ public class Drag : MonoBehaviour
                 objec.color = new Color(255, 255, 255);
             }
             deadlock = false;
+            isInventory = false;
         }
     }
 
@@ -113,6 +135,19 @@ public class Drag : MonoBehaviour
         //다른 타일과 겹친 상태(교착상태)에 마우스를 놓을 경우 이 좌표로 이동
         if (deadlock)
             transform.position = pastposition;
+        if (isInventory)
+        {
+            Debug.Log(this.gameObject);
+            IInventoryItem item = this.gameObject.GetComponent<IInventoryItem>();
+            if(item != null)
+            {
+                inventory.AddItem(item);
+                Debug.Log("ok");
+            }
+
+        }
+            
+            //inventory.AddItem(this.gameObject);
         rigid.bodyType = RigidbodyType2D.Static;
 
     }

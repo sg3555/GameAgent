@@ -29,29 +29,8 @@ public class UpArrow : MonoBehaviour, IInventoryItem
 
     public void OnDrop()
     {
-        Debug.Log("drop");
+        //Debug.Log("drop");
         gameObject.SetActive(true);
     }
 
-
-
-    // 실행 후 2초 뒤 화살표를 인벤토리에 넣음
-    //float timer;
-    //int waitingTime;
-    //private void Start()
-    //{
-    //    timer = 0.0f;
-    //    waitingTime = 2;
-    //}
-    //void Update()
-    //{
-    //    timer += Time.deltaTime;
-
-    //    if (timer > waitingTime && timer < 2.02f)
-    //    {
-    //        Debug.Log(timer);
-    //        inventory.AddItem(this);
-    //        //timer = 0;
-    //    }
-    //}
 }

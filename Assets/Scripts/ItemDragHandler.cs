@@ -14,9 +14,10 @@ public class ItemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log(eventData);
-        Debug.Log(Item);
+        //Debug.Log(eventData);
+        //Debug.Log(Item);
+        transform.localPosition = Vector2.zero;
         inventory.RemoveItem(Item);
-        transform.localPosition = Vector3.zero;
+        
     }
 }

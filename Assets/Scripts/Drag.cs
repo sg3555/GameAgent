@@ -77,7 +77,7 @@ public class Drag : MonoBehaviour
         {
             if (collision.gameObject.tag == "Inventory")
             {
-                Debug.Log(collision);
+                //Debug.Log(collision);
                 isInventory = true;
             }
             else
@@ -137,17 +137,16 @@ public class Drag : MonoBehaviour
             transform.position = pastposition;
         if (isInventory)
         {
-            Debug.Log(this.gameObject);
+            //Debug.Log(this.gameObject);
             IInventoryItem item = this.gameObject.GetComponent<IInventoryItem>();
             if(item != null)
             {
                 inventory.AddItem(item);
-                Debug.Log("ok");
+                //Debug.Log("ok");
             }
 
         }
-            
-            //inventory.AddItem(this.gameObject);
+
         rigid.bodyType = RigidbodyType2D.Static;
 
     }

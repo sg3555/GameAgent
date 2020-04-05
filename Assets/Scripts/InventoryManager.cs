@@ -41,13 +41,23 @@ public class InventoryManager : MonoBehaviour
             Image image = imageTransform.GetComponent<Image>();
             ItemDragHandler itemDragHandler = imageTransform.GetComponent<ItemDragHandler>();
 
-            if (itemDragHandler.Item.Equals(e.Item))
+            //Debug.Log("handler : " + itemDragHandler.Item);
+            //Debug.Log("e.Itrm : " + e.Item);
+
+            if(itemDragHandler.Item != null)
             {
-                image.enabled = false;
-                image.sprite = null;
-                itemDragHandler.Item = null;
-                break;
+                if (itemDragHandler.Item.Equals(e.Item))
+                {
+                    //Debug.Log("handler : " + itemDragHandler.Item);
+                    //Debug.Log("e.Itrm : " + e.Item);
+
+                    image.enabled = false;
+                    image.sprite = null;
+                    itemDragHandler.Item = null;
+                    break;
+                }
             }
+            
         }
     }
 }

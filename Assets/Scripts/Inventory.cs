@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour
     {
         if (mItems.Contains(item))
         {
-            Debug.Log("Remove");
+            //Debug.Log("Remove");
             mItems.Remove(item);
             item.OnDrop();
 

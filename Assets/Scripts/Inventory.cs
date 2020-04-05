@@ -18,10 +18,10 @@ public class Inventory : MonoBehaviour
         if(mItems.Count < SLOTS)
         {
             mItems.Add(item);
-            foreach(var i in mItems)
-            {
-                Debug.Log(i);
-            }
+            //foreach(var i in mItems)
+            //{
+            //    Debug.Log(i);
+            //}
 
             item.OnPickup();
 

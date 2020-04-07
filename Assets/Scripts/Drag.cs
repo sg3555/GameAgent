@@ -8,14 +8,14 @@ public class Drag : MonoBehaviour
 {
     bool startgame; //게임시작 bool
     Vector2 originposition, pastposition;   //각각 최초위치, 마우스를 놓기전 위치
-    public bool deadlock;  //타일이 다른 객체에 겹치는것을 방지하기 위한 교착상태 bool
     SpriteRenderer thissprite; //간판전용 스프라이트구동기
     SpriteRenderer[] tiles; //플랫폼전용 스프라이트구동기
     Rigidbody2D rigid; //물리엔진
     Collider2D colid; //충돌자
 
-    public bool isInventory;
-    public Inventory inventory;
+    public bool deadlock;  //타일이 다른 객체에 겹치는것을 방지하기 위한 교착상태 bool
+    public bool isInventory;    //오브젝트와 인벤토리 간 충돌을 감지
+    public Inventory inventory; //인벤토리
 
     private void Awake()
     {
@@ -37,12 +37,10 @@ public class Drag : MonoBehaviour
     //타일이 다른 객체에 겹쳤을 경우
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("rty");
         if (!startgame)
         {
             if (collision.gameObject.tag == "Inventory")
             {
-                Debug.Log(collision);
                 isInventory = true;
             }
             else
@@ -54,13 +52,11 @@ public class Drag : MonoBehaviour
                 deadlock = true;
             }
         }
-        
     }
 
     //타일이 다른 객체와 겹친 상태에서 빠져 나왔을 경우
     private void OnCollisionExit2D(Collision2D collision)
     {
-        //.Log("1123");
         if (!startgame)
         {
             //원상복귀
@@ -69,18 +65,15 @@ public class Drag : MonoBehaviour
             deadlock = false;
             isInventory = false;
         }
-        
     }
 
     //위 OnCollisionEnter2D와 동일
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("rty");
         if (!startgame)
         {
             if (collision.gameObject.tag == "Inventory")
             {
-                //Debug.Log(collision);
                 isInventory = true;
             }
             else
@@ -89,14 +82,12 @@ public class Drag : MonoBehaviour
                     objec.color = new Color(1, 0, 0);
                 deadlock = true;
             }
-            
         }
     }
 
     //위 OnCollisionExit2D와 동일
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //Debug.Log("1124");
         if (!startgame)
         {
             foreach (SpriteRenderer objec in tiles)
@@ -118,7 +109,6 @@ public class Drag : MonoBehaviour
             pastposition = this.gameObject.transform.position;
             rigid.bodyType = RigidbodyType2D.Dynamic;
         }
-            
     }
 
     //마우스를 드래그해서 타일을 옮기는 함수
@@ -136,24 +126,20 @@ public class Drag : MonoBehaviour
     //마우스를 드래그한 상태에서 놓은 순간
     private void OnMouseUp()
     {
-        Debug.Log("EE");
         //다른 타일과 겹친 상태(교착상태)에 마우스를 놓을 경우 이 좌표로 이동
         if (deadlock)
             transform.position = pastposition;
+
+        //인벤토리에 오브젝트를 넣었을 경우
         if (isInventory)
         {
-            //Debug.Log(this.gameObject);
             IInventoryItem item = this.gameObject.GetComponent<IInventoryItem>();
             if(item != null)
             {
                 inventory.AddItem(item);
-                //Debug.Log("ok");
             }
-
         }
-
         rigid.bodyType = RigidbodyType2D.Static;
-
     }
 
     //Start버튼을 눌렀을 경우
@@ -169,8 +155,6 @@ public class Drag : MonoBehaviour
             colid.isTrigger = true;
             thissprite.color  = new Color(255, 255, 255, 0.5f);
         }
-            
-            
     }
 
     //Stop버튼을 눌렀을 경우
@@ -199,6 +183,4 @@ public class Drag : MonoBehaviour
             thissprite.color = new Color(255, 255, 255, 1);
         }
     }
-
-    
 }

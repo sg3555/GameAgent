@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * InventoryItem 인터페이스 참조
+ */
+
 public class UpArrow : MonoBehaviour, IInventoryItem
 {
     public Inventory inventory;

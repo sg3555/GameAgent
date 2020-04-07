@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     //이건 클리어 여부 확인을 위한것이 아닌 클리어 후 애니메이션 설정을 위해 둔 bool값
     public bool clear; 
 
-
     private void Start()
     {
         //메인배경음 재생, 블럭을 옮기는 중일때에는 볼륨 0.3f로 설정
@@ -56,7 +55,6 @@ public class GameManager : MonoBehaviour
         Goal1.PlaySound();
         //1.172초 후 클리어 배경음으로 전환
         Invoke("clearAction", 1.172f);
-
     }
 
     //클리어 배경음 2차전환
@@ -87,7 +85,6 @@ public class GameManager : MonoBehaviour
         foreach (Drag dr in MovableTile)
             dr.StopMove();
         MainBGM.SetVolume(0.3f);
-
     }
 
     //맵 초기화
@@ -120,7 +117,6 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    
 
     //최종수정일 2020.03.10 오후 19:47
 }

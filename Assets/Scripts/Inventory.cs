@@ -5,26 +5,17 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private const int SLOTS = 14;
-
-    private List<IInventoryItem> mItems = new List<IInventoryItem>();
-
-    public event EventHandler<InventoryEventArgs> ItemAdded;
-
-    public event EventHandler<InventoryEventArgs> ItemRemoved;
+    private const int SLOTS = 14;   //인벤토리 슬롯 수
+    private List<IInventoryItem> mItems = new List<IInventoryItem>();   //인벤토리에 등록된 아이템 리스트
+    public event EventHandler<InventoryEventArgs> ItemAdded;    //인벤토리에 아이템을 넣을 때 발생하는 이벤트 핸들러
+    public event EventHandler<InventoryEventArgs> ItemRemoved;  //인벤토리에서 아이템을 뺄 때 발생하는 이벤트 핸들러
 
     public void AddItem(IInventoryItem item)
     {
         if(mItems.Count < SLOTS)
         {
             mItems.Add(item);
-            //foreach(var i in mItems)
-            //{
-            //    Debug.Log(i);
-            //}
-
             item.OnPickup();
-
             if (ItemAdded != null)
             {
                 ItemAdded(this, new InventoryEventArgs(item));
@@ -36,10 +27,8 @@ public class Inventory : MonoBehaviour
     {
         if (mItems.Contains(item))
         {
-            //Debug.Log("Remove");
             mItems.Remove(item);
             item.OnDrop();
-
             if (ItemRemoved != null)
             {
                 ItemRemoved(this, new InventoryEventArgs(item));

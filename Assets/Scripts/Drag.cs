@@ -8,13 +8,13 @@ public class Drag : MonoBehaviour
 {
     bool startgame; //게임시작 bool
     Vector2 originposition, pastposition;   //각각 최초위치, 마우스를 놓기전 위치
-    bool deadlock;  //타일이 다른 객체에 겹치는것을 방지하기 위한 교착상태 bool
+    public bool deadlock;  //타일이 다른 객체에 겹치는것을 방지하기 위한 교착상태 bool
     SpriteRenderer thissprite; //간판전용 스프라이트구동기
     SpriteRenderer[] tiles; //플랫폼전용 스프라이트구동기
     Rigidbody2D rigid; //물리엔진
     Collider2D colid; //충돌자
 
-    bool isInventory;
+    public bool isInventory;
     public Inventory inventory;
 
     private void Awake()
@@ -37,7 +37,8 @@ public class Drag : MonoBehaviour
     //타일이 다른 객체에 겹쳤을 경우
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(!startgame)
+        //Debug.Log("rty");
+        if (!startgame)
         {
             if (collision.gameObject.tag == "Inventory")
             {
@@ -59,7 +60,8 @@ public class Drag : MonoBehaviour
     //타일이 다른 객체와 겹친 상태에서 빠져 나왔을 경우
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(!startgame)
+        //.Log("1123");
+        if (!startgame)
         {
             //원상복귀
             foreach (SpriteRenderer objec in tiles)
@@ -73,7 +75,8 @@ public class Drag : MonoBehaviour
     //위 OnCollisionEnter2D와 동일
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!startgame)
+        //Debug.Log("rty");
+        if (!startgame)
         {
             if (collision.gameObject.tag == "Inventory")
             {
@@ -93,7 +96,8 @@ public class Drag : MonoBehaviour
     //위 OnCollisionExit2D와 동일
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(!startgame)
+        //Debug.Log("1124");
+        if (!startgame)
         {
             foreach (SpriteRenderer objec in tiles)
             {
@@ -107,7 +111,7 @@ public class Drag : MonoBehaviour
     //마우스를 클릭한 순간
     private void OnMouseDown()
     {
-        if(!startgame)
+        if (!startgame)
         {
             //그 순간의 타일 좌표 저장
             //다른 타일과 겹친 상태(교착상태)에 마우스를 놓을 경우 이 좌표로 이동
@@ -120,7 +124,7 @@ public class Drag : MonoBehaviour
     //마우스를 드래그해서 타일을 옮기는 함수
     void OnMouseDrag()
     {
-        if(!startgame)
+        if (!startgame)
         {
             Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             Vector2 temp = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -132,6 +136,7 @@ public class Drag : MonoBehaviour
     //마우스를 드래그한 상태에서 놓은 순간
     private void OnMouseUp()
     {
+        Debug.Log("EE");
         //다른 타일과 겹친 상태(교착상태)에 마우스를 놓을 경우 이 좌표로 이동
         if (deadlock)
             transform.position = pastposition;

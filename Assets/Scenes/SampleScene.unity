@@ -455,6 +455,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c177288f98c713e4ab920befd4e538a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadlock: 0
+  isInventory: 0
   inventory: {fileID: 0}
 --- !u!61 &61079708
 BoxCollider2D:
@@ -2764,6 +2766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c177288f98c713e4ab920befd4e538a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadlock: 0
+  isInventory: 0
   inventory: {fileID: 0}
 --- !u!50 &475980445
 Rigidbody2D:
@@ -5727,6 +5731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c177288f98c713e4ab920befd4e538a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadlock: 0
+  isInventory: 0
   inventory: {fileID: 875949896}
 --- !u!61 &1026657399
 BoxCollider2D:
@@ -5813,10 +5819,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1026657395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e124bb133f656474fab78182af5cd409, type: 3}
+  m_Script: {fileID: 11500000, guid: c0ee34611f31acf4394ccb501703fa06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 875949896}
+  _Name: Jump
   _Image: {fileID: 21300000, guid: 873c008e15872af47a9fcdd3082ff760, type: 3}
 --- !u!1 &1070667619
 GameObject:
@@ -6843,6 +6850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c177288f98c713e4ab920befd4e538a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadlock: 0
+  isInventory: 0
   inventory: {fileID: 875949896}
 --- !u!61 &1360133568
 BoxCollider2D:
@@ -6951,10 +6960,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360133565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e124bb133f656474fab78182af5cd409, type: 3}
+  m_Script: {fileID: 11500000, guid: c0ee34611f31acf4394ccb501703fa06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 875949896}
+  _Name: Jump
   _Image: {fileID: 21300000, guid: 873c008e15872af47a9fcdd3082ff760, type: 3}
 --- !u!1 &1450315091
 GameObject:
@@ -9746,6 +9756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c177288f98c713e4ab920befd4e538a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadlock: 0
+  isInventory: 0
   inventory: {fileID: 875949896}
 --- !u!61 &1982433562
 BoxCollider2D:
@@ -9832,10 +9844,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1982433558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e124bb133f656474fab78182af5cd409, type: 3}
+  m_Script: {fileID: 11500000, guid: c0ee34611f31acf4394ccb501703fa06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 875949896}
+  _Name: Jump
   _Image: {fileID: 21300000, guid: 873c008e15872af47a9fcdd3082ff760, type: 3}
 --- !u!1 &2004758420
 GameObject:

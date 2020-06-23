@@ -27,6 +27,16 @@ public class ItemProperty : MonoBehaviour, IInventoryItem
             return _Image;
         }
     }
+
+    private void Start()
+    {
+        IInventoryItem item = this.gameObject.GetComponent<IInventoryItem>();
+        if (item != null)
+        {
+            inventory.AddItem(item);
+        }
+    }
+
     public GameObject GetGameObject()
     {
         return gameObject;

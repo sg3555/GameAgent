@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 61079709}
   - component: {fileID: 61079707}
   - component: {fileID: 61079708}
+  - component: {fileID: 61079711}
   m_Layer: 8
   m_Name: MovablePlatform2
   m_TagString: Platform
@@ -457,7 +458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadlock: 0
   isInventory: 0
-  inventory: {fileID: 0}
+  inventory: {fileID: 875949896}
 --- !u!61 &61079708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -522,6 +523,21 @@ Transform:
   m_Father: {fileID: 765892084}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &61079711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61079706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ee34611f31acf4394ccb501703fa06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 875949896}
+  _Name: Block_1
+  _Image: {fileID: 21300000, guid: c303fc8e68b308e4ea0edafc3f333c28, type: 3}
 --- !u!1 &76019844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +2720,7 @@ GameObject:
   - component: {fileID: 475980445}
   - component: {fileID: 475980444}
   - component: {fileID: 475980442}
+  - component: {fileID: 475980446}
   m_Layer: 8
   m_Name: MovablePlatform1
   m_TagString: Platform
@@ -2768,7 +2785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadlock: 0
   isInventory: 0
-  inventory: {fileID: 0}
+  inventory: {fileID: 875949896}
 --- !u!50 &475980445
 Rigidbody2D:
   serializedVersion: 4
@@ -2790,6 +2807,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &475980446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475980441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ee34611f31acf4394ccb501703fa06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 875949896}
+  _Name: Block_1
+  _Image: {fileID: 21300000, guid: c303fc8e68b308e4ea0edafc3f333c28, type: 3}
 --- !u!1 &506379394
 GameObject:
   m_ObjectHideFlags: 0
@@ -6870,7 +6902,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.44, y: 1.44}
     newSize: {x: 1.44, y: 1.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6918,8 +6950,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 8446930541770316629, guid: 09f71806b59d6784082275220aa0f94e,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 873c008e15872af47a9fcdd3082ff760, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

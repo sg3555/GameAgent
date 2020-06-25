@@ -37,6 +37,14 @@ public class ItemProperty : MonoBehaviour, IInventoryItem
         }
     }
 
+    public void ResetBtn()
+    {
+        IInventoryItem item = this.gameObject.GetComponent<IInventoryItem>();
+        if(this.gameObject.activeSelf == true && item != null)
+        {
+            inventory.AddItem(item);
+        }
+    }
     public GameObject GetGameObject()
     {
         return gameObject;

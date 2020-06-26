@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         //메인배경음 재생, 블럭을 옮기는 중일때에는 볼륨 0.3f로 설정
         MainBGM.PlaySound();
         MainBGM.SetLoop(true);
-        MainBGM.SetVolume(0.3f);
+        MainBGM.SetVolume(0.7f);
         clear = false;
     }
 
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
         Actor.ResetGame();
         foreach (Drag dr in MovableTile)
             dr.StopMove();
-        MainBGM.SetVolume(0.3f);
+        MainBGM.SetVolume(0.7f);
     }
 
     //맵 초기화
@@ -92,8 +92,11 @@ public class GameManager : MonoBehaviour
     {
         Actor.ResetGame();
         foreach (Drag dr in MovableTile)
-            dr.ResetGame();
-        MainBGM.SetVolume(0.3f);
+        {
+            ItemProperty item = dr.GetComponent<ItemProperty>();
+            item.ResetBtn();
+        }
+        MainBGM.SetVolume(0.7f);
     }
 
     //버튼 비활성화 함수

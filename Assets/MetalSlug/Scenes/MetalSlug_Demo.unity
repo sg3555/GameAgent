@@ -1550,7 +1550,7 @@ Transform:
   - {fileID: 1817915926}
   - {fileID: 644071857}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &521962427
 GameObject:
@@ -1674,6 +1674,54 @@ EdgeCollider2D:
   m_Points:
   - {x: -6.182282, y: 0.04049133}
   - {x: -4.831358, y: 0.040491417}
+--- !u!1 &574313671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 574313673}
+  - component: {fileID: 574313672}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &574313672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574313671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791c418ce369da64ca3f498de0bd5f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1829792867}
+  buttons:
+  - {fileID: 2124023848}
+  - {fileID: 722809531}
+  - {fileID: 1960782781}
+--- !u!4 &574313673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574313671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 985.8468, y: 435.80307, z: -2008.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609945475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3747,7 +3795,7 @@ Transform:
   m_Children:
   - {fileID: 561009681}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1208765321
 GameObject:
@@ -5805,7 +5853,7 @@ Transform:
   m_LocalScale: {x: 32.00029, y: 1.9988257, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1776681345
 GameObject:
@@ -5992,7 +6040,7 @@ RectTransform:
   - {fileID: 1980696653}
   - {fileID: 989516587}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6166,6 +6214,7 @@ GameObject:
   - component: {fileID: 1829792863}
   - component: {fileID: 1829792862}
   - component: {fileID: 1829792866}
+  - component: {fileID: 1829792867}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6228,7 +6277,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &1829792865
 Transform:
   m_ObjectHideFlags: 0
@@ -6247,7 +6296,7 @@ Transform:
   - {fileID: 1576081597}
   - {fileID: 320949959}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1829792866
 SpriteRenderer:
@@ -6299,6 +6348,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1829792867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829792861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689cabc69dd1eba468159752f735368f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startGame: 0
+  clear: 0
+  maxSpeed: 5
+  jumpForce: 600
 --- !u!1 &1841049009
 GameObject:
   m_ObjectHideFlags: 0
@@ -7058,7 +7123,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2124023846
 GameObject:
@@ -7142,7 +7207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 574313672}
         m_MethodName: startUpGame
         m_Mode: 1
         m_Arguments:

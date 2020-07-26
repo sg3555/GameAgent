@@ -30,6 +30,7 @@ public class MS_PlayerController : MonoBehaviour
     {
         startGame = false;
         clear = false;
+        originPosition = this.gameObject.transform.position;
     }
 
     void FixedUpdate()
@@ -54,9 +55,14 @@ public class MS_PlayerController : MonoBehaviour
         }
     }
 
-    public void StartMove()
+    public void startMove()
     {
         Debug.Log("start");
         startGame = true;
+    }
+
+    public void resetGame()
+    {
+        Debug.Log("reset");
     }
 }

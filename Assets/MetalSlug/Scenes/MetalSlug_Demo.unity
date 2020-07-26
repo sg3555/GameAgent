@@ -2063,8 +2063,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: stopGame
+      - m_Target: {fileID: 574313672}
+        m_MethodName: stopButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6668,8 +6668,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: resetGame
+      - m_Target: {fileID: 574313672}
+        m_MethodName: resetButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7208,7 +7208,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 574313672}
-        m_MethodName: startUpGame
+        m_MethodName: goButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

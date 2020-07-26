@@ -16,9 +16,19 @@ public class MS_GameManager : MonoBehaviour
     }
 
     //캐릭터 행동개시
-    public void startUpGame()
+    public void goButton()
     {
-        player.StartMove();
+        player.startMove();
+    }
+
+    public void stopButton()
+    {
+        player.resetGame();
+    }
+
+    public void resetButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     //버튼 비활성화 함수

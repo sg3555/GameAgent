@@ -1218,7 +1218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 320949959}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1635,7 +1635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 561009681}
   - component: {fileID: 561009682}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2120,7 +2120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 726718437}
   - component: {fileID: 726718438}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eri Kasamoto_Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3724,7 +3724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1191106508}
   - component: {fileID: 1191106507}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3967,7 +3967,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264241659}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -4245,7 +4245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1385287006}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4276,7 +4276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1402372305}
   - component: {fileID: 1402372306}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eri Kasamoto_Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5328,9 +5328,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1576081597}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Knife
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6215,9 +6215,9 @@ GameObject:
   - component: {fileID: 1829792862}
   - component: {fileID: 1829792866}
   - component: {fileID: 1829792867}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

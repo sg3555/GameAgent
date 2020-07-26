@@ -25,9 +25,9 @@ TagManager:
   - AfterHit
   - Damage
   - 
-  - 
-  - 
-  - 
+  - Ground
+  - Enemy
+  - Player
   - 
   - 
   - 

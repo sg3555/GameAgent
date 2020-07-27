@@ -55,10 +55,31 @@ public class MS_PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Contains("Test") && startGame)
+        {
+            Debug.Log("Enter Test");
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag.Contains("Test") && startGame)
+        {
+            //Debug.Log("Stay Test");
+        }
+    }
+
     public void startMove()
     {
         Debug.Log("start");
         startGame = true;
+    }
+
+    public void stopGame()
+    {
+        Debug.Log("stop");
     }
 
     public void resetGame()

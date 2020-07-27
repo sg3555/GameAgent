@@ -11,6 +11,7 @@ TagManager:
   - Disappear
   - Damage
   - Inventory
+  - Test
   layers:
   - Default
   - TransparentFX

@@ -23,11 +23,12 @@ public class MS_GameManager : MonoBehaviour
 
     public void stopButton()
     {
-        player.resetGame();
+        player.stopGame();
     }
 
     public void resetButton()
     {
+        player.resetGame();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

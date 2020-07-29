@@ -4249,7 +4249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269254650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -0.9, z: 0}
+  m_LocalPosition: {x: -4.71, y: -0.9, z: 0}
   m_LocalScale: {x: 2.995, y: 2.995, z: 2.995}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6543,7 +6543,7 @@ MonoBehaviour:
   startGame: 0
   clear: 0
   maxSpeed: 5
-  jumpForce: 600
+  jumpForce: 450
 --- !u!1 &1841049009
 GameObject:
   m_ObjectHideFlags: 0

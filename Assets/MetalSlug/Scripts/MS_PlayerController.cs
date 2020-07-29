@@ -14,7 +14,7 @@ public class MS_PlayerController : MonoBehaviour
     public bool startGame;  //게임 시작상태 bool
     public bool clear; //클리어 여부 
     public float maxSpeed = 5f;    // Player Speed
-    public float jumpForce = 600;   // Player jump force
+    public int jumpForce = 450;   // Player jump force
 
     void Awake()
     {
@@ -57,9 +57,11 @@ public class MS_PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag.Contains("Test") && startGame)
+        if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame)
         {
             Debug.Log("Enter Test");
+            anim.SetBool("IsJump", true);
+            rigid.AddForce(Vector2.up * jumpForce);
         }
     }
 

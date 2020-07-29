@@ -1445,6 +1445,9 @@ TextureImporter:
   - first:
       213: 7935247932275630875
     second: Eri Kasamoto_479
+  - first:
+      213: -7054294955714801283
+    second: Eri Kasamoto_480
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -2414,10 +2417,10 @@ TextureImporter:
       name: Eri Kasamoto_43
       rect:
         serializedVersion: 2
-        x: 339
-        y: 2396
-        width: 39
-        height: 59
+        x: 340
+        y: 2416
+        width: 35
+        height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11575,7 +11578,7 @@ TextureImporter:
         width: 34
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -11596,7 +11599,7 @@ TextureImporter:
         width: 28
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -11604,6 +11607,27 @@ TextureImporter:
       bones: []
       spriteID: b1321ff93f9af1e60800000000000000
       internalID: 7935247932275630875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eri Kasamoto_480
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2396
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d711acfec1c1a1e90800000000000000
+      internalID: -7054294955714801283
       vertices: []
       indices: 
       edges: []

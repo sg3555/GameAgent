@@ -15,8 +15,13 @@ public class MS_PlayerController : MonoBehaviour
     public bool clear; //클리어 여부 
     public float maxSpeed = 5f;    // Player Speed
     public int jumpForce = 450;   // Player jump force
+    public int groundLayerNum = 13;
 
     private bool isKnife = false;
+    private Transform groundCheck;
+    private bool onGround = false;
+    private bool groundLineCheck = false;
+    private bool groundColCheck = false;
 
     void Awake()
     {
@@ -33,6 +38,7 @@ public class MS_PlayerController : MonoBehaviour
         startGame = false;
         clear = false;
         originPosition = this.gameObject.transform.position;
+        groundCheck = gameObject.transform.Find("GroundCheck");
     }
 
     void FixedUpdate()
@@ -40,8 +46,13 @@ public class MS_PlayerController : MonoBehaviour
         //게임 시작상태에서만 움직임 활성화
         if (startGame)
         {
+            groundLineCheck = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+            if (groundLineCheck && groundColCheck)
+                onGround = true;
+            else
+                onGround = false;
+
             rigid.AddForce(Vector2.right * 1f, ForceMode2D.Impulse);
-            
             //최대속력 설정
             if (rigid.velocity.x > maxSpeed && !clear)
                 rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
@@ -68,20 +79,21 @@ public class MS_PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         //점프
-        //if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame)
-        //{
-        //    Debug.Log("Enter Test");
-        //    anim.SetBool("IsJump", true);
-        //    rigid.AddForce(Vector2.up * jumpForce);
-        //}
-
-        //나이프
-        if (collision.tag.Contains("Test") && !anim.GetBool("IsKnife") && startGame)
+        if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame && onGround)
         {
             Debug.Log("Enter Test");
-            isKnife = true;
+            anim.SetBool("IsJump", true);
+            rigid.AddForce(Vector2.up * jumpForce);
         }
+
+        //나이프
+        //if (collision.tag.Contains("Test") && !anim.GetBool("IsKnife") && startGame)
+        //{
+        //    Debug.Log("Enter Test");
+        //    isKnife = true;
+        //}
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -89,6 +101,29 @@ public class MS_PlayerController : MonoBehaviour
         if (collision.tag.Contains("Test") && startGame)
         {
             //Debug.Log("Stay Test");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log(collision.gameObject.layer + "Enter");
+        if(collision.gameObject.layer == groundLayerNum)
+        {
+            groundColCheck = true;
+            
+            if (anim.GetBool("IsJump") && groundLineCheck)
+            {
+                anim.SetBool("IsJump", false);
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        //Debug.Log(collision.gameObject.layer + "Exit");
+        if (collision.gameObject.layer == groundLayerNum)
+        {
+            groundColCheck = false;
         }
     }
 

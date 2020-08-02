@@ -4032,7 +4032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264241658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.871, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1829792865}
@@ -4249,7 +4249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269254650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.71, y: -0.9, z: 0}
+  m_LocalPosition: {x: -4.25, y: -0.86, z: 0}
   m_LocalScale: {x: 2.995, y: 2.995, z: 2.995}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6544,6 +6544,7 @@ MonoBehaviour:
   clear: 0
   maxSpeed: 5
   jumpForce: 450
+  groundLayerNum: 13
 --- !u!1 &1841049009
 GameObject:
   m_ObjectHideFlags: 0

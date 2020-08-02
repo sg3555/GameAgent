@@ -62,6 +62,7 @@ public class MS_PlayerController : MonoBehaviour
             }
             else
                 anim.SetBool("IsKnife", false);
+
         }
     }
 

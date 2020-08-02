@@ -16,6 +16,8 @@ public class MS_PlayerController : MonoBehaviour
     public float maxSpeed = 5f;    // Player Speed
     public int jumpForce = 450;   // Player jump force
 
+    private bool isKnife = false;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -46,22 +48,38 @@ public class MS_PlayerController : MonoBehaviour
             else if (rigid.velocity.x < -maxSpeed && !clear)
                 rigid.velocity = new Vector2(-maxSpeed, rigid.velocity.y);
 
+            //움직일때 달리는 모션
             if (Mathf.Abs(rigid.velocity.x) > 0.3)
+                anim.SetBool("IsRunning", true);
+            else
+                anim.SetBool("IsRunning", false);
+
+            //근접공격
+            if (isKnife)
             {
-                anim.SetBool("isRunning", true);
+                anim.SetBool("IsKnife", true);
+                isKnife = false;
             }
             else
-                anim.SetBool("isRunning", false);
+                anim.SetBool("IsKnife", false);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame)
+        //점프
+        //if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame)
+        //{
+        //    Debug.Log("Enter Test");
+        //    anim.SetBool("IsJump", true);
+        //    rigid.AddForce(Vector2.up * jumpForce);
+        //}
+
+        //나이프
+        if (collision.tag.Contains("Test") && !anim.GetBool("IsKnife") && startGame)
         {
             Debug.Log("Enter Test");
-            anim.SetBool("IsJump", true);
-            rigid.AddForce(Vector2.up * jumpForce);
+            isKnife = true;
         }
     }
 

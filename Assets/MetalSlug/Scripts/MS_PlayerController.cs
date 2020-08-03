@@ -16,8 +16,11 @@ public class MS_PlayerController : MonoBehaviour
     public float maxSpeed = 5f; // Player Speed
     public int jumpForce = 450; // Player jump force
     public int groundLayerNum = 21; // ground의 레이어 번호
-
-    private bool isKnife = false;
+    public int playerLayerNum = 22; // ground의 레이어 번호
+    public int goalLayerNum = 24; 
+    public int PBulletLayerNum = 25; 
+    public GameObject knife;
+    public bool isKnife = false;
     private Transform groundCheck;
     private bool onGround = false;
     private bool groundLineCheck = false;
@@ -46,39 +49,44 @@ public class MS_PlayerController : MonoBehaviour
         //게임 시작상태에서만 움직임 활성화
         if (startGame)
         {
-            groundLineCheck = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-            if (groundLineCheck && groundColCheck)
-                onGround = true;
-            else
-                onGround = false;
-
-            rigid.AddForce(Vector2.right * 1f, ForceMode2D.Impulse);
-            //최대속력 설정
-            if (rigid.velocity.x > maxSpeed && !clear)
-                rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
-            else if (rigid.velocity.x < -maxSpeed && !clear)
-                rigid.velocity = new Vector2(-maxSpeed, rigid.velocity.y);
-
-            //움직일때 달리는 모션
-            if (Mathf.Abs(rigid.velocity.x) > 0.3)
-                anim.SetBool("IsRunning", true);
-            else
-                anim.SetBool("IsRunning", false);
-
-            //근접공격
-            if (isKnife)
+            useKnife();
+            if (!clear)
             {
-                anim.SetBool("IsKnife", true);
-                isKnife = false;
+                groundLineCheck = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+                if (groundLineCheck && groundColCheck)
+                    onGround = true;
+                else
+                    onGround = false;
+
+                rigid.AddForce(Vector2.right * 1f, ForceMode2D.Impulse);
+                //최대속력 설정
+                if (rigid.velocity.x > maxSpeed && !clear)
+                    rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
+                else if (rigid.velocity.x < -maxSpeed && !clear)
+                    rigid.velocity = new Vector2(-maxSpeed, rigid.velocity.y);
+                anim.SetBool("IsRunning", true);
+                //움직일때 달리는 모션
+                //if (Mathf.Abs(rigid.velocity.x) > 0.3)
+                //    anim.SetBool("IsRunning", true);
+                //else
+                //    anim.SetBool("IsRunning", false);
+
             }
             else
-                anim.SetBool("IsKnife", false);
-
+            {
+                rigid.velocity = new Vector2(0, 0);
+                anim.SetBool("IsRunning", false);
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //if (collision.gameObject.layer != playerLayerNum && collision.gameObject.layer != PBulletLayerNum)
+        //{ 
+
+        //}
+
         //점프
         if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame && onGround)
         {
@@ -93,6 +101,12 @@ public class MS_PlayerController : MonoBehaviour
         //    Debug.Log("Enter Test");
         //    isKnife = true;
         //}
+
+        if (collision.gameObject.layer == goalLayerNum)
+        {
+            isKnife = true;
+            clear = true;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -106,7 +120,7 @@ public class MS_PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Debug.Log(collision.gameObject.layer + "Enter");
-        if(collision.gameObject.layer == groundLayerNum)
+        if (collision.gameObject.layer == groundLayerNum)
         {
             groundColCheck = true;
             if (anim.GetBool("IsJump") && groundLineCheck)
@@ -139,5 +153,28 @@ public class MS_PlayerController : MonoBehaviour
     public void resetGame()
     {
         Debug.Log("reset");
+    }
+
+    private void useKnife()
+    {
+        //근접공격
+        if (isKnife)
+        {
+            anim.SetBool("IsKnife", true);
+            isKnife = false;
+        }
+        else
+            anim.SetBool("IsKnife", false);
+
+        //근접공격 중 칼날에 타격판정 부여
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife"))
+        {
+            knife.layer = PBulletLayerNum;
+            //Debug.Log("Knife");
+        }
+        else
+        {
+            knife.layer = playerLayerNum;
+        }
     }
 }

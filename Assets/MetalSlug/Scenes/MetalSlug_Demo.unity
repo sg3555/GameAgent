@@ -1218,7 +1218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 320949959}
-  m_Layer: 15
+  m_Layer: 22
   m_Name: Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1457,6 +1457,7 @@ GameObject:
   - component: {fileID: 461886157}
   - component: {fileID: 461886156}
   - component: {fileID: 461886155}
+  - component: {fileID: 461886160}
   m_Layer: 24
   m_Name: Goal
   m_TagString: Untagged
@@ -1585,6 +1586,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &461886160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461886154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fbed7060c6d9e4c8ff793419ff995a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,7 +2274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 726718437}
   - component: {fileID: 726718438}
-  m_Layer: 15
+  m_Layer: 22
   m_Name: Eri Kasamoto_Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3914,7 +3927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1191106508}
   - component: {fileID: 1191106507}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4158,7 +4171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264241659}
-  m_Layer: 15
+  m_Layer: 22
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -4390,7 +4403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269254650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.31, y: -0.88, z: 0}
+  m_LocalPosition: {x: -6.61, y: 4.16, z: 0}
   m_LocalScale: {x: 2.995, y: 2.995, z: 2.995}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4566,7 +4579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1385287006}
-  m_Layer: 15
+  m_Layer: 22
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4597,7 +4610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1402372305}
   - component: {fileID: 1402372306}
-  m_Layer: 15
+  m_Layer: 22
   m_Name: Eri Kasamoto_Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5649,7 +5662,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1576081597}
-  m_Layer: 15
+  - component: {fileID: 1576081598}
+  m_Layer: 22
   m_Name: Knife
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5670,6 +5684,22 @@ Transform:
   m_Father: {fileID: 1829792865}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1576081598
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576081596}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!1 &1606032510
 GameObject:
   m_ObjectHideFlags: 0
@@ -6536,7 +6566,7 @@ GameObject:
   - component: {fileID: 1829792862}
   - component: {fileID: 1829792866}
   - component: {fileID: 1829792867}
-  m_Layer: 15
+  m_Layer: 22
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6686,6 +6716,11 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 450
   groundLayerNum: 21
+  playerLayerNum: 22
+  goalLayerNum: 24
+  PBulletLayerNum: 25
+  knife: {fileID: 1576081596}
+  isKnife: 0
 --- !u!1 &1841049009
 GameObject:
   m_ObjectHideFlags: 0

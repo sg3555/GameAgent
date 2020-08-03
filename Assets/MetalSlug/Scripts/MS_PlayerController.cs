@@ -13,9 +13,9 @@ public class MS_PlayerController : MonoBehaviour
 
     public bool startGame;  //게임 시작상태 bool
     public bool clear; //클리어 여부 
-    public float maxSpeed = 5f;    // Player Speed
-    public int jumpForce = 450;   // Player jump force
-    public int groundLayerNum = 13;
+    public float maxSpeed = 5f; // Player Speed
+    public int jumpForce = 450; // Player jump force
+    public int groundLayerNum = 21; // ground의 레이어 번호
 
     private bool isKnife = false;
     private Transform groundCheck;
@@ -79,7 +79,6 @@ public class MS_PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         //점프
         if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame && onGround)
         {
@@ -110,7 +109,6 @@ public class MS_PlayerController : MonoBehaviour
         if(collision.gameObject.layer == groundLayerNum)
         {
             groundColCheck = true;
-            
             if (anim.GetBool("IsJump") && groundLineCheck)
             {
                 anim.SetBool("IsJump", false);

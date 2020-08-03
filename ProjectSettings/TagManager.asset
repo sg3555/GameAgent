@@ -26,21 +26,21 @@ TagManager:
   - AfterHit
   - Damage
   - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - Ground
-  - Enemy
   - Player
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Goal
+  - Player_Bullet
+  - Enemy_Bullet
+  - Trigger
   - 
   - 
   - 

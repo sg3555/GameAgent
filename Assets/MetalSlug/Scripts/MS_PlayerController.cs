@@ -155,6 +155,19 @@ public class MS_PlayerController : MonoBehaviour
         Debug.Log("reset");
     }
 
+    //GameManager나 다른 오브젝트에서 플레이어의 상태를 조회
+    public string getState()
+    {
+        if (clear)
+        {
+            return "clear";
+        }
+        else
+        {
+            return "null";
+        }
+    }
+
     private void useKnife()
     {
         //근접공격
@@ -170,7 +183,7 @@ public class MS_PlayerController : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife"))
         {
             knife.layer = PBulletLayerNum;
-            //Debug.Log("Knife");
+            //Debug.Log(knife.layer);
         }
         else
         {

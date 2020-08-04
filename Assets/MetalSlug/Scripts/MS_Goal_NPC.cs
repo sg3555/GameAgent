@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class MS_Goal_NPC : MonoBehaviour
 {
+    Animator anim;  //스프라이트 애니메이션
     public int PBulletLayerNum = 25;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        
+        //Debug.Log(collision.gameObject.layer);
+        //플레이어의 공격이 닿았을 때
+        if (collision.gameObject.layer == PBulletLayerNum && !anim.GetBool("IsClear"))
+        {
+            anim.SetBool("IsClear", true);
+        }
     }
 }

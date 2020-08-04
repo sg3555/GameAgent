@@ -15,6 +15,15 @@ public class MS_GameManager : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        //클리어 여부 체크
+        if (player.getState().Equals("clear"))
+        {
+            Debug.Log(player.getState());
+        }
+    }
+
     //캐릭터 행동개시
     public void goButton()
     {

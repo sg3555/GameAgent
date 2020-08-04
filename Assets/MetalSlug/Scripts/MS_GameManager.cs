@@ -20,7 +20,7 @@ public class MS_GameManager : MonoBehaviour
         //클리어 여부 체크
         if (player.getState().Equals("clear"))
         {
-            Debug.Log(player.getState());
+            //Debug.Log(player.getState());
         }
     }
 

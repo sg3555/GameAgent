@@ -75,7 +75,13 @@ public class MS_PlayerController : MonoBehaviour
             else
             {
                 rigid.velocity = new Vector2(0, 0);
-                anim.SetBool("IsRunning", false);
+                //anim.SetBool("IsRunning", false);
+
+                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife") && !anim.GetBool("IsClear"))
+                {
+                    Debug.Log(anim.GetCurrentAnimatorStateInfo(0));
+                    anim.SetBool("IsClear", true);
+                }
             }
         }
     }

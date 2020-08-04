@@ -1448,6 +1448,9 @@ TextureImporter:
   - first:
       213: -7054294955714801283
     second: Eri Kasamoto_480
+  - first:
+      213: 560453894241405023
+    second: Eri Kasamoto_481
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -11628,6 +11631,27 @@ TextureImporter:
       bones: []
       spriteID: d711acfec1c1a1e90800000000000000
       internalID: -7054294955714801283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eri Kasamoto_481
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 2542
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f584e3fe8d127c700800000000000000
+      internalID: 560453894241405023
       vertices: []
       indices: 
       edges: []

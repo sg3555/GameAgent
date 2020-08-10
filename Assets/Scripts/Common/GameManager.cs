@@ -93,8 +93,8 @@ public class GameManager : MonoBehaviour
         Actor.ResetGame();
         foreach (Drag dr in MovableTile)
         {
-            ItemProperty item = dr.GetComponent<ItemProperty>();
-            item.ResetBtn();
+            //ItemProperty item = dr.GetComponent<ItemProperty>();
+            //item.ResetBtn();
         }
         MainBGM.SetVolume(0.7f);
     }

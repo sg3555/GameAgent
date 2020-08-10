@@ -51,23 +51,38 @@ public class rm_move : MonoBehaviour
         {
             anim.SetBool("isrun", false);
         }
-       //사다리 올라가는 것에 대한 애니메이션과 방향과 속도를 정하는 함수
+        //사다리 올라가는 것에 대한 애니메이션과 방향과 속도를 정하는 함수
         if (isladder)
         {
             float ver = Input.GetAxis("Vertical");
-            if (Input.GetKeyDown(KeyCode.UpArrow)|| Input.GetKeyDown(KeyCode.DownArrow)) { anim.SetBool("isclimb", true); }
+         if (Input.GetKeyDown(KeyCode.Z))
+            {
+                anim.SetBool("climbshoot", true);
+            }
+         else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
+            {
+                    anim.SetBool("isclimb", true);
+    
+              
+
+
+            }
+            else
+            {
+                anim.SetBool("climbshoot", false);
+            }
             rigid.gravityScale = 0;
-            rigid.velocity = new Vector2(rigid.velocity.x, ver * speed);
-            
+                rigid.velocity = new Vector2(rigid.velocity.x, ver * speed);
+                               
         }
         else
         {
             
             rigid.gravityScale = 3f;
-            anim.SetBool("isclimb", false); ;
+            anim.SetBool("isclimb", false);
         }
     }
-    public bool isladder;
+    public bool isladder = true;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("ladder")) { isladder = true; }

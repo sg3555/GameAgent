@@ -26,6 +26,8 @@ public class Drager : MonoBehaviour
         enterinven, //인벤토리상태 확인
         isclick;    //클릭상태 확인
 
+    public float minimumsize;
+
     GameObject mainCam, MovableItem;
 
 
@@ -71,7 +73,7 @@ public class Drager : MonoBehaviour
             //인벤토리 객체의 자식으로 들어가기(화면이 움직일 때 같이 움직이기 위함)
             transform.SetParent(mainCam.transform);
             //객체크기 줄이기
-            transform.localScale = new Vector2(0.5f, 0.5f);
+            transform.localScale = new Vector2(minimumsize, minimumsize);
             //인벤토리 안에 있는 상태
             enterinven = true;
 

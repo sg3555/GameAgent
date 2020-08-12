@@ -10,9 +10,10 @@ public class GameManager : MonoBehaviour
     public Drag[] MovableTile; //움직일 수 있는 아이템들
     public BgmController MainBGM, DeadBGM, Goal1, Goal2; //배경음 관리자
     public Button[] buttons = new Button[3]; //시작, 정지, 초기화 버튼
-    public GameObject flag, ClearUI; //깃발, 클리어UI
+    public GameObject flag, ClearUI, ExplainUI; //깃발, 클리어UI, 설명창UI
     //이건 클리어 여부 확인을 위한것이 아닌 클리어 후 애니메이션 설정을 위해 둔 bool값
-    public bool clear; 
+    public bool clear;
+    bool isopen; //설명창 전용 bool
 
     private void Start()
     {
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
         MainBGM.SetLoop(true);
         MainBGM.SetVolume(0.7f);
         clear = false;
+        isopen = false;
+        ExplainUI.SetActive(isopen);
     }
 
     private void FixedUpdate()
@@ -121,5 +124,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    //최종수정일 2020.03.10 오후 19:47
+    //버튼 누르면 설명창 반전
+    public void OpenExplain()
+    {
+        isopen = !isopen;
+        ExplainUI.SetActive(isopen);
+    }
+
+    //최종수정일 2020.8.12
 }

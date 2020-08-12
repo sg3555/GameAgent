@@ -10,13 +10,13 @@ public class Drager : MonoBehaviour
      * 두 Collider의 충돌여부 판정은 반드시 둘중 하나는 Dynamic상태여야 함
      */
 
-    //각각 최초위치, 마우스를 놓기전 위치
-    Vector2 originposition, pastposition;
+    //각각 최초위치, 마우스를 놓기전 위치, 최초 사이즈, 인벤사이즈
+    Vector2 originPosition, //최초위치
+        pastposition,   //마우스를 놓기전 위치
+        originSize, //최초 사이즈
+        invenSize;  //인벤토리에 들어갔을 시 사이즈
 
-    //간판전용 스프라이트구동기
-    //SpriteRenderer sprite;
-
-    //플랫폼전용 스프라이트구동기
+    //스프라이트구동기
     SpriteRenderer[] tiles; 
 
     Rigidbody2D rigid; //물리엔진
@@ -26,37 +26,26 @@ public class Drager : MonoBehaviour
         enterinven, //인벤토리상태 확인
         isclick;    //클릭상태 확인
 
-    public float minimumsize;
+    public float minimunsize = 0.5f; //인벤토리에 들어갔을 때 사이즈(디폴트값 : 0.5)
 
-    GameObject mainCam, MovableItem;
+    GameObject Inventory, MovableItem;
 
-
-    // Start is called before the first frame update
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         tiles = gameObject.GetComponentsInChildren<SpriteRenderer>();
         colid = GetComponent<Collider2D>();
-        //sprite = GetComponent<SpriteRenderer>();
-        mainCam = GameObject.Find("Inventory");
+        Inventory = GameObject.Find("Inventory");
         MovableItem = GameObject.Find("MovableItem");
     }
     void Start()
     {
-        originposition = this.gameObject.transform.position;
+        originPosition = this.gameObject.transform.position;
+        originSize = this.gameObject.transform.localScale;
+        invenSize = new Vector2(minimunsize, minimunsize);
         deadlock = false;
         startGame = false;
         isclick = false;
-
-        /*
-        //인벤토리 객체의 자식으로 들어가기(화면이 움직일 때 같이 움직이기 위함)
-        transform.SetParent(mainCam.transform);
-        //객체크기 줄이기
-        transform.localScale = new Vector2(0.5f, 0.5f);
-        //인벤토리 안에 있는 상태
-        enterinven = true;
-        */
-
     }
 
     // Update is called once per frame
@@ -71,9 +60,9 @@ public class Drager : MonoBehaviour
         if (collision.tag == "Inventory" && !isclick)
         {
             //인벤토리 객체의 자식으로 들어가기(화면이 움직일 때 같이 움직이기 위함)
-            transform.SetParent(mainCam.transform);
+            transform.SetParent(Inventory.transform);
             //객체크기 줄이기
-            transform.localScale = new Vector2(minimumsize, minimumsize);
+            transform.localScale = invenSize;
             //인벤토리 안에 있는 상태
             enterinven = true;
 
@@ -83,7 +72,7 @@ public class Drager : MonoBehaviour
             //인벤토리 객체에서 MovableItem객체의 자식으로 돌아감
             transform.SetParent(MovableItem.transform);
             //객체크기 원상태
-            transform.localScale = new Vector2(1f, 1f);
+            transform.localScale = originSize;
             //인벤토리 밖에 있는 상태
             enterinven = false;
         }

@@ -25,7 +25,7 @@ public class rm_playerAttack : MonoBehaviour
            
                 if (Input.GetKey(KeyCode.Z))
                 {
-                    if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+                    if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))&&isladder==false)
                     {
                         anim.SetBool("isrunAttack", true);
                         Instantiate(Bullet, pos.position, transform.rotation);
@@ -38,10 +38,10 @@ public class rm_playerAttack : MonoBehaviour
                         anim.SetBool("isshoot", true);
                         Instantiate(Bullet, pos.position, transform.rotation);
                     }
-                    else if (isladder == true)
-                {
-                    Instantiate(Bullet, pos.position, transform.rotation);
-                }
+                //    else if (isladder == true)
+                //{
+                //    Instantiate(Bullet, pos.position, transform.rotation);
+                //}
 
 
                 }

@@ -19,8 +19,9 @@ public class rm_move : MonoBehaviour
     public int jumpcount;
     int jumpcnt;
     public Animator anim;
+    public GameObject Bullet;
+    public Transform buipos;
 
- 
 
     bool isGround;
     private void Start()
@@ -58,19 +59,18 @@ public class rm_move : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.Z))
             {
                 anim.SetBool("climbshoot", true);
+                Invoke("bulletInstantiate", 0.3f);
+                Invoke("climbshotDeactive", 0.3f);
             }
          else if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
             {
-                    anim.SetBool("isclimb", true);
-    
-              
-
-
+                anim.SetBool("isclimb", true);
+;
             }
-            else
-            {
-                anim.SetBool("climbshoot", false);
-            }
+            //else
+            //{
+            //    anim.SetBool("climbshoot", false);
+            //}
             rigid.gravityScale = 0;
                 rigid.velocity = new Vector2(rigid.velocity.x, ver * speed);
                                
@@ -81,6 +81,14 @@ public class rm_move : MonoBehaviour
             rigid.gravityScale = 3f;
             anim.SetBool("isclimb", false);
         }
+    }
+    void bulletInstantiate()
+    {
+        Instantiate(Bullet, pos.position, transform.rotation);
+    }
+   void climbshotDeactive()
+    {
+        anim.SetBool("climbshoot", false);
     }
     public bool isladder = true;
     private void OnTriggerEnter2D(Collider2D collision)

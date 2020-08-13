@@ -6252,6 +6252,8 @@ MonoBehaviour:
     m_Bits: 8192
   jumpcount: 2
   anim: {fileID: 1879180680}
+  Bullet: {fileID: 35703330822469590, guid: 90d99be152c6b164b9245e1e80f3fb28, type: 3}
+  buipos: {fileID: 271066799}
   isladder: 0
 --- !u!95 &1879180680
 Animator:

@@ -39,12 +39,17 @@ public class Move : MonoBehaviour
         originPosition = this.gameObject.transform.position;
     }
 
-    void FixedUpdate()
+    //움직임
+    void mario_move()
     {
         //게임 시작상태에서만 움직임 활성화
-        if(startGame)
+        if (startGame)
             rigid.AddForce(Vector2.right * 0.1f, ForceMode2D.Impulse);
+    }
 
+    //속력설정
+    void mario_speed()
+    {
         //최대속력 설정
         if (rigid.velocity.x > maxSpeed && !clear)
             rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
@@ -55,7 +60,11 @@ public class Move : MonoBehaviour
             rigid.velocity = new Vector2(maxSpeed / 2, rigid.velocity.y);
         else if (rigid.velocity.x < -maxSpeed && clear)
             rigid.velocity = new Vector2(-maxSpeed / 2, rigid.velocity.y);
+    }
 
+    //떨어지는 마리오
+    void mario_fall()
+    {
         //점프후 바닥에 착지시 점프애니메이션 종료
         if (rigid.velocity.y < 0)
         {
@@ -63,9 +72,13 @@ public class Move : MonoBehaviour
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector2.down, 1, LayerMask.GetMask("Platform"));
             if (rayHit.collider != null)
                 if (rayHit.distance < 0.5f)
-                    anim.SetBool("IsJump", false);       
+                    anim.SetBool("IsJump", false);
         }
+    }
 
+    //반대방향구현
+    void mario_inverse()
+    {
         //이동값(Vector변화량)에 따른 애니메이션 제어
         animSpeed = Mathf.Abs(rigid.velocity.x) / 10 + 0.5f;
         if (Mathf.Abs(rigid.velocity.x) > 0.3)
@@ -75,6 +88,17 @@ public class Move : MonoBehaviour
         }
         else
             anim.SetBool("IsMove", false);
+    }
+
+    void FixedUpdate()
+    {
+
+        mario_move();
+        mario_speed();
+        mario_fall();
+        mario_inverse();
+
+        
 
         //클리어시 국기봉에서 내려오는 모션
         if(clear&& transform.position.y >= -5.5)

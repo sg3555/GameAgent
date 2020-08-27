@@ -15,7 +15,7 @@ public class Drag : MonoBehaviour
 
     public bool deadlock;  //타일이 다른 객체에 겹치는것을 방지하기 위한 교착상태 bool
     public bool isInventory;    //오브젝트와 인벤토리 간 충돌을 감지
-    public Inventory inventory; //인벤토리
+    //public Inventory inventory; //인벤토리
 
     private void Awake()
     {
@@ -45,6 +45,7 @@ public class Drag : MonoBehaviour
             }
             else
             {
+                thissprite.color = new Color(1, 0, 0);
                 //자식객체의 각 타일들을 붉은 색으로 바꾸고
                 foreach (SpriteRenderer objec in tiles)
                     objec.color = new Color(1, 0, 0);
@@ -130,6 +131,7 @@ public class Drag : MonoBehaviour
         if (deadlock)
             transform.position = pastposition;
 
+        /*
         //인벤토리에 오브젝트를 넣었을 경우
         if (isInventory)
         {
@@ -139,6 +141,7 @@ public class Drag : MonoBehaviour
                 inventory.AddItem(item);
             }
         }
+        */
         rigid.bodyType = RigidbodyType2D.Static;
     }
 

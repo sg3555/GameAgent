@@ -21,10 +21,10 @@ public class Drager : MonoBehaviour
 
     Rigidbody2D rigid; //물리엔진
     Collider2D colid; //충돌자
-    bool deadlock, //겹침상태 확인
+    public bool deadlock, //겹침상태 확인
          startGame, //게임시작 확인
-        enterinven, //인벤토리상태 확인
-        isclick;    //클릭상태 확인
+        enterinven; //인벤토리상태 확인
+
 
     public float minimunsize = 0.5f; //인벤토리에 들어갔을 때 사이즈(디폴트값 : 0.5)
 
@@ -45,37 +45,26 @@ public class Drager : MonoBehaviour
         invenSize = new Vector2(minimunsize, minimunsize);
         deadlock = false;
         startGame = false;
-        isclick = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
-    {
-        //인벤토리 처리
-        if (collision.tag == "Inventory" && !isclick)
-        {
-            //인벤토리 객체의 자식으로 들어가기(화면이 움직일 때 같이 움직이기 위함)
-            transform.SetParent(Inventory.transform);
-            //객체크기 줄이기
-            transform.localScale = invenSize;
-            //인벤토리 안에 있는 상태
+    {      
+        if (collision.tag == "Inventory")
             enterinven = true;
+    }
 
-        }
-        else
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Inventory")
         {
-            //인벤토리 객체에서 MovableItem객체의 자식으로 돌아감
-            transform.SetParent(MovableItem.transform);
-            //객체크기 원상태
-            transform.localScale = originSize;
-            //인벤토리 밖에 있는 상태
             enterinven = false;
-        }
+        }    
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -111,7 +100,11 @@ public class Drager : MonoBehaviour
     {
         pastposition = this.gameObject.transform.position;
         rigid.bodyType = RigidbodyType2D.Dynamic;
-        isclick = true;
+
+        //인벤토리 객체에서 MovableItem객체의 자식으로 돌아감
+        transform.SetParent(MovableItem.transform);
+        //객체크기 원상태
+        transform.localScale = originSize;
     }
 
     //마우스를 드래그해서 타일을 옮기는 함수
@@ -121,6 +114,9 @@ public class Drager : MonoBehaviour
         Vector2 temp = Camera.main.ScreenToWorldPoint(mousePosition); //마우스 절대 좌표를 화면상 상대 좌표로 수정
         Vector2 objPosition = new Vector2(temp.x, temp.y); //
         transform.position = objPosition;
+        //레이어 설정
+        foreach (SpriteRenderer objec in tiles)
+            objec.sortingLayerName = "Inven 4";
     }
 
     //마우스를 드래그한 상태에서 놓은 순간
@@ -130,7 +126,26 @@ public class Drager : MonoBehaviour
         if (deadlock)
             transform.position = pastposition;
         rigid.bodyType = RigidbodyType2D.Kinematic;
-        isclick = false;
+
+        //레이어 설정
+        
+
+        //인벤토리 안에 있을 시
+        if (enterinven)
+        {
+            Debug.Log("감지");
+            //인벤토리 객체의 자식으로 들어가기(화면이 움직일 때 같이 움직이기 위함)
+            transform.SetParent(Inventory.transform);
+            //객체크기 줄이기
+            transform.localScale = invenSize;
+            //충돌효과 무시
+            rigid.bodyType = RigidbodyType2D.Kinematic;
+        }
+        else
+        {
+            foreach (SpriteRenderer objec in tiles)
+                objec.sortingLayerName = "Item out Inventory 3";
+        }
     }
 
 }

@@ -1072,6 +1072,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f066bdeaabffb9748905300b78b3c2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadlock: 0
+  startGame: 0
+  enterinven: 0
+  paststate: 0
   minimunsize: 0.5
 --- !u!50 &401656950
 Rigidbody2D:
@@ -1131,6 +1135,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1146,6 +1151,25 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3afeba5465fe29c4a840134448e3ade5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min_x: 0
+  max_x: 0
+  min_y: -2
+  max_y: -2
+  camSpeed: 1
+  characterObject: {fileID: 1879180674}
+  isStart: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1654,6 +1678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f066bdeaabffb9748905300b78b3c2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadlock: 0
+  startGame: 0
+  enterinven: 0
+  paststate: 0
   minimunsize: 0.7
 --- !u!61 &1132426787
 BoxCollider2D:
@@ -1906,7 +1934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1353673434}
   - component: {fileID: 1353673435}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: ladder
   m_Icon: {fileID: 0}
@@ -2041,7 +2069,7 @@ GameObject:
   - component: {fileID: 1532403089}
   - component: {fileID: 1532403091}
   - component: {fileID: 1532403090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ladder
   m_TagString: ladder
   m_Icon: {fileID: 0}

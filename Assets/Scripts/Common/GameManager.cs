@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Move Actor; //마리오
+    public rm_move Actor; //록맨
     public Drag[] MovableTile; //움직일 수 있는 아이템들
     public BgmController MainBGM, DeadBGM, Goal1, Goal2; //배경음 관리자
     public Button[] buttons = new Button[3]; //시작, 정지, 초기화 버튼
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     //캐릭터 행동개시
     public void startUpGame()
     {
-        Actor.StartMove();
+        //Actor.StartMove();
         foreach (Drag dr in MovableTile)
             dr.StartMove();
         MainBGM.SetVolume(1.0f);
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
     //캐릭터 행동 중단
     public void stopGame()
     {
-        Actor.ResetGame();
+        //Actor.ResetGame();
         foreach (Drag dr in MovableTile)
             dr.StopMove();
         MainBGM.SetVolume(0.7f);
@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
     //맵 초기화
     public void resetGame()
     {
-        Actor.ResetGame();
+        //Actor.ResetGame();
         foreach (Drag dr in MovableTile)
         {
             //ItemProperty item = dr.GetComponent<ItemProperty>();

@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - ladder
   - Sign
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - player
+  - ground
   - 
   - 
   - 
@@ -45,4 +46,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background 0
+    uniqueID: 4102746243
+    locked: 0
+  - name: Platform 1
+    uniqueID: 4108313593
+    locked: 0
+  - name: Character 2
+    uniqueID: 1542083297
+    locked: 0
+  - name: Item out Inventory 3
+    uniqueID: 1967732639
+    locked: 0
+  - name: Inven 4
+    uniqueID: 836269921
     locked: 0

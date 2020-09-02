@@ -9,7 +9,15 @@ public class rm_Signcheck : MonoBehaviour
     public Animator anim;
     public float jumpPower;
     Rigidbody2D rigid;
+    [SerializeField]
+    float checkRadius;
+    [SerializeField]
+    Transform pos;
+    [SerializeField]
+    LayerMask islayer;
+    public rm_move rm;
     // Start is called before the first frame update
+    bool isGround;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -26,11 +34,16 @@ public class rm_Signcheck : MonoBehaviour
     {
         if (collision.tag == "Sign")
         {
+         
             if (collision.name.Contains("Sign_Up"))
             {
-                anim.SetTrigger("jump");
-                rigid.velocity = Vector2.up * jumpPower;
+                rm.rockman_jump();
             }
+     
+
+
+
+
             //if (collision.name.Contains("Sign_Down"))
             //{
 

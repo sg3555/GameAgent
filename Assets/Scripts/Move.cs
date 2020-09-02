@@ -166,7 +166,7 @@ public class Move : MonoBehaviour
             
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)//대충 방향키
     {
         //점프
         if(collision.tag.Contains("Jumper") && !anim.GetBool("IsJump") && startGame)

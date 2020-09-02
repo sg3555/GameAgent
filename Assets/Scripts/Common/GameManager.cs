@@ -131,5 +131,18 @@ public class GameManager : MonoBehaviour
         ExplainUI.SetActive(isopen);
     }
 
-    //최종수정일 2020.8.12
+    public void START()
+    {
+
+    }
+
+    public void STOP()
+    {
+
+    }
+
+    public void RESET()
+    {
+
+    }
 }

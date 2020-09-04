@@ -1,0 +1,6175 @@
+fileFormatVersion: 2
+guid: 527fb62d7625b3b48bcbc4ffba062795
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5621073169671140129
+    second: Helpful NPCs_0
+  - first:
+      213: -1327658796094978753
+    second: Helpful NPCs_1
+  - first:
+      213: -1580552840742465124
+    second: Helpful NPCs_2
+  - first:
+      213: -2520374466911945908
+    second: Helpful NPCs_3
+  - first:
+      213: 1880763163283406775
+    second: Helpful NPCs_4
+  - first:
+      213: -8741706980094169181
+    second: Helpful NPCs_5
+  - first:
+      213: -143768209104814858
+    second: Helpful NPCs_6
+  - first:
+      213: -4446627777966353125
+    second: Helpful NPCs_7
+  - first:
+      213: 2124640395864777108
+    second: Helpful NPCs_8
+  - first:
+      213: 1778079683804355865
+    second: Helpful NPCs_9
+  - first:
+      213: -4464409784609216446
+    second: Helpful NPCs_10
+  - first:
+      213: 4923374427687094179
+    second: Helpful NPCs_11
+  - first:
+      213: 3504060851263299551
+    second: Helpful NPCs_12
+  - first:
+      213: 329590100261223164
+    second: Helpful NPCs_13
+  - first:
+      213: -6615858330679881100
+    second: Helpful NPCs_14
+  - first:
+      213: 5424165235700903755
+    second: Helpful NPCs_15
+  - first:
+      213: -3110428213154085775
+    second: Helpful NPCs_16
+  - first:
+      213: 2064804294468013267
+    second: Helpful NPCs_17
+  - first:
+      213: 8167135812000643567
+    second: Helpful NPCs_18
+  - first:
+      213: -5990950690564342800
+    second: Helpful NPCs_19
+  - first:
+      213: 8552856307654622161
+    second: Helpful NPCs_20
+  - first:
+      213: -6646248283950925030
+    second: Helpful NPCs_21
+  - first:
+      213: -421234273053355612
+    second: Helpful NPCs_22
+  - first:
+      213: 5572920176202631885
+    second: Helpful NPCs_23
+  - first:
+      213: -5649648910618899880
+    second: Helpful NPCs_24
+  - first:
+      213: 8740949133943782563
+    second: Helpful NPCs_25
+  - first:
+      213: -1609142027989066939
+    second: Helpful NPCs_26
+  - first:
+      213: 9118837275068198570
+    second: Helpful NPCs_27
+  - first:
+      213: 9047365329510170517
+    second: Helpful NPCs_28
+  - first:
+      213: -4186376224678357306
+    second: Helpful NPCs_29
+  - first:
+      213: 8230448445968147275
+    second: Helpful NPCs_30
+  - first:
+      213: -3752710586867548274
+    second: Helpful NPCs_31
+  - first:
+      213: 6428409591761125109
+    second: Helpful NPCs_32
+  - first:
+      213: -784517799286836989
+    second: Helpful NPCs_33
+  - first:
+      213: 6968682955666691287
+    second: Helpful NPCs_34
+  - first:
+      213: 3116088512031243973
+    second: Helpful NPCs_35
+  - first:
+      213: -6732431980863958768
+    second: Helpful NPCs_36
+  - first:
+      213: -6991410225436376407
+    second: Helpful NPCs_37
+  - first:
+      213: -7750764310386828147
+    second: Helpful NPCs_38
+  - first:
+      213: -128223002482026614
+    second: Helpful NPCs_39
+  - first:
+      213: 7669469566595195557
+    second: Helpful NPCs_40
+  - first:
+      213: 6342878878339292035
+    second: Helpful NPCs_41
+  - first:
+      213: 821771135742539645
+    second: Helpful NPCs_42
+  - first:
+      213: 8687338755228785333
+    second: Helpful NPCs_43
+  - first:
+      213: -3857570625983916909
+    second: Helpful NPCs_44
+  - first:
+      213: 5935448669011586976
+    second: Helpful NPCs_45
+  - first:
+      213: 4796678200547235292
+    second: Helpful NPCs_46
+  - first:
+      213: -3246978961514951316
+    second: Helpful NPCs_47
+  - first:
+      213: -633432865599514955
+    second: Helpful NPCs_48
+  - first:
+      213: -4760035476088734531
+    second: Helpful NPCs_49
+  - first:
+      213: 708208606884158574
+    second: Helpful NPCs_50
+  - first:
+      213: -5447410123569572303
+    second: Helpful NPCs_51
+  - first:
+      213: 3451481058262821084
+    second: Helpful NPCs_52
+  - first:
+      213: 6694242860690485446
+    second: Helpful NPCs_53
+  - first:
+      213: -7971744675620965018
+    second: Helpful NPCs_54
+  - first:
+      213: 1296710477452581742
+    second: Helpful NPCs_55
+  - first:
+      213: -6690192791912369298
+    second: Helpful NPCs_56
+  - first:
+      213: 6211201735614647518
+    second: Helpful NPCs_57
+  - first:
+      213: 6416763609483256360
+    second: Helpful NPCs_58
+  - first:
+      213: 3660508007529386011
+    second: Helpful NPCs_59
+  - first:
+      213: -8157981769698200596
+    second: Helpful NPCs_60
+  - first:
+      213: -6923266562135918000
+    second: Helpful NPCs_61
+  - first:
+      213: 5317884254506979460
+    second: Helpful NPCs_62
+  - first:
+      213: 9177879899243823627
+    second: Helpful NPCs_63
+  - first:
+      213: 1978092726661711106
+    second: Helpful NPCs_64
+  - first:
+      213: -221124749862126607
+    second: Helpful NPCs_65
+  - first:
+      213: -1753579460186782151
+    second: Helpful NPCs_66
+  - first:
+      213: -6982997325821096680
+    second: Helpful NPCs_67
+  - first:
+      213: 5664989410255290209
+    second: Helpful NPCs_68
+  - first:
+      213: -8583736197514160063
+    second: Helpful NPCs_69
+  - first:
+      213: 2278733168178468556
+    second: Helpful NPCs_70
+  - first:
+      213: 2467938330157135971
+    second: Helpful NPCs_71
+  - first:
+      213: -6125344266974786693
+    second: Helpful NPCs_72
+  - first:
+      213: 3304616228567068560
+    second: Helpful NPCs_73
+  - first:
+      213: 8316382022848384916
+    second: Helpful NPCs_74
+  - first:
+      213: 3364485849551721506
+    second: Helpful NPCs_75
+  - first:
+      213: -5798939932593663276
+    second: Helpful NPCs_76
+  - first:
+      213: 531424784267847651
+    second: Helpful NPCs_77
+  - first:
+      213: -6950309841473009719
+    second: Helpful NPCs_78
+  - first:
+      213: -2336188199130991368
+    second: Helpful NPCs_79
+  - first:
+      213: -6289650563099388284
+    second: Helpful NPCs_80
+  - first:
+      213: 8165853563543282363
+    second: Helpful NPCs_81
+  - first:
+      213: -1387261989531970663
+    second: Helpful NPCs_82
+  - first:
+      213: 3812043364515646511
+    second: Helpful NPCs_83
+  - first:
+      213: 136200793668474374
+    second: Helpful NPCs_84
+  - first:
+      213: -6658304861015762363
+    second: Helpful NPCs_85
+  - first:
+      213: -7639267568709233793
+    second: Helpful NPCs_86
+  - first:
+      213: -2432935815408898663
+    second: Helpful NPCs_87
+  - first:
+      213: 7260717136991006549
+    second: Helpful NPCs_88
+  - first:
+      213: -3740723597420206098
+    second: Helpful NPCs_89
+  - first:
+      213: -7642970781951955156
+    second: Helpful NPCs_90
+  - first:
+      213: 5951136802391308001
+    second: Helpful NPCs_91
+  - first:
+      213: -5594133297619986980
+    second: Helpful NPCs_92
+  - first:
+      213: -2013375407887013799
+    second: Helpful NPCs_93
+  - first:
+      213: 4485181658060199476
+    second: Helpful NPCs_94
+  - first:
+      213: 1982159621895319982
+    second: Helpful NPCs_95
+  - first:
+      213: -8620414214974155320
+    second: Helpful NPCs_96
+  - first:
+      213: -7049541464929958929
+    second: Helpful NPCs_97
+  - first:
+      213: 4365865208153374164
+    second: Helpful NPCs_98
+  - first:
+      213: 5925559456685398684
+    second: Helpful NPCs_99
+  - first:
+      213: 7747220514290613961
+    second: Helpful NPCs_100
+  - first:
+      213: 3795290564307634682
+    second: Helpful NPCs_101
+  - first:
+      213: -797818129640914682
+    second: Helpful NPCs_102
+  - first:
+      213: 7151461209469154150
+    second: Helpful NPCs_103
+  - first:
+      213: -7527833036081093393
+    second: Helpful NPCs_104
+  - first:
+      213: 6053645111179258184
+    second: Helpful NPCs_105
+  - first:
+      213: 4464831541216814957
+    second: Helpful NPCs_106
+  - first:
+      213: -8888033484558499220
+    second: Helpful NPCs_107
+  - first:
+      213: 2122277936380614835
+    second: Helpful NPCs_108
+  - first:
+      213: 8812615442089689776
+    second: Helpful NPCs_109
+  - first:
+      213: -6065535894659942563
+    second: Helpful NPCs_110
+  - first:
+      213: 7126863044074058597
+    second: Helpful NPCs_111
+  - first:
+      213: -1025925831365379332
+    second: Helpful NPCs_112
+  - first:
+      213: 3247167363496343890
+    second: Helpful NPCs_113
+  - first:
+      213: 4461923634815988158
+    second: Helpful NPCs_114
+  - first:
+      213: 4323550763321170001
+    second: Helpful NPCs_115
+  - first:
+      213: 6357624185180440882
+    second: Helpful NPCs_116
+  - first:
+      213: 7898197610989430863
+    second: Helpful NPCs_117
+  - first:
+      213: 1995306147612116854
+    second: Helpful NPCs_118
+  - first:
+      213: -8219926039127873078
+    second: Helpful NPCs_119
+  - first:
+      213: -1457005550567337355
+    second: Helpful NPCs_120
+  - first:
+      213: 529125592651883667
+    second: Helpful NPCs_121
+  - first:
+      213: 5643781977059469561
+    second: Helpful NPCs_122
+  - first:
+      213: 2446063906814420914
+    second: Helpful NPCs_123
+  - first:
+      213: 7190478967129531131
+    second: Helpful NPCs_124
+  - first:
+      213: 123570969078186979
+    second: Helpful NPCs_125
+  - first:
+      213: -3477660786167630843
+    second: Helpful NPCs_126
+  - first:
+      213: -7900095758206798724
+    second: Helpful NPCs_127
+  - first:
+      213: -8568175989006709040
+    second: Helpful NPCs_128
+  - first:
+      213: -6893248975526055374
+    second: Helpful NPCs_129
+  - first:
+      213: -5205625390131036908
+    second: Helpful NPCs_130
+  - first:
+      213: -589921000086456181
+    second: Helpful NPCs_131
+  - first:
+      213: -7954803435967487331
+    second: Helpful NPCs_132
+  - first:
+      213: 7679665974427105804
+    second: Helpful NPCs_133
+  - first:
+      213: 3149681452462870686
+    second: Helpful NPCs_134
+  - first:
+      213: 712338909459076144
+    second: Helpful NPCs_135
+  - first:
+      213: -3104724256582618138
+    second: Helpful NPCs_136
+  - first:
+      213: 559472576397167071
+    second: Helpful NPCs_137
+  - first:
+      213: 3930005278599038639
+    second: Helpful NPCs_138
+  - first:
+      213: -9212424974144391011
+    second: Helpful NPCs_139
+  - first:
+      213: -2785315237271086356
+    second: Helpful NPCs_140
+  - first:
+      213: -3948300159126503233
+    second: Helpful NPCs_141
+  - first:
+      213: -6207237999351333574
+    second: Helpful NPCs_142
+  - first:
+      213: 5050161194891112956
+    second: Helpful NPCs_143
+  - first:
+      213: -662199529637412782
+    second: Helpful NPCs_144
+  - first:
+      213: -385846122435558524
+    second: Helpful NPCs_145
+  - first:
+      213: -5453409183176418337
+    second: Helpful NPCs_146
+  - first:
+      213: -5775207010677962991
+    second: Helpful NPCs_147
+  - first:
+      213: 1841903845995444273
+    second: Helpful NPCs_148
+  - first:
+      213: -8870923663710782145
+    second: Helpful NPCs_149
+  - first:
+      213: 9118915291490985962
+    second: Helpful NPCs_150
+  - first:
+      213: 1792737440449696214
+    second: Helpful NPCs_151
+  - first:
+      213: 1309166475860701850
+    second: Helpful NPCs_152
+  - first:
+      213: -2330167986214741116
+    second: Helpful NPCs_153
+  - first:
+      213: 4187731168376004858
+    second: Helpful NPCs_154
+  - first:
+      213: 6764436585745969111
+    second: Helpful NPCs_155
+  - first:
+      213: 9074590748786973802
+    second: Helpful NPCs_156
+  - first:
+      213: -2810997769602712840
+    second: Helpful NPCs_157
+  - first:
+      213: 93198323215603015
+    second: Helpful NPCs_158
+  - first:
+      213: 7389712359420389214
+    second: Helpful NPCs_159
+  - first:
+      213: -1759072012262627800
+    second: Helpful NPCs_160
+  - first:
+      213: -1596863119595365848
+    second: Helpful NPCs_161
+  - first:
+      213: 8943103768894429488
+    second: Helpful NPCs_162
+  - first:
+      213: -5089493348309224970
+    second: Helpful NPCs_163
+  - first:
+      213: -8708176438741393309
+    second: Helpful NPCs_164
+  - first:
+      213: 4875836159628921935
+    second: Helpful NPCs_165
+  - first:
+      213: 7912141042544041880
+    second: Helpful NPCs_166
+  - first:
+      213: -967390433300535434
+    second: Helpful NPCs_167
+  - first:
+      213: -7499953872187683065
+    second: Helpful NPCs_168
+  - first:
+      213: 7972878266188188960
+    second: Helpful NPCs_169
+  - first:
+      213: 7542122257077206940
+    second: Helpful NPCs_170
+  - first:
+      213: -7419638617641931640
+    second: Helpful NPCs_171
+  - first:
+      213: 1136298969447841299
+    second: Helpful NPCs_172
+  - first:
+      213: 5186876627840487917
+    second: Helpful NPCs_173
+  - first:
+      213: -8585846669568040411
+    second: Helpful NPCs_174
+  - first:
+      213: -1787534285101475819
+    second: Helpful NPCs_175
+  - first:
+      213: -6084860256772354340
+    second: Helpful NPCs_176
+  - first:
+      213: 5605238085186971073
+    second: Helpful NPCs_177
+  - first:
+      213: -3926015100637480554
+    second: Helpful NPCs_178
+  - first:
+      213: 5307716229794730597
+    second: Helpful NPCs_179
+  - first:
+      213: -8513884714266392956
+    second: Helpful NPCs_180
+  - first:
+      213: 3019423348860235934
+    second: Helpful NPCs_181
+  - first:
+      213: 2804110622272049124
+    second: Helpful NPCs_182
+  - first:
+      213: 319544422703786580
+    second: Helpful NPCs_183
+  - first:
+      213: -7785584978694731738
+    second: Helpful NPCs_184
+  - first:
+      213: 7199572662313933964
+    second: Helpful NPCs_185
+  - first:
+      213: -6632107711931230539
+    second: Helpful NPCs_186
+  - first:
+      213: 8766506334549224241
+    second: Helpful NPCs_187
+  - first:
+      213: 7287185488320082140
+    second: Helpful NPCs_188
+  - first:
+      213: -4446234609843645088
+    second: Helpful NPCs_189
+  - first:
+      213: 2610954715279768354
+    second: Helpful NPCs_190
+  - first:
+      213: -2402084970855229717
+    second: Helpful NPCs_191
+  - first:
+      213: -3692396529792724238
+    second: Helpful NPCs_192
+  - first:
+      213: 2470689272332553869
+    second: Helpful NPCs_193
+  - first:
+      213: 1590343323458536174
+    second: Helpful NPCs_194
+  - first:
+      213: 1367666500763548070
+    second: Helpful NPCs_195
+  - first:
+      213: -4301518587239030486
+    second: Helpful NPCs_196
+  - first:
+      213: 6394427089069129139
+    second: Helpful NPCs_197
+  - first:
+      213: -408996954291799377
+    second: Helpful NPCs_198
+  - first:
+      213: 8415759964430400203
+    second: Helpful NPCs_199
+  - first:
+      213: -6074675411610720358
+    second: Helpful NPCs_200
+  - first:
+      213: 8362302826938633057
+    second: Helpful NPCs_201
+  - first:
+      213: 3798239483444455667
+    second: Helpful NPCs_202
+  - first:
+      213: 7703972348542411747
+    second: Helpful NPCs_203
+  - first:
+      213: 6844235288280905167
+    second: Helpful NPCs_204
+  - first:
+      213: -4559766953341001561
+    second: Helpful NPCs_205
+  - first:
+      213: -7750391314858909843
+    second: Helpful NPCs_206
+  - first:
+      213: 8335765697064578524
+    second: Helpful NPCs_207
+  - first:
+      213: 5911053469446781449
+    second: Helpful NPCs_208
+  - first:
+      213: 3722422808136362581
+    second: Helpful NPCs_209
+  - first:
+      213: 3050417257567457257
+    second: Helpful NPCs_210
+  - first:
+      213: -8594663275586135819
+    second: Helpful NPCs_211
+  - first:
+      213: 185715411716124353
+    second: Helpful NPCs_212
+  - first:
+      213: 6886519446040131044
+    second: Helpful NPCs_213
+  - first:
+      213: 4123151284584970949
+    second: Helpful NPCs_214
+  - first:
+      213: -8149020366196011183
+    second: Helpful NPCs_215
+  - first:
+      213: -8916820628074852141
+    second: Helpful NPCs_216
+  - first:
+      213: 4473018927085222057
+    second: Helpful NPCs_217
+  - first:
+      213: -8705468727534119927
+    second: Helpful NPCs_218
+  - first:
+      213: 6265913053981382269
+    second: Helpful NPCs_219
+  - first:
+      213: 8658978637863731249
+    second: Helpful NPCs_220
+  - first:
+      213: -3026049987952258327
+    second: Helpful NPCs_221
+  - first:
+      213: -3793017916382365691
+    second: Helpful NPCs_222
+  - first:
+      213: -4255343767112105902
+    second: Helpful NPCs_223
+  - first:
+      213: -7960776917808808318
+    second: Helpful NPCs_224
+  - first:
+      213: -3825966721526643608
+    second: Helpful NPCs_225
+  - first:
+      213: -5271545305281135859
+    second: Helpful NPCs_226
+  - first:
+      213: 5043769998250073056
+    second: Helpful NPCs_227
+  - first:
+      213: 2066372800130374241
+    second: Helpful NPCs_228
+  - first:
+      213: 6455410493114456663
+    second: Helpful NPCs_229
+  - first:
+      213: -6641679760605322909
+    second: Helpful NPCs_230
+  - first:
+      213: 2318016864560875701
+    second: Helpful NPCs_231
+  - first:
+      213: -2721885862424246157
+    second: Helpful NPCs_232
+  - first:
+      213: -1690388230405085613
+    second: Helpful NPCs_233
+  - first:
+      213: 8113519453050001448
+    second: Helpful NPCs_234
+  - first:
+      213: -5395129921569311560
+    second: Helpful NPCs_235
+  - first:
+      213: -4922725200469885750
+    second: Helpful NPCs_236
+  - first:
+      213: 6193066975015599904
+    second: Helpful NPCs_237
+  - first:
+      213: -9081809148971226883
+    second: Helpful NPCs_238
+  - first:
+      213: -3834976011939403285
+    second: Helpful NPCs_239
+  - first:
+      213: 148611027529598570
+    second: Helpful NPCs_240
+  - first:
+      213: 6851760852288755950
+    second: Helpful NPCs_241
+  - first:
+      213: -4795295430616453085
+    second: Helpful NPCs_242
+  - first:
+      213: -3771230600827872808
+    second: Helpful NPCs_243
+  - first:
+      213: -1510562134865472645
+    second: Helpful NPCs_244
+  - first:
+      213: -2800183231767621220
+    second: Helpful NPCs_245
+  - first:
+      213: -6750717206379172526
+    second: Helpful NPCs_246
+  - first:
+      213: 7134566403681543308
+    second: Helpful NPCs_247
+  - first:
+      213: -2906726453143571580
+    second: Helpful NPCs_248
+  - first:
+      213: 5545858959568441759
+    second: Helpful NPCs_249
+  - first:
+      213: 3352921932340073689
+    second: Helpful NPCs_250
+  - first:
+      213: 539046973338978147
+    second: Helpful NPCs_251
+  - first:
+      213: 1075379094576300053
+    second: Helpful NPCs_252
+  - first:
+      213: -7559346794396252985
+    second: Helpful NPCs_253
+  - first:
+      213: -3938623994063379444
+    second: Helpful NPCs_254
+  - first:
+      213: 7093733131884158301
+    second: Helpful NPCs_255
+  - first:
+      213: -2935170656667521480
+    second: Helpful NPCs_256
+  - first:
+      213: 735783103688241061
+    second: Helpful NPCs_257
+  - first:
+      213: -8912712759342149586
+    second: Helpful NPCs_258
+  - first:
+      213: -5058799790133016915
+    second: Helpful NPCs_259
+  - first:
+      213: -6001052918513032015
+    second: Helpful NPCs_260
+  - first:
+      213: -190552829373299487
+    second: Helpful NPCs_261
+  - first:
+      213: 271440079622719095
+    second: Helpful NPCs_262
+  - first:
+      213: 6822218119788955624
+    second: Helpful NPCs_263
+  - first:
+      213: 7222782469051144172
+    second: Helpful NPCs_264
+  - first:
+      213: 3489520892579086243
+    second: Helpful NPCs_265
+  - first:
+      213: -4423637384125680956
+    second: Helpful NPCs_266
+  - first:
+      213: -6297769471052881040
+    second: Helpful NPCs_267
+  - first:
+      213: 880590174411088028
+    second: Helpful NPCs_268
+  - first:
+      213: 1691061817797872380
+    second: Helpful NPCs_269
+  - first:
+      213: -579433163327418416
+    second: Helpful NPCs_270
+  - first:
+      213: -8331293987807910163
+    second: Helpful NPCs_271
+  - first:
+      213: 3085513899232514736
+    second: Helpful NPCs_272
+  - first:
+      213: 4079668808136200723
+    second: Helpful NPCs_273
+  - first:
+      213: 131946277389289827
+    second: Helpful NPCs_274
+  - first:
+      213: -3707810878297209082
+    second: Helpful NPCs_275
+  - first:
+      213: 5424779364443197732
+    second: Helpful NPCs_276
+  - first:
+      213: 8764942523226573746
+    second: Helpful NPCs_277
+  - first:
+      213: 2447879286601698153
+    second: Helpful NPCs_278
+  - first:
+      213: 860690518327486947
+    second: Helpful NPCs_279
+  - first:
+      213: -1904155825879920716
+    second: Helpful NPCs_280
+  - first:
+      213: -5273319166095291754
+    second: Helpful NPCs_281
+  - first:
+      213: 7180214786900124241
+    second: Helpful NPCs_282
+  - first:
+      213: 1142675930320337427
+    second: Helpful NPCs_283
+  - first:
+      213: 5642949822470478409
+    second: Helpful NPCs_284
+  - first:
+      213: -4412618541953826853
+    second: Helpful NPCs_285
+  - first:
+      213: 2885902510909208666
+    second: Helpful NPCs_286
+  - first:
+      213: -8546510868676090193
+    second: Helpful NPCs_287
+  - first:
+      213: 2650453776641956245
+    second: Helpful NPCs_288
+  - first:
+      213: 4478430885070148124
+    second: Helpful NPCs_289
+  - first:
+      213: 2914028018350263419
+    second: Helpful NPCs_290
+  - first:
+      213: 2377771937075123262
+    second: Helpful NPCs_291
+  - first:
+      213: 6598071104458127556
+    second: Helpful NPCs_292
+  - first:
+      213: -3109420282503967443
+    second: Helpful NPCs_293
+  - first:
+      213: -6772496376673032103
+    second: Helpful NPCs_294
+  - first:
+      213: 1911208586047699614
+    second: Helpful NPCs_295
+  - first:
+      213: -5801890937796848156
+    second: Helpful NPCs_296
+  - first:
+      213: 478089888481330885
+    second: Helpful NPCs_297
+  - first:
+      213: -3674141587369886929
+    second: Helpful NPCs_298
+  - first:
+      213: -2675188524935203564
+    second: Helpful NPCs_299
+  - first:
+      213: -2911720890637909328
+    second: Helpful NPCs_300
+  - first:
+      213: -8452288504218864188
+    second: Helpful NPCs_301
+  - first:
+      213: -2052919196350511112
+    second: Helpful NPCs_302
+  - first:
+      213: 5457166761320815030
+    second: Helpful NPCs_303
+  - first:
+      213: 386282486941274981
+    second: Helpful NPCs_304
+  - first:
+      213: -8230866993098976969
+    second: Helpful NPCs_305
+  - first:
+      213: 5784395083394060024
+    second: Helpful NPCs_306
+  - first:
+      213: 8121651835215771062
+    second: Helpful NPCs_307
+  - first:
+      213: 4084799598863894584
+    second: Helpful NPCs_308
+  - first:
+      213: -88505579884875431
+    second: Helpful NPCs_309
+  - first:
+      213: -8703152674661072027
+    second: Helpful NPCs_310
+  - first:
+      213: 599697859008673945
+    second: Helpful NPCs_311
+  - first:
+      213: -897602589214091380
+    second: Helpful NPCs_312
+  - first:
+      213: -8020300237905594910
+    second: Helpful NPCs_313
+  - first:
+      213: 7405105487008461271
+    second: Helpful NPCs_314
+  - first:
+      213: -6175820641441767622
+    second: Helpful NPCs_315
+  - first:
+      213: -7438295698735692541
+    second: Helpful NPCs_316
+  - first:
+      213: 8386157415194853787
+    second: Helpful NPCs_317
+  - first:
+      213: -1744835772989366626
+    second: Helpful NPCs_318
+  - first:
+      213: 7281597982927116235
+    second: Helpful NPCs_319
+  - first:
+      213: 1001658637096204901
+    second: Helpful NPCs_320
+  - first:
+      213: -4854187554041217005
+    second: Helpful NPCs_321
+  - first:
+      213: -5887261001349132430
+    second: Helpful NPCs_322
+  - first:
+      213: -3469980899342456843
+    second: Helpful NPCs_323
+  - first:
+      213: 6497517520225634471
+    second: Helpful NPCs_324
+  - first:
+      213: 7337640670705405303
+    second: Helpful NPCs_325
+  - first:
+      213: -1033629671715881272
+    second: Helpful NPCs_326
+  - first:
+      213: 2440037881361689138
+    second: Helpful NPCs_327
+  - first:
+      213: 7195866298121960474
+    second: Helpful NPCs_328
+  - first:
+      213: -5666934166146864056
+    second: Helpful NPCs_329
+  - first:
+      213: 2014451838670985615
+    second: Helpful NPCs_330
+  - first:
+      213: 8705145445515385021
+    second: Helpful NPCs_331
+  - first:
+      213: 2407891441079065880
+    second: Helpful NPCs_332
+  - first:
+      213: 3672840573455831622
+    second: Helpful NPCs_333
+  - first:
+      213: -9178863695540920614
+    second: Helpful NPCs_334
+  - first:
+      213: -6415092441732218110
+    second: Helpful NPCs_335
+  - first:
+      213: -1566192119519687796
+    second: Helpful NPCs_336
+  - first:
+      213: -2934151588724328602
+    second: Helpful NPCs_337
+  - first:
+      213: 7446370015163755489
+    second: Helpful NPCs_338
+  - first:
+      213: 5279865424407600597
+    second: Helpful NPCs_339
+  - first:
+      213: 7460857370103241491
+    second: Helpful NPCs_340
+  - first:
+      213: 7480556900060955886
+    second: Helpful NPCs_341
+  - first:
+      213: -2026146317513228640
+    second: Helpful NPCs_342
+  - first:
+      213: 2283443026619119321
+    second: Helpful NPCs_343
+  - first:
+      213: -6803239195345025375
+    second: Helpful NPCs_344
+  - first:
+      213: 5321756337039313108
+    second: Helpful NPCs_345
+  - first:
+      213: 6360853061631361498
+    second: Helpful NPCs_346
+  - first:
+      213: 3290811744103010291
+    second: Helpful NPCs_347
+  - first:
+      213: 1325264746590363533
+    second: Helpful NPCs_348
+  - first:
+      213: -7461806862007888012
+    second: Helpful NPCs_349
+  - first:
+      213: -5109286621329123639
+    second: Helpful NPCs_350
+  - first:
+      213: -2611309108530149907
+    second: Helpful NPCs_351
+  - first:
+      213: 1840164648309501431
+    second: Helpful NPCs_352
+  - first:
+      213: 2075843720872174508
+    second: Helpful NPCs_353
+  - first:
+      213: -2454430554447740874
+    second: Helpful NPCs_354
+  - first:
+      213: -4224531036885642998
+    second: Helpful NPCs_355
+  - first:
+      213: -6695655558430917612
+    second: Helpful NPCs_356
+  - first:
+      213: -4321628148421939023
+    second: Helpful NPCs_357
+  - first:
+      213: 2491687842160166357
+    second: Helpful NPCs_358
+  - first:
+      213: -6290343487280249637
+    second: Helpful NPCs_359
+  - first:
+      213: 6565739018434448127
+    second: Helpful NPCs_360
+  - first:
+      213: -7127467421050414896
+    second: Helpful NPCs_361
+  - first:
+      213: -7137636346589376262
+    second: Helpful NPCs_362
+  - first:
+      213: 8928575884485479711
+    second: Helpful NPCs_363
+  - first:
+      213: -3781511579150611239
+    second: Helpful NPCs_364
+  - first:
+      213: 8851626863975221140
+    second: Helpful NPCs_365
+  - first:
+      213: -586900782501789319
+    second: Helpful NPCs_366
+  - first:
+      213: 1727517791457924141
+    second: Helpful NPCs_367
+  - first:
+      213: 4703289541226373791
+    second: Helpful NPCs_368
+  - first:
+      213: -4071541485350797102
+    second: Helpful NPCs_369
+  - first:
+      213: 9131480050319633566
+    second: Helpful NPCs_370
+  - first:
+      213: 5331970643742688002
+    second: Helpful NPCs_371
+  - first:
+      213: 7556147874242064953
+    second: Helpful NPCs_372
+  - first:
+      213: 1820727297567738969
+    second: Helpful NPCs_373
+  - first:
+      213: 1533378578116609820
+    second: Helpful NPCs_374
+  - first:
+      213: 5180226572985737005
+    second: Helpful NPCs_375
+  - first:
+      213: 4775678322284917331
+    second: Helpful NPCs_376
+  - first:
+      213: -7092664838960678889
+    second: Helpful NPCs_377
+  - first:
+      213: -5580128089970341948
+    second: Helpful NPCs_378
+  - first:
+      213: 1207731127521220660
+    second: Helpful NPCs_379
+  - first:
+      213: -8107651584661203316
+    second: Helpful NPCs_61
+  - first:
+      213: -6100878906208016840
+    second: Helpful NPCs_62
+  - first:
+      213: 5821325565405049977
+    second: Helpful NPCs_63
+  - first:
+      213: 7889067360219652887
+    second: Helpful NPCs_64
+  - first:
+      213: -4078474562471103801
+    second: Helpful NPCs_25
+  - first:
+      213: 1995816455371723932
+    second: Helpful NPCs_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Helpful NPCs_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 975
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcc541ebbfedf1b0800000000000000
+      internalID: -5621073169671140129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 975
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3506d3fb55339de0800000000000000
+      internalID: -1327658796094978753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 975
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c919fc2c09fb01ae0800000000000000
+      internalID: -1580552840742465124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 975
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bbfbe96c4d50dd0800000000000000
+      internalID: -2520374466911945908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 975
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfb52ed120d91a10800000000000000
+      internalID: 1880763163283406775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_5
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 975
+        width: 38
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af2fe031d73fa680800000000000000
+      internalID: -8741706980094169181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_6
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 974
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc3056539b310ef0800000000000000
+      internalID: -143768209104814858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_7
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 975
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b155eed58976a42c0800000000000000
+      internalID: -4446627777966353125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_8
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 980
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49127f6ee2d3c7d10800000000000000
+      internalID: 2124640395864777108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_9
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 975
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d5f7f3d020da810800000000000000
+      internalID: 1778079683804355865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 904
+        width: 20
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248e69054fa3b02c0800000000000000
+      internalID: -4464409784609216446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_11
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 904
+        width: 19
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a70882f4f6535440800000000000000
+      internalID: 4923374427687094179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_12
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 904
+        width: 19
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdfd6e667cce0a030800000000000000
+      internalID: 3504060851263299551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 904
+        width: 18
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa3e8f2370f29400800000000000000
+      internalID: 329590100261223164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_14
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 904
+        width: 18
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472548b86efbf24a0800000000000000
+      internalID: -6615858330679881100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_18
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 908
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe97baaefbe775170800000000000000
+      internalID: 8167135812000643567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_19
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 909
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbf70e961edbdca0800000000000000
+      internalID: -5990950690564342800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_20
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 908
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db76b03f79d1b670800000000000000
+      internalID: 8552856307654622161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_23
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 909
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca4a28af5df65d40800000000000000
+      internalID: 5572920176202631885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_24
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 909
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a43e8bf3a6891b0800000000000000
+      internalID: -5649648910618899880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_46
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 838
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd55a75d869319240800000000000000
+      internalID: 4796678200547235292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_47
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 838
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d0cb576d960f2d0800000000000000
+      internalID: -3246978961514951316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_48
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 838
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b612e03a289537f0800000000000000
+      internalID: -633432865599514955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_49
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 838
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc397944f4f0fdb0800000000000000
+      internalID: -4760035476088734531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_50
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 838
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c5438c9ff04d900800000000000000
+      internalID: 708208606884158574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_51
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 838
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136d4ceaa59e664b0800000000000000
+      internalID: -5447410123569572303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_52
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 838
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8aeba5cbf16ef20800000000000000
+      internalID: 3451481058262821084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_53
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 838
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0b6a70a6ab6ec50800000000000000
+      internalID: 6694242860690485446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_54
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 838
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6653081247cae5190800000000000000
+      internalID: -7971744675620965018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_55
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 787
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b96191f47def110800000000000000
+      internalID: 1296710477452581742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_56
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 787
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e633f271a19a723a0800000000000000
+      internalID: -6690192791912369298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_57
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 787
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcc997f11f923650800000000000000
+      internalID: 6211201735614647518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_58
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 787
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82227ee518cec0950800000000000000
+      internalID: 6416763609483256360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_59
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 787
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10134e73acbcc230800000000000000
+      internalID: 3660508007529386011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_60
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 787
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3b605adc609ce80800000000000000
+      internalID: -8157981769698200596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_99
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 742
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a903f4ee0db3250800000000000000
+      internalID: 5925559456685398684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_100
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 742
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce39eed208a38b60800000000000000
+      internalID: 7747220514290613961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_101
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 742
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9c2f0f8a49ba430800000000000000
+      internalID: 3795290564307634682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_102
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 743
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601036b53a49de4f0800000000000000
+      internalID: -797818129640914682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_103
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 744
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663f46774181f3360800000000000000
+      internalID: 7151461209469154150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_104
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 742
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4afe3ecb3c78790800000000000000
+      internalID: -7527833036081093393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_105
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 742
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849ae10b72ed20450800000000000000
+      internalID: 6053645111179258184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_106
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 742
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67203c81a446fd30800000000000000
+      internalID: 4464831541216814957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_107
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 742
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c620d19f2ac57a480800000000000000
+      internalID: -8888033484558499220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_108
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 742
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b89d90f988d37d10800000000000000
+      internalID: 2122277936380614835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_109
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 743
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2c0e7ad03bc4a70800000000000000
+      internalID: 8812615442089689776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_110
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 743
+        width: 33
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57b96a8d33e2dba0800000000000000
+      internalID: -6065535894659942563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_111
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 695
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563b4e8cd24b7e260800000000000000
+      internalID: 7126863044074058597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_112
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 695
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfab19754ed23c1f0800000000000000
+      internalID: -1025925831365379332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_113
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 696
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259f07b4381401d20800000000000000
+      internalID: 3247167363496343890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_114
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 695
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb17024d7efebed30800000000000000
+      internalID: 4461923634815988158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_115
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 694
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15890281386500c30800000000000000
+      internalID: 4323550763321170001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_116
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 693
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239cc152381da3850800000000000000
+      internalID: 6357624185180440882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_117
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 693
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f482dd871e80c9d60800000000000000
+      internalID: 7898197610989430863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_118
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 695
+        width: 24
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677c292ae50c0bb10800000000000000
+      internalID: 1995306147612116854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_119
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 696
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9acc581d4fced80800000000000000
+      internalID: -8219926039127873078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_120
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 696
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57259aadb2da7cbe0800000000000000
+      internalID: -1457005550567337355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_121
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 696
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394659f4ce4d75700800000000000000
+      internalID: 529125592651883667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_122
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 699
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8a16c5ecdb25e40800000000000000
+      internalID: 5643781977059469561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_123
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 701
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7e397d92a22f120800000000000000
+      internalID: 2446063906814420914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_124
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 700
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf26ca81686b9c360800000000000000
+      internalID: 7190478967129531131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_125
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 633
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3c474442307b100800000000000000
+      internalID: 123570969078186979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_126
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 633
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5043c2fb0fddcbfc0800000000000000
+      internalID: -3477660786167630843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_127
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 634
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c747380b3c83d5290800000000000000
+      internalID: -7900095758206798724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_128
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 638
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de493a8559b71980800000000000000
+      internalID: -8568175989006709040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_129
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 642
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 232b17924924650a0800000000000000
+      internalID: -6893248975526055374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_130
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 642
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d3c7bc947e1c7b0800000000000000
+      internalID: -5205625390131036908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_131
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 642
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88bd48d9fd20d7f0800000000000000
+      internalID: -589921000086456181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_132
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 643
+        width: 27
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92e91ddb6cda9190800000000000000
+      internalID: -7954803435967487331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_133
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 644
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ab16fd387a39a60800000000000000
+      internalID: 7679665974427105804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_134
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 645
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e909fa1e79ae5bb20800000000000000
+      internalID: 3149681452462870686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_135
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 648
+        width: 25
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0345ff9c67cb2e900800000000000000
+      internalID: 712338909459076144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_136
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 650
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3bad8fcbdc9e4d0800000000000000
+      internalID: -3104724256582618138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_137
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 652
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9c9b11855a3c700800000000000000
+      internalID: 559472576397167071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_138
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 652
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa64e449afe2a8630800000000000000
+      internalID: 3930005278599038639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_139
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 655
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98bf28ab44e62080800000000000000
+      internalID: -9212424974144391011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_140
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 660
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea59f68c829859d0800000000000000
+      internalID: -2785315237271086356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_141
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 592
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb085ac9ce1d439c0800000000000000
+      internalID: -3948300159126503233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_142
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 592
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d7b5c4de57bd9a0800000000000000
+      internalID: -6207237999351333574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_143
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 592
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf172ff89d6c51640800000000000000
+      internalID: 5050161194891112956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_144
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 592
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250088949056fc6f0800000000000000
+      internalID: -662199529637412782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_145
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 592
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4834446fef235aaf0800000000000000
+      internalID: -385846122435558524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_146
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 592
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb9ae5cd399154b0800000000000000
+      internalID: -5453409183176418337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_147
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 592
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117c13872d75adfa0800000000000000
+      internalID: -5775207010677962991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_148
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 592
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138fbf20ac1cf8910800000000000000
+      internalID: 1841903845995444273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_149
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 592
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d79e29de524e480800000000000000
+      internalID: -8870923663710782145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_150
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 592
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7a23eb425ec8e70800000000000000
+      internalID: 9118915291490985962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_151
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 592
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d11c89243511e810800000000000000
+      internalID: 1792737440449696214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_152
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 549
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92f68939f71b2210800000000000000
+      internalID: 1309166475860701850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_153
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 549
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bdea2ff8499afd0800000000000000
+      internalID: -2330167986214741116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_154
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 549
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af022e16f4fcd1a30800000000000000
+      internalID: 4187731168376004858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_155
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 549
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df6b073c3b10ed50800000000000000
+      internalID: 6764436585745969111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_157
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 549
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa3a6efb645df8d0800000000000000
+      internalID: -2810997769602712840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_158
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 549
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7459de4916b1b4100800000000000000
+      internalID: 93198323215603015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_159
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 549
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57e09f0d388d8660800000000000000
+      internalID: 7389712359420389214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_160
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 549
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82621c623558697e0800000000000000
+      internalID: -1759072012262627800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_161
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 549
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a9899047dc6d9e0800000000000000
+      internalID: -1596863119595365848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_162
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 549
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039d866ce794c1c70800000000000000
+      internalID: 8943103768894429488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_163
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 549
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1b057d3cc7e59b0800000000000000
+      internalID: -5089493348309224970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_164
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 549
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360a467baa7562780800000000000000
+      internalID: -8708176438741393309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_165
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 549
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ccfa567237aa340800000000000000
+      internalID: 4875836159628921935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_166
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 549
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f50ad9b529dcd60800000000000000
+      internalID: 7912141042544041880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_167
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 505
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677a200c6832392f0800000000000000
+      internalID: -967390433300535434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_168
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 505
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f007090bfcae790800000000000000
+      internalID: -7499953872187683065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_169
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 505
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d449d7a8a55ae60800000000000000
+      internalID: 7972878266188188960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_170
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 507
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f77a1ab300ba860800000000000000
+      internalID: 7542122257077206940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_171
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 505
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88caea9fcf5280990800000000000000
+      internalID: -7419638617641931640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_172
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 505
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31eb49074e1f4cf00800000000000000
+      internalID: 1136298969447841299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_173
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 505
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de15530dfcc7bf740800000000000000
+      internalID: 5186876627840487917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_174
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 508
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5222d6c91f1f8d880800000000000000
+      internalID: -8585846669568040411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_231
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 495
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b804839e004b2020800000000000000
+      internalID: 2318016864560875701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_232
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 495
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3788b03ba3be93ad0800000000000000
+      internalID: -2721885862424246157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_233
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 495
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356243a4cd88a88e0800000000000000
+      internalID: -1690388230405085613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_239
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 454
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9253eb2ad67cac0800000000000000
+      internalID: -3834976011939403285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_240
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 454
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a668b9131f8ff0200800000000000000
+      internalID: 148611027529598570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_241
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 454
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee859966138561f50800000000000000
+      internalID: 6851760852288755950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_242
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 454
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3207d016630b37db0800000000000000
+      internalID: -4795295430616453085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_243
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 454
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d95297dfb5e9abc0800000000000000
+      internalID: -3771230600827872808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_244
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 454
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73103cddb7690be0800000000000000
+      internalID: -1510562134865472645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_245
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 415
+        width: 84
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c915c7ccf20c329d0800000000000000
+      internalID: -2800183231767621220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_246
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 415
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25de6a6b772a052a0800000000000000
+      internalID: -6750717206379172526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_247
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 415
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84efd5f752130360800000000000000
+      internalID: 7134566403681543308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_248
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 415
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483752df0bb39a7d0800000000000000
+      internalID: -2906726453143571580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_249
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 415
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f919e7b2759d6fc40800000000000000
+      internalID: 5545858959568441759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_250
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 415
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d41fb0abb8f78e20800000000000000
+      internalID: 3352921932340073689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_251
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 415
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3678e13cd541b7700800000000000000
+      internalID: 539046973338978147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_252
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 415
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5100a13c6938cee00800000000000000
+      internalID: 1075379094576300053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_253
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 415
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c40602442ec71790800000000000000
+      internalID: -7559346794396252985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_254
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 415
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04a50a58523759c0800000000000000
+      internalID: -3938623994063379444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_255
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 415
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ddf5103b0027260800000000000000
+      internalID: 7093733131884158301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_256
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 415
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83eae26c6dd2447d0800000000000000
+      internalID: -2935170656667521480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_257
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 440
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af621f95d6063a00800000000000000
+      internalID: 735783103688241061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_258
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 415
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20d15a87feaf4480800000000000000
+      internalID: -8912712759342149586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_259
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 415
+        width: 87
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da60d4fb4688bc9b0800000000000000
+      internalID: -5058799790133016915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_260
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 412
+        width: 75
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4a5b16a2af7bca0800000000000000
+      internalID: -6001052918513032015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_261
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 380
+        width: 88
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4424616350b5df0800000000000000
+      internalID: -190552829373299487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_262
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 380
+        width: 89
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77647b3705954c300800000000000000
+      internalID: 271440079622719095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_263
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 380
+        width: 90
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7014afb336dae50800000000000000
+      internalID: 6822218119788955624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_264
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 380
+        width: 91
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce756bd336a7c3460800000000000000
+      internalID: 7222782469051144172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_265
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 380
+        width: 91
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3affa7673c44d6030800000000000000
+      internalID: 3489520892579086243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_266
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 380
+        width: 91
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2fc009c351c92c0800000000000000
+      internalID: -4423637384125680956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_267
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 359
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073e7987804d998a0800000000000000
+      internalID: -6297769471052881040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_268
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 361
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90e87a191c783c00800000000000000
+      internalID: 880590174411088028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_282
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 309
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15260386e4f35a360800000000000000
+      internalID: 7180214786900124241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_283
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 309
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31af12854b99bdf00800000000000000
+      internalID: 1142675930320337427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_284
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 309
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ad4b547f8cf4e40800000000000000
+      internalID: 5642949822470478409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_285
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 309
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf3a8da0da33c2c0800000000000000
+      internalID: -4412618541953826853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_286
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 310
+        width: 20
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58b6232b09cc0820800000000000000
+      internalID: 2885902510909208666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_287
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 309
+        width: 21
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6eb8375a1b46980800000000000000
+      internalID: -8546510868676090193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_288
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 310
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599165acaad48c420800000000000000
+      internalID: 2650453776641956245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_289
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 310
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c129eb78925962e30800000000000000
+      internalID: 4478430885070148124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_290
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 310
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c8d432b05b07820800000000000000
+      internalID: 2914028018350263419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_291
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 310
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3451429afa8ff020800000000000000
+      internalID: 2377771937075123262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_292
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 310
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8feff16be019b50800000000000000
+      internalID: 6598071104458127556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_293
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 309
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2dc4fb3abe19d4d0800000000000000
+      internalID: -3109420282503967443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_294
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 299
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958a8c97d624302a0800000000000000
+      internalID: -6772496376673032103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_295
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 299
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9abc0f351af58a10800000000000000
+      internalID: 1911208586047699614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_296
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 299
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e59f0b8eea8b7fa0800000000000000
+      internalID: -5801890937796848156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_297
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 299
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6c2a5783482a600800000000000000
+      internalID: 478089888481330885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_298
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 299
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bf35651b3d20dc0800000000000000
+      internalID: -3674141587369886929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_299
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 299
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4153908d532dfdad0800000000000000
+      internalID: -2675188524935203564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_300
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 299
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b28174e64d7797d0800000000000000
+      internalID: -2911720890637909328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_301
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 299
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5bae6336073ba80800000000000000
+      internalID: -8452288504218864188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_302
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 299
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f782f42ed09283e0800000000000000
+      internalID: -2052919196350511112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_303
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 299
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b998909140cbbb40800000000000000
+      internalID: 5457166761320815030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_304
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 299
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563d61110e95c5500800000000000000
+      internalID: 386282486941274981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_305
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 299
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73119da241616cd80800000000000000
+      internalID: -8230866993098976969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_306
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 299
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe083a6eac464050800000000000000
+      internalID: 5784395083394060024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_307
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 299
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b57f635057e5b070800000000000000
+      internalID: 8121651835215771062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_308
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 299
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838c0fcc79f10b830800000000000000
+      internalID: 4084799598863894584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_309
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 299
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951725ed4a095cef0800000000000000
+      internalID: -88505579884875431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_310
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 299
+        width: 444
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56306d0f0c0383780800000000000000
+      internalID: -8703152674661072027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_311
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 255
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99836c2860e825800800000000000000
+      internalID: 599697859008673945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_312
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 255
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c875c6863331b83f0800000000000000
+      internalID: -897602589214091380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_313
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 255
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5f7af4d6b22b090800000000000000
+      internalID: -8020300237905594910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_314
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 255
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d17f6dd43834c660800000000000000
+      internalID: 7405105487008461271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_315
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 255
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f9656f8d31b4aa0800000000000000
+      internalID: -6175820641441767622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_316
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 255
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3050b86c87dd5c890800000000000000
+      internalID: -7438295698735692541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_317
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 255
+        width: 46
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b918233ccbd916470800000000000000
+      internalID: 8386157415194853787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_318
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 255
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e1397eb1919c7e0800000000000000
+      internalID: -1744835772989366626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_319
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 255
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7529139ce6d0560800000000000000
+      internalID: 7281597982927116235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_320
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 255
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a3252393b96ed00800000000000000
+      internalID: 1001658637096204901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_321
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 255
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3104040632672acb0800000000000000
+      internalID: -4854187554041217005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_322
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 255
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f0392bf4f3c4ea0800000000000000
+      internalID: -5887261001349132430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_323
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 255
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f76d4db1c628dfc0800000000000000
+      internalID: -3469980899342456843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_324
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 214
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a80de262c1db2a50800000000000000
+      internalID: 6497517520225634471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_325
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 214
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dcad2405984d560800000000000000
+      internalID: 7337640670705405303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_326
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 214
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce321c3a4fc7a1f0800000000000000
+      internalID: -1033629671715881272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_327
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 170
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a6f057681ccd120800000000000000
+      internalID: 2440037881361689138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_328
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 170
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cb3c6d54adcd360800000000000000
+      internalID: 7195866298121960474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_329
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 170
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84caa4d86610b51b0800000000000000
+      internalID: -5666934166146864056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_330
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 170
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89dd153645c4fb10800000000000000
+      internalID: 2014451838670985615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_331
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 170
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8dd0e29a3eec870800000000000000
+      internalID: 8705145445515385021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_332
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 170
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d9833128c8a6120800000000000000
+      internalID: 2407891441079065880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_333
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 170
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6421a71ca0d88f230800000000000000
+      internalID: 3672840573455831622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_334
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 170
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adedd81c9102e9080800000000000000
+      internalID: -9178863695540920614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_335
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 170
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2030241b96309f6a0800000000000000
+      internalID: -6415092441732218110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_336
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 170
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b430ab094c34ae0800000000000000
+      internalID: -1566192119519687796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_337
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 170
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66730f40dacc747d0800000000000000
+      internalID: -2934151588724328602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_338
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 170
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eba4f38312d65760800000000000000
+      internalID: 7446370015163755489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_339
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 170
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd9eab21a9d54940800000000000000
+      internalID: 5279865424407600597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_340
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 170
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31bdbd0bf3a4a8760800000000000000
+      internalID: 7460857370103241491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_341
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 129
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee40b3eedd640d760800000000000000
+      internalID: 7480556900060955886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_342
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 130
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae78a1c8aea1e3e0800000000000000
+      internalID: -2026146317513228640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_343
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 90
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6b972a55b60bf10800000000000000
+      internalID: 2283443026619119321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_344
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 91
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a602773ff90691a0800000000000000
+      internalID: -6803239195345025375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_345
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 89
+        width: 51
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d88962513daad940800000000000000
+      internalID: 5321756337039313108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_346
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 89
+        width: 50
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad14ef6882a464850800000000000000
+      internalID: 6360853061631361498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_347
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 89
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff81f588df4bad20800000000000000
+      internalID: 3290811744103010291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_348
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 89
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fddd5f349446210800000000000000
+      internalID: 1325264746590363533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_349
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 89
+        width: 47
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477927f7136527890800000000000000
+      internalID: -7461806862007888012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_350
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 89
+        width: 48
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6950853ea2819b0800000000000000
+      internalID: -5109286621329123639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_351
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 89
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5815b7334c2cbd0800000000000000
+      internalID: -2611309108530149907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_352
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 89
+        width: 41
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd28be7ff3998910800000000000000
+      internalID: 1840164648309501431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_353
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 89
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3afc7add0eecc10800000000000000
+      internalID: 2075843720872174508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_354
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 46
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63007443a6c10fdd0800000000000000
+      internalID: -2454430554447740874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_355
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 46
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0191db87637f55c0800000000000000
+      internalID: -4224531036885642998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_356
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 46
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cfa55aeb04413a0800000000000000
+      internalID: -6695655558430917612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_357
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 46
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b03bf1981e7604c0800000000000000
+      internalID: -4321628148421939023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_358
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 34
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5cd1314e0449220800000000000000
+      internalID: 2491687842160166357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_359
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 34
+        width: 46
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4087d0de534b8a0800000000000000
+      internalID: -6290343487280249637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_360
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa05b9b9d03e1b50800000000000000
+      internalID: 6565739018434448127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_361
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 4
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8de1cb426261d90800000000000000
+      internalID: -7127467421050414896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_362
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 2
+        width: 46
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af09f914f8502fc90800000000000000
+      internalID: -7137636346589376262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_363
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2
+        width: 48
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d40e8167ca8eb70800000000000000
+      internalID: 8928575884485479711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_364
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 2
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc83ba014f558bc0800000000000000
+      internalID: -3781511579150611239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_365
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 4
+        width: 46
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4974c8f1cbb47da70800000000000000
+      internalID: 8851626863975221140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_366
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 2
+        width: 46
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971059c09d8ead7f0800000000000000
+      internalID: -586900782501789319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_367
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 2
+        width: 48
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24540f474069f710800000000000000
+      internalID: 1727517791457924141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_368
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 2
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92ab9c2be0754140800000000000000
+      internalID: 4703289541226373791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_61
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 787
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86d2a507d5db7f80800000000000000
+      internalID: -8107651584661203316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_62
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 787
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8362cc965f2555ba0800000000000000
+      internalID: -6100878906208016840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_63
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 787
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9743edf42c089c050800000000000000
+      internalID: 5821325565405049977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helpful NPCs_64
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 787
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713650f47f89b7d60800000000000000
+      internalID: 7889067360219652887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

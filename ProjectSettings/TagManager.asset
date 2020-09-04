@@ -32,13 +32,13 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemy
+  - Goal
+  - Player_Bullet
+  - Enemy_Bullet
+  - Trigger
   - 
   - 
   - 

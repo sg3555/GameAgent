@@ -9,47 +9,56 @@ public class rm_playerAttack : MonoBehaviour
     public float cooltime;
     private float curtime;
     Animator anim;
+    Rigidbody2D rigid;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        rigid = GetComponent<Rigidbody2D>();
 
     }
 
     // Update is called once per frame
     bool isladder;
+    public void rockman_Attack()
+    {
+        anim.SetBool("isrunAttack", true);
+        Instantiate(Bullet, pos.position, transform.rotation);
+
+        
+    }
     void Update()
     {
         if (curtime <= 0)
         {
            
-                if (Input.GetKey(KeyCode.Z))
-                {
-                    if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))&&isladder==false)
-                    {
-                        anim.SetBool("isrunAttack", true);
-                        Instantiate(Bullet, pos.position, transform.rotation);
-                    }
+                //if (Input.GetKey(KeyCode.Z))
+                //{
+                //    if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))&&isladder==false)
+                //    {
+                //        anim.SetBool("isrunAttack", true);
+                //        Instantiate(Bullet, pos.position, transform.rotation);
+                //    }
 
 
 
-                    else if(isladder==false)
-                    {
-                        anim.SetBool("isshoot", true);
-                        Instantiate(Bullet, pos.position, transform.rotation);
-                    }
+                //    else if(isladder==false)
+                //    {
+                //        anim.SetBool("isshoot", true);
+                //        Instantiate(Bullet, pos.position, transform.rotation);
+                //    }
                 //    else if (isladder == true)
                 //{
                 //    Instantiate(Bullet, pos.position, transform.rotation);
                 //}
 
 
-                }
-                else
-                {
-                    anim.SetBool("isrunAttack", false);
-                    anim.SetBool("isshoot", false);
-                }
+                //}
+                //else
+                //{
+                //    anim.SetBool("isrunAttack", false);
+                //    anim.SetBool("isshoot", false);
+                //}
                 curtime = cooltime;
 
             }

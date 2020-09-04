@@ -16,6 +16,8 @@ public class rm_Signcheck : MonoBehaviour
     [SerializeField]
     LayerMask islayer;
     public rm_move rm;
+    public rm_playerAttack rp;
+    public rm_bullet rb;
     // Start is called before the first frame update
     bool isGround;
     void Start()
@@ -27,7 +29,11 @@ public class rm_Signcheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (rb.enemydistroy == true)
+        {
+            anim.SetBool("isrunAttack", false);
+            rm.rockman_move();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,6 +45,7 @@ public class rm_Signcheck : MonoBehaviour
             {
                 rm.rockman_jump();
             }
+            
      
 
 
@@ -56,10 +63,10 @@ public class rm_Signcheck : MonoBehaviour
             //{
 
             //}
-            //if (collision.name.Contains("Sign_A"))
-            //{
-
-            //}
+            if (collision.name.Contains("Sign_A"))
+            {
+                rp.rockman_Attack();
+            }
             //if (collision.name.Contains("Sign_B"))
             //{
 

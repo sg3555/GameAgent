@@ -8,7 +8,7 @@ public class rm_bullet : MonoBehaviour
     public float speed;
     public float distance;
     public LayerMask isLayer;
-
+    public bool enemydistroy;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,7 @@ public class rm_bullet : MonoBehaviour
             {
                 Debug.Log("명중");
                 onAttack(ray.collider.transform);
+               
             }
             DestroyBullet();
         }
@@ -45,6 +46,7 @@ public class rm_bullet : MonoBehaviour
     {
        rm_enemy enemyMove = enemy.GetComponent<rm_enemy>();
         enemyMove.OnDamaged();
+        enemydistroy = true;
     }
    //총알이 사라지게 하는 함수
     void DestroyBullet()

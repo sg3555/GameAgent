@@ -16,7 +16,7 @@ public class rm_move : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-    void rockman_move()
+   public void rockman_move()
     {   
         if (start) { 
             transform.Translate(Vector2.right * 0.05f);

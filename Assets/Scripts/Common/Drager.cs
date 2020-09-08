@@ -109,7 +109,6 @@ public class Drager : MonoBehaviour
             transform.position = objPosition;
             DeadlockSetting(deadlock);
         }
-        
     }
 
     //마우스를 드래그한 상태에서 놓은 순간
@@ -201,6 +200,39 @@ public class Drager : MonoBehaviour
             foreach (SpriteRenderer objec in tiles)
                 objec.color = new Color(255, 255, 255);
         }
+    }
+
+    public void StartGame()
+    {
+        startGame = true;
+        rigid.bodyType = RigidbodyType2D.Static;
+        if (tag == "Sign")
+        {
+            foreach (SpriteRenderer objec in tiles)
+                objec.color = new Color(255, 255, 255, 0.3f);
+            colid.isTrigger = true;
+        }
+    }
+    
+    public void StopGame()
+    {
+        startGame = false;
+        rigid.bodyType = RigidbodyType2D.Kinematic;
+        colid.isTrigger = false;
+        foreach (SpriteRenderer objec in tiles)
+            objec.color = new Color(255, 255, 255, 1f);
+    }
+    
+    public void ResetGame()
+    {
+        startGame = false;
+        transform.position = originPosition;
+        InvenSetting(true);
+        LayerSetting("In");
+        rigid.bodyType = RigidbodyType2D.Kinematic;
+        colid.isTrigger = false;
+        foreach (SpriteRenderer objec in tiles)
+            objec.color = new Color(255, 255, 255, 1f);
     }
 
 }

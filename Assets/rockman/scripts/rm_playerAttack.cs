@@ -6,8 +6,12 @@ public class rm_playerAttack : MonoBehaviour
 {
     public GameObject Bullet;
     public Transform pos;
-    public float cooltime;
-    private float curtime;
+    public rm_move rm;
+    public rm_enemy re;
+    AudioSource audiosource;
+    public AudioClip Audioshoot;
+    //public float cooltime;
+    //private float curtime;
     Animator anim;
     Rigidbody2D rigid;
     // Start is called before the first frame update
@@ -15,6 +19,7 @@ public class rm_playerAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
+        audiosource = GetComponent<AudioSource>();
 
     }
 
@@ -24,13 +29,22 @@ public class rm_playerAttack : MonoBehaviour
     {
         anim.SetBool("isrunAttack", true);
         Instantiate(Bullet, pos.position, transform.rotation);
+        rm.PlaySound(Audioshoot);
 
-        
+
+    }
+    public void rockman_DeAttack()
+    {
+        anim.SetBool("isrunAttack", false);
     }
     void Update()
     {
-        if (curtime <= 0)
+        if (re.damage)
         {
+            anim.SetBool("isrunAttack", false);
+        }
+        //if (curtime <= 0)
+        //{
            
                 //if (Input.GetKey(KeyCode.Z))
                 //{
@@ -59,10 +73,10 @@ public class rm_playerAttack : MonoBehaviour
                 //    anim.SetBool("isrunAttack", false);
                 //    anim.SetBool("isshoot", false);
                 //}
-                curtime = cooltime;
+                //curtime = cooltime;
 
-            }
-            curtime -= Time.deltaTime;
+            //}
+            //curtime -= Time.deltaTime;
  
     }
     private void OnTriggerEnter2D(Collider2D collision)

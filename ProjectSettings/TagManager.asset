@@ -10,6 +10,13 @@ TagManager:
   - ladder
   - Sign
   - ground
+  - Platform
+  - Disappear
+  - Damage
+  - Actor
+  - Jumper
+  - Test
+  - Clear
   layers:
   - Default
   - TransparentFX
@@ -21,6 +28,7 @@ TagManager:
   - 
   - player
   - ground
+  - enemy
   - 
   - 
   - 
@@ -32,13 +40,12 @@ TagManager:
   - 
   - 
   - 
-  - Ground
-  - Player
-  - Enemy
-  - Goal
-  - Player_Bullet
-  - Enemy_Bullet
-  - Trigger
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -48,7 +55,6 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background 0
-<<<<<<< HEAD
     uniqueID: 4102746243
     locked: 0
   - name: Platform 1
@@ -62,19 +68,4 @@ TagManager:
     locked: 0
   - name: Inven 4
     uniqueID: 836269921
-=======
-    uniqueID: 899082081
-    locked: 0
-  - name: Platform 1
-    uniqueID: 2929960027
-    locked: 0
-  - name: Character 2
-    uniqueID: 3340264345
-    locked: 0
-  - name: Item out Inventory 3
-    uniqueID: 2964470109
-    locked: 0
-  - name: Inven 4
-    uniqueID: 1539714877
->>>>>>> 221991238086e3a0d1211a8971909962d32da1e0
     locked: 0

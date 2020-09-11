@@ -9,9 +9,13 @@ public class rm_enemy : MonoBehaviour
     Rigidbody2D rigid;
     BoxCollider2D collide;
     Animator anim;
-    bool damage = false;
+    public rm_move rm;
+    public AudioClip des_sound;
+    AudioSource audiosource;
+    public bool damage = false;
     public float speed;
     bool isleft = true;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,15 +23,21 @@ public class rm_enemy : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         collide = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()//적이 데미지를 받았을 경우 그 자리에서 멈추게 하고 그렇지 않으면 이동하게 하는 것
     {
-        if (damage==true)
-            transform.Translate(Vector2.zero);
-        else
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+        if (GameManager_RM.gm.start)
+        {
+            if (damage == true)
+                transform.Translate(Vector2.zero);
+            else
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+        }
+        
     }
     
     private void OnTriggerEnter2D(Collider2D collision)//적의 이동 거리를 정하기 위해 collision의 tag 중 endpoint를 지나게 되면 방향을 바꾸게 함
@@ -55,10 +65,21 @@ public class rm_enemy : MonoBehaviour
         collide.enabled = false;
         //rigid.AddForce(Vector2.down * 5, ForceMode2D.Impulse);
         anim.SetTrigger("destroy");
+        rm.PlaySound(des_sound);
         Invoke("DeActive", 0.5f);
+        
+    }
+    public void enemyMove()
+    {
+        if (damage == true)
+            transform.Translate(Vector2.zero);
+        else
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+
     }
     void DeActive()//적이 사라지게 만드는 함수
     {
         gameObject.SetActive(false);
     }
+    
 }

@@ -10,37 +10,93 @@ public class rm_move : MonoBehaviour
     Rigidbody2D rigid;
     public bool start;
     public int JumpPower;
+    AudioSource audiosource;
+    public AudioClip audiojump;
+    public AudioClip audioClear;
+    public AudioClip audioWarp;
     Animator anim;
+    public static rm_move rm;
+    SpriteRenderer sprite;
+   
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+        anim.SetBool("isstart",true);
+        audiosource = GetComponent<AudioSource>();
+        PlaySound(audioWarp);
     }
    public void rockman_move()
-    {   
-        if (start) { 
+    {
+        if (GameManager_RM.gm.start)
+        {
+            
             transform.Translate(Vector2.right * 0.05f);
             anim.SetBool("isrun", true);
-            
         }
         else
         {
             anim.SetBool("isrun", false);
         }
-        
+   
+
+
 
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            onDamaged(collision.transform.position);
+        }
+     
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Clear")
+        {
+            GameManager_RM.gm.start = false;
+            transform.Translate(Vector2.zero);
+            anim.SetBool("isclear",true);
+            // PlaySound(audioClear);
+            GameManager_RM.gm.clearAction();
+            Invoke("Deact", 1f);
+            
+        }
+    }
+    void onDamaged(Vector2 targetPos)
+    {
+        gameObject.layer = 12;
 
+        //sprite.color = new Color(1, 1, 1, 0.4f);
+
+        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        rigid.AddForce(new Vector2(dirc, 1)*3, ForceMode2D.Impulse);
+
+        //애니메이션
+        anim.SetTrigger("damaged");
+        Invoke("Deact", 0.38f);
+    }
+    void Deact()
+    {
+        gameObject.SetActive(false);
+    }
     public void rockman_jump()
     {
-        rigid.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+        rigid.AddForce(Vector2.up * 12, ForceMode2D.Impulse);
         anim.SetBool("isrun", false);
         anim.SetBool("isjump", true);
+        PlaySound(audiojump);
        
 
     }
     private void FixedUpdate()
     {
+        if ((anim.GetCurrentAnimatorStateInfo(0).IsName("start")) && (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.18f))
+        {
+            anim.SetBool("isstart", false);
+        }
         rockman_move();
         //rockman_jump();
         if (rigid.velocity.y < 0)
@@ -64,6 +120,12 @@ public class rm_move : MonoBehaviour
     {
         start = true;
 
+    }
+
+    public void PlaySound(AudioClip action)
+    {
+        audiosource.clip = action;
+        audiosource.Play();
     }
 }
 

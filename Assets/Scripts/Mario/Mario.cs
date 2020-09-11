@@ -96,9 +96,7 @@ public class Mario : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (startGame)
-            rigid.AddForce(Vector2.right * 0.1f, ForceMode2D.Impulse);
-        //mario_move();
+        mario_move();
         mario_speed();
         mario_fall();
         mario_inverse();
@@ -121,7 +119,7 @@ public class Mario : MonoBehaviour
     //게임 리셋
     public void ResetGame()
     {
-        gameObject.layer = 0;
+        gameObject.layer = 9;
         rigid.bodyType = RigidbodyType2D.Static;
         anim.SetBool("IsMove", false);
         anim.SetBool("IsJump", false);
@@ -131,54 +129,7 @@ public class Mario : MonoBehaviour
         startGame = false;
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //사망
-        if (collision.tag.Contains("Damage") && gameObject.layer == 0)
-        {
-            startGame = false;
-            rigid.bodyType = RigidbodyType2D.Static;
-            anim.SetBool("IsDead", true);
-            GM_isdead = true;
-            gameObject.layer = 10;
-            colid.isTrigger = true;
-            Invoke("bound", 0.5f);
-        }
-
-
-        //골인
-        if (collision.tag.Contains("Finish"))
-        {
-            GM_goal = true;
-            startGame = false;
-            clear = true;
-            rigid.bodyType = RigidbodyType2D.Kinematic;
-            rigid.velocity = Vector2.zero;
-            anim.SetBool("IsJump", false);
-            anim.SetBool("IsGoal", true);
-            Invoke("flip", 1.2f);
-        }
-
-        //문안으로 들어가면 클리어 화면 출력
-        if (collision.tag.Contains("Disappear"))
-        {
-            gameObject.SetActive(false);
-            GM_clear = true;
-        }
-
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)//대충 방향키
-    {
-        //점프
-        if (collision.tag.Contains("Jumper") && !anim.GetBool("IsJump") && startGame)
-        {
-            rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
-            anim.SetBool("IsJump", true);
-            PlaySound(audioJump);
-        }
-    }
+    
 
     //효과음 재생용
     void PlaySound(AudioClip action)
@@ -209,5 +160,139 @@ public class Mario : MonoBehaviour
         anim.SetBool("IsGoal", false);
         sprit.flipX = false;
         startGame = true;
+    }
+
+    //사망모션
+    void deadAction()
+    {
+        startGame = false;
+        rigid.bodyType = RigidbodyType2D.Static;
+        anim.SetBool("IsDead", true);
+        GM_isdead = true;
+        gameObject.layer = 10;
+        colid.isTrigger = true;
+        Invoke("bound", 0.5f);
+    }
+
+    //골인모션
+    void goalAction()
+    {
+        GM_goal = true;
+        startGame = false;
+        clear = true;
+        rigid.bodyType = RigidbodyType2D.Kinematic;
+        rigid.velocity = Vector2.zero;
+        anim.SetBool("IsJump", false);
+        anim.SetBool("IsGoal", true);
+        Invoke("flip", 1.2f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //사망
+        if (collision.tag.Contains("Damage") && gameObject.layer == 9)
+        {
+            deadAction();
+        }
+
+
+        //골인
+        if (collision.tag.Contains("Finish"))
+        {
+            goalAction();
+        }
+
+        //문안으로 들어가면 클리어 화면 출력
+        if (collision.tag.Contains("Disappear"))
+        {
+            gameObject.SetActive(false);
+            GM_clear = true;
+        }
+
+
+        if (collision.tag == "Sign")
+        {
+            if (collision.name.Contains("Sign_Up"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Down"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Left"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Right"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_A"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_B"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_X"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Y"))
+            {
+
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Sign")
+        {
+            if (collision.name.Contains("Sign_Up"))
+            {
+                if (!anim.GetBool("IsJump") && startGame)
+                {
+                    rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+                    anim.SetBool("IsJump", true);
+                    PlaySound(audioJump);
+                }
+            }
+            if (collision.name.Contains("Sign_Down"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Left"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Right"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_A"))
+            {
+                if (!anim.GetBool("IsJump") && startGame)
+                {
+                    rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+                    anim.SetBool("IsJump", true);
+                    PlaySound(audioJump);
+                }
+            }
+            if (collision.name.Contains("Sign_B"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_X"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Y"))
+            {
+
+            }
+        }
     }
 }

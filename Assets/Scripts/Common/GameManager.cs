@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public BgmController MainBGM, DeadBGM, Goal1, Goal2; //배경음 관리자
     public Button[] buttons = new Button[3]; //시작, 정지, 초기화 버튼
     public GameObject flag, ClearUI, ExplainUI; //깃발, 클리어UI, 설명창UI
+    public CamControl mainCam; //카메라
     //이건 클리어 여부 확인을 위한것이 아닌 클리어 후 애니메이션 설정을 위해 둔 bool값
     public bool clear;
     bool isopen; //설명창 전용 bool
@@ -97,6 +98,7 @@ public class GameManager : MonoBehaviour
     //캐릭터 행동개시
     public void startUpGame()
     {
+        mainCam.StartGame();
         Actor.StartMove();
         foreach (Drager dr in MovableTile)
             dr.StartGame();
@@ -108,6 +110,7 @@ public class GameManager : MonoBehaviour
     //캐릭터 행동 중단
     public void stopGame()
     {
+        mainCam.StopGame();
         Actor.ResetGame();
         foreach (Drager dr in MovableTile)
             dr.StopGame();
@@ -119,6 +122,7 @@ public class GameManager : MonoBehaviour
     //맵 초기화
     public void resetGame()
     {
+        mainCam.ResetGame();
         Actor.ResetGame();
         foreach (Drager dr in MovableTile)
             dr.ResetGame();

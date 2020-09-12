@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ using UnityEngine;
 //버튼을 누르면 캐릭터가 움직이는 Actor객체의 스크립트
 public class rm_move : MonoBehaviour
 {
+    Vector2 originPosition;
     public float maxspeed;
     Rigidbody2D rigid;
     public bool start;
@@ -17,21 +19,27 @@ public class rm_move : MonoBehaviour
     Animator anim;
     public static rm_move rm;
     SpriteRenderer sprite;
-   
+    
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-        anim.SetBool("isstart",true);
+        anim.SetBool("isstart", true);
         audiosource = GetComponent<AudioSource>();
         PlaySound(audioWarp);
+        originPosition = this.gameObject.transform.position;
+        rigid.bodyType = RigidbodyType2D.Static;
+        
+
     }
-   public void rockman_move()
+    public void rockman_move()
     {
         if (GameManager_RM.gm.start)
         {
-            
+
+            rigid.bodyType = RigidbodyType2D.Dynamic;
             transform.Translate(Vector2.right * 0.05f);
             anim.SetBool("isrun", true);
         }
@@ -39,10 +47,15 @@ public class rm_move : MonoBehaviour
         {
             anim.SetBool("isrun", false);
         }
-   
+    
 
 
 
+    }
+
+    public void ResetGame()
+    {
+        gameObject.transform.position = originPosition;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -75,8 +88,8 @@ public class rm_move : MonoBehaviour
         rigid.AddForce(new Vector2(dirc, 1)*3, ForceMode2D.Impulse);
 
         //애니메이션
-        anim.SetTrigger("damaged");
-        Invoke("Deact", 0.38f);
+        anim.SetTrigger("damaged");      
+        Invoke("Deact", 1f);
     }
     void Deact()
     {
@@ -84,9 +97,11 @@ public class rm_move : MonoBehaviour
     }
     public void rockman_jump()
     {
+        if (anim.GetBool("isrun")==true)
+        {
+            anim.SetBool("isjump", true);
+        }
         rigid.AddForce(Vector2.up * 12, ForceMode2D.Impulse);
-        anim.SetBool("isrun", false);
-        anim.SetBool("isjump", true);
         PlaySound(audiojump);
        
 
@@ -106,10 +121,10 @@ public class rm_move : MonoBehaviour
             if (rayHit.collider != null)
             {
                 //Debug.Log(rayHit.collider.tag);
-                if (rayHit.distance <= 0.5f)
+                if (rayHit.distance <= 1f)
                 {
 
-                    anim.SetBool("isrun", true);
+                    //anim.SetBool("isrun", true);
                     anim.SetBool("isjump", false);
                 }
 

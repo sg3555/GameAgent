@@ -5,14 +5,17 @@ using UnityEngine;
 public class CamControl : MonoBehaviour
 {
 
+
     public float min_x = 0, max_x = 0, min_y = -2, max_y = -2;   //카메라가 움직일수 있는 범위
     public float camSpeed = 1f; //카메라 조작 속도
 
+
     float xSmooth = 8f, ySmooth = 8f;   //카메라 움직임을 부드럽게
     float xMargin = 1f, yMargin = 1f;   //카메라중심과 캐릭터 사이 간격
-    
+
     public GameObject characterObject;    //추적대상 캐릭터(주인공)의 게임오브젝트
     Transform actor;    //캐릭터 게임오브젝트의 트랜스폼 컴포넌트
+    Vector3 originPosition; //카메라 최초위치
 
     public bool isStart;
 
@@ -20,6 +23,7 @@ public class CamControl : MonoBehaviour
     {
         actor = characterObject.transform;
         isStart = false;
+        originPosition = this.gameObject.transform.position;
     }
 
     void FixedUpdate()
@@ -75,4 +79,20 @@ public class CamControl : MonoBehaviour
 
     bool CheckYMargin()
     { return Mathf.Abs(transform.position.y - actor.position.y) > yMargin; }
+
+    public void StartGame()
+    {
+        isStart = true;
+    }
+
+    public void StopGame()
+    {
+        isStart = false;
+    }
+
+    public void ResetGame()
+    {
+        isStart = false;
+        transform.position = originPosition;
+    }
 }

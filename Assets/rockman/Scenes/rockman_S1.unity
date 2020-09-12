@@ -1108,10 +1108,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0021500587, y: 0.14490747}
+  m_Offset: {x: 0.03091979, y: 0.113165855}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1122,7 +1122,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4197502, y: 0.66271496}
+  m_Size: {x: 0.9205241, y: 0.7261982}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -1221,7 +1221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: -10}
+  m_LocalPosition: {x: -0, y: -2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1710861331}
@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1085638001}
         m_MethodName: resetGame
         m_Mode: 1
         m_Arguments:
@@ -1671,8 +1671,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainBgm: {fileID: 1979692959}
   clear: {fileID: 1236038620}
+  MovableTile:
+  - {fileID: 1132426786}
+  - {fileID: 401656949}
+  Inventory:
+  - {fileID: 1132426786}
+  - {fileID: 401656949}
   rm: {fileID: 1879180683}
   start: 0
+  mainCam: {fileID: 519420030}
   Btn:
   - {fileID: 2022228446}
   - {fileID: 908058678}
@@ -1773,7 +1780,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2052,18 +2059,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.012630105, y: 0.018945277}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.375}
+    oldSize: {x: 1.6, y: 2.2}
     newSize: {x: 1, y: 1.125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.125}
+  m_Size: {x: 1.6062376, y: 2.2490673}
   m_EdgeRadius: 0
 --- !u!95 &1341872221
 Animator:
@@ -2143,7 +2150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341872217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7, y: -7.18, z: 0}
+  m_LocalPosition: {x: -2.78, y: -6.76, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2733,7 +2740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569751698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.42, y: -7.06, z: -4.3517566}
+  m_LocalPosition: {x: -3.85, y: -6.88, z: -4.3517566}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2952,7 +2959,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879180674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: -7.3, z: 0}
+  m_LocalPosition: {x: -15.2, y: -7.33, z: 0}
   m_LocalScale: {x: 1.0638889, y: 1.1227125, z: 1}
   m_Children:
   - {fileID: 271066799}
@@ -2973,7 +2980,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0108398795, y: -0.0065430254}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2984,7 +2991,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.75}
+  m_Size: {x: 0.682341, y: 0.7603283}
   m_EdgeRadius: 0
 --- !u!114 &1879180679
 MonoBehaviour:
@@ -3081,6 +3088,7 @@ MonoBehaviour:
   audiojump: {fileID: 8300000, guid: 0a4e66e1482e91e47b1a82510ed5665e, type: 3}
   audioClear: {fileID: 8300000, guid: f484746065f31f648a1260fd83b74295, type: 3}
   audioWarp: {fileID: 8300000, guid: 946fe575014d541408e38d8a45a159f2, type: 3}
+  re: {fileID: 1341872218}
 --- !u!82 &1879180684
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3101,7 +3109,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.66355515
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

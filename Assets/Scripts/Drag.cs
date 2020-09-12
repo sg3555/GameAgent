@@ -6,184 +6,225 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-    bool startgame; //게임시작 bool
-    Vector2 originposition, pastposition;   //각각 최초위치, 마우스를 놓기전 위치
-    SpriteRenderer thissprite; //간판전용 스프라이트구동기
-    SpriteRenderer[] tiles; //플랫폼전용 스프라이트구동기
+    /*
+    * Rigidbody Dynamic : 움직일 수 있는 형태
+    * Rigidbody Static : 움직일 수 없는 형태
+    * 두 Collider의 충돌여부 판정은 반드시 둘중 하나는 Dynamic상태여야 함
+    */
+
+    //각각 최초위치, 마우스를 놓기전 위치, 최초 사이즈, 인벤사이즈
+    Vector2 originPosition, //최초위치
+        pastposition,   //마우스를 놓기전 위치
+        originSize, //최초 사이즈
+        invenSize,  //인벤토리에 들어갔을 시 사이즈
+        mousePosition; //마우스 현재위치
+
+    //스프라이트구동기
+    SpriteRenderer[] tiles;
+
     Rigidbody2D rigid; //물리엔진
     Collider2D colid; //충돌자
+    public bool deadlock, //겹침상태 확인
+         startGame, //게임시작 확인
+        enterinven, //인벤토리상태 확인
+        paststate; //마우스 드래그 전 인벤에 있는지 상태
 
-    public bool deadlock;  //타일이 다른 객체에 겹치는것을 방지하기 위한 교착상태 bool
-    public bool isInventory;    //오브젝트와 인벤토리 간 충돌을 감지
-    //public Inventory inventory; //인벤토리
+
+    public float minimunsize = 0.5f; //인벤토리에 들어갔을 때 사이즈(디폴트값 : 0.5)
+
+    GameObject Inventory, MovableItem;//아이템이 들어가는 위치
+
+    Ray mouseRay; // 마우스 인벤 충돌 감지용
+    RaycastHit2D invenhit;
 
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         tiles = gameObject.GetComponentsInChildren<SpriteRenderer>();
         colid = GetComponent<Collider2D>();
-        thissprite = GetComponent<SpriteRenderer>();
+        Inventory = GameObject.Find("Inventory");
+        MovableItem = GameObject.Find("MovableItem");
     }
-
-    private void Start()
+    void Start()
     {
-        //게임시작시 최초위치 설정(나중에 UI인벤토리에 넣으면 수정해아 함)
-        originposition = this.gameObject.transform.position;
+        originPosition = this.gameObject.transform.position;
+        originSize = this.gameObject.transform.localScale;
+        invenSize = new Vector2(minimunsize, minimunsize);
         deadlock = false;
-        startgame = false;
-        isInventory = false;
+        startGame = false;
+        paststate = true;
+        InvenSetting(true);
+        LayerSetting("In");
     }
 
-    //타일이 다른 객체에 겹쳤을 경우
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!startgame)
-        {
-            if (collision.gameObject.tag == "Inventory")
-            {
-                isInventory = true;
-            }
-            else
-            {
-                thissprite.color = new Color(1, 0, 0);
-                //자식객체의 각 타일들을 붉은 색으로 바꾸고
-                foreach (SpriteRenderer objec in tiles)
-                    objec.color = new Color(1, 0, 0);
-                //교착상태 bool을 true로 변경
-                deadlock = true;
-            }
-        }
+        //인벤토리 바깥에서 충돌 감지
+        if (!startGame)
+            deadlock = true;
     }
 
-    //타일이 다른 객체와 겹친 상태에서 빠져 나왔을 경우
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (!startgame)
-        {
-            //원상복귀
-            foreach (SpriteRenderer objec in tiles)
-                objec.color = new Color(255, 255, 255);
+        if (!startGame)
             deadlock = false;
-            isInventory = false;
-        }
-    }
-
-    //위 OnCollisionEnter2D와 동일
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!startgame)
-        {
-            if (collision.gameObject.tag == "Inventory")
-            {
-                isInventory = true;
-            }
-            else
-            {
-                foreach (SpriteRenderer objec in tiles)
-                    objec.color = new Color(1, 0, 0);
-                deadlock = true;
-            }
-        }
-    }
-
-    //위 OnCollisionExit2D와 동일
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (!startgame)
-        {
-            foreach (SpriteRenderer objec in tiles)
-            {
-                objec.color = new Color(255, 255, 255);
-            }
-            deadlock = false;
-            isInventory = false;
-        }
     }
 
     //마우스를 클릭한 순간
     private void OnMouseDown()
     {
-        if (!startgame)
+        if (!startGame)
         {
-            //그 순간의 타일 좌표 저장
-            //다른 타일과 겹친 상태(교착상태)에 마우스를 놓을 경우 이 좌표로 이동
             pastposition = this.gameObject.transform.position;
             rigid.bodyType = RigidbodyType2D.Dynamic;
+            LayerSetting("In");
+            paststate = enterinven;
         }
+
     }
 
     //마우스를 드래그해서 타일을 옮기는 함수
     void OnMouseDrag()
     {
-        if (!startgame)
+        if (!startGame)
         {
-            Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            Vector2 temp = Camera.main.ScreenToWorldPoint(mousePosition);
-            Vector2 objPosition = new Vector2(Mathf.Floor(temp.x) + 0.5f, Mathf.Floor(temp.y) + 0.5f);
+            Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y); //마우스 절대 좌표 입력
+            Vector2 temp = Camera.main.ScreenToWorldPoint(mousePosition); //마우스 절대 좌표를 화면상 상대 좌표로 수정
+            Vector2 objPosition = new Vector2(temp.x, temp.y); //
             transform.position = objPosition;
+            DeadlockSetting(deadlock);
+
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            invenhit = Physics2D.Raycast(mousePosition, Vector2.zero, 0f, LayerMask.GetMask("UI"));
+            if (invenhit.collider)
+                InvenSetting(true);
+            else
+                InvenSetting(false);
         }
+
     }
 
     //마우스를 드래그한 상태에서 놓은 순간
     private void OnMouseUp()
     {
-        //다른 타일과 겹친 상태(교착상태)에 마우스를 놓을 경우 이 좌표로 이동
-        if (deadlock)
-            transform.position = pastposition;
-
-        /*
-        //인벤토리에 오브젝트를 넣었을 경우
-        if (isInventory)
+        if (!startGame)
         {
-            IInventoryItem item = this.gameObject.GetComponent<IInventoryItem>();
-            if(item != null)
+            //다른 타일과 겹친 상태(교착상태)에 마우스를 놓을 경우 이 좌표로 이동
+            if (deadlock)
             {
-                inventory.AddItem(item);
+                transform.position = pastposition;
+                deadlock = false;
+                DeadlockSetting(deadlock);
+                if (paststate)
+                {
+                    InvenSetting(true);
+                    LayerSetting("In");
+                }
             }
+            else
+            {
+                if (!enterinven)
+                    LayerSetting("Out");
+            }
+
+            rigid.bodyType = RigidbodyType2D.Kinematic;
+
         }
-        */
-        rigid.bodyType = RigidbodyType2D.Static;
+
     }
 
-    //Start버튼을 눌렀을 경우
-    public void StartMove()
+    //인벤 세팅 함수
+    private void InvenSetting(bool etinven)
     {
-        //rigidbody타입 변경(Dynamic상태를 방치하면 캐릭터가 밟을 때 미세하게 움직임
-        rigid.bodyType = RigidbodyType2D.Static;
-        startgame = true;
-
-        //안내판일 경우 colide속성을 trigger로 변경, 반투명화
-        if (this.tag.Contains("Jumper"))
+        if (etinven)
         {
+            //인벤토리 객체의 자식으로 들어가기(화면이 움직일 때 같이 움직이기 위함)
+            transform.SetParent(Inventory.transform);
+            //객체크기 줄이기
+            transform.localScale = invenSize;
+            //인벤여부 bool 확인
+            enterinven = true;
+        }
+        else
+        {
+            //인벤토리 객체에서 MovableItem객체의 자식으로 돌아감
+            transform.SetParent(MovableItem.transform);
+            //객체크기 원상태
+            transform.localScale = originSize;
+            //인벤여부 bool 확인
+            enterinven = false;
+        }
+    }
+
+    /*
+     * 레이어 세팅 함수
+     * In : 인벤토리 안(인벤토리보다 위에 보이게)
+     * Out : 인벤토리 밖(인벤토리에 가려저 안보이게)
+    */
+
+    private void LayerSetting(string where)
+    {
+        if (where == "In")
+        {
+            foreach (SpriteRenderer objec in tiles)
+                objec.sortingLayerName = "Inven 4";
+            this.gameObject.layer = 12;
+        }
+        else if (where == "Out")
+        {
+            foreach (SpriteRenderer objec in tiles)
+                objec.sortingLayerName = "Item out Inventory 3";
+            this.gameObject.layer = 0;
+        }
+    }
+
+    private void DeadlockSetting(bool deadlock)
+    {
+        if (deadlock)
+        {
+            //자식객체의 각 타일들을 붉은 색으로 바꾸기
+            foreach (SpriteRenderer objec in tiles)
+                objec.color = new Color(1, 0, 0);
+        }
+        else
+        {
+            //원상복귀
+            foreach (SpriteRenderer objec in tiles)
+                objec.color = new Color(255, 255, 255);
+        }
+    }
+
+    public void StartGame()
+    {
+        startGame = true;
+        rigid.bodyType = RigidbodyType2D.Static;
+        if (tag == "Sign")
+        {
+            foreach (SpriteRenderer objec in tiles)
+                objec.color = new Color(255, 255, 255, 0.3f);
             colid.isTrigger = true;
-            thissprite.color  = new Color(255, 255, 255, 0.5f);
         }
     }
 
-    //Stop버튼을 눌렀을 경우
-    public void StopMove()
+    public void StopGame()
     {
-        startgame = false;
-        if (this.tag.Contains("Jumper"))
-        {
-            colid.isTrigger = false;
-            thissprite.color = new Color(255, 255, 255, 1);
-        }
+        startGame = false;
+        rigid.bodyType = RigidbodyType2D.Kinematic;
+        colid.isTrigger = false;
+        foreach (SpriteRenderer objec in tiles)
+            objec.color = new Color(255, 255, 255, 1f);
     }
 
-    //Reset버튼을 눌렀을 경우
     public void ResetGame()
     {
-        startgame = false;
-
-        //타일들의 위치를 게임 시작 직후의 위치로 변경
-        //후에 UI로 변경하여 타일들을 UI로 옮기는 작업을 실시해야함
-        transform.position = originposition;
-
-        if (this.tag.Contains("Jumper"))
-        {
-            colid.isTrigger = false;
-            thissprite.color = new Color(255, 255, 255, 1);
-        }
+        startGame = false;
+        transform.position = originPosition;
+        InvenSetting(true);
+        LayerSetting("In");
+        rigid.bodyType = RigidbodyType2D.Kinematic;
+        colid.isTrigger = false;
+        foreach (SpriteRenderer objec in tiles)
+            objec.color = new Color(255, 255, 255, 1f);
     }
 }

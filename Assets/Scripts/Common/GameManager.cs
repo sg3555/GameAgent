@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public rm_move Actor; //록맨
-    public Drag[] MovableTile; //움직일 수 있는 아이템들
+    public Mario Actor; //마리오
+    public Drager[] MovableTile, Inventory; //아이템창
     public BgmController MainBGM, DeadBGM, Goal1, Goal2; //배경음 관리자
     public Button[] buttons = new Button[3]; //시작, 정지, 초기화 버튼
     public GameObject flag, ClearUI, ExplainUI; //깃발, 클리어UI, 설명창UI
+    public CamControl mainCam; //카메라
     //이건 클리어 여부 확인을 위한것이 아닌 클리어 후 애니메이션 설정을 위해 둔 bool값
     public bool clear;
     bool isopen; //설명창 전용 bool
@@ -24,6 +25,9 @@ public class GameManager : MonoBehaviour
         clear = false;
         isopen = false;
         ExplainUI.SetActive(isopen);
+
+        MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
+        Inventory = GameObject.Find("Inventory").GetComponentsInChildren<Drager>();
     }
 
     private void FixedUpdate()
@@ -31,6 +35,25 @@ public class GameManager : MonoBehaviour
         //클리어 했을 시 깃발이 조금씩 내려오는 모션을 위한 부분
         if (clear && flag.transform.position.y >= -5.5)
             flag.transform.Translate(new Vector3(0, -0.15f, 0));
+
+        if (Actor.GM_clear)
+        {
+            clearScreen();
+            Actor.GM_clear = false;
+        }
+
+        if (Actor.GM_isdead)
+        {
+            deadAction();
+            Actor.GM_isdead = false;
+        }
+
+        if (Actor.GM_goal)
+        {
+            goalAction();
+            Actor.GM_goal = false;
+        }
+
     }
 
     //캐릭터 사망시 행동
@@ -75,30 +98,36 @@ public class GameManager : MonoBehaviour
     //캐릭터 행동개시
     public void startUpGame()
     {
-        //Actor.StartMove();
-        foreach (Drag dr in MovableTile)
-            dr.StartMove();
+        mainCam.StartGame();
+        Actor.StartMove();
+        foreach (Drager dr in MovableTile)
+            dr.StartGame();
+        foreach (Drager dr in Inventory)
+            dr.StartGame();
         MainBGM.SetVolume(1.0f);
     }
 
     //캐릭터 행동 중단
     public void stopGame()
     {
-        //Actor.ResetGame();
-        foreach (Drag dr in MovableTile)
-            dr.StopMove();
+        mainCam.StopGame();
+        Actor.ResetGame();
+        foreach (Drager dr in MovableTile)
+            dr.StopGame();
+        foreach (Drager dr in Inventory)
+            dr.StopGame();
         MainBGM.SetVolume(0.7f);
     }
 
     //맵 초기화
     public void resetGame()
     {
-        //Actor.ResetGame();
-        foreach (Drag dr in MovableTile)
-        {
-            //ItemProperty item = dr.GetComponent<ItemProperty>();
-            //item.ResetBtn();
-        }
+        mainCam.ResetGame();
+        Actor.ResetGame();
+        foreach (Drager dr in MovableTile)
+            dr.ResetGame();
+        foreach (Drager dr in Inventory)
+            dr.ResetGame();
         MainBGM.SetVolume(0.7f);
     }
 
@@ -121,7 +150,7 @@ public class GameManager : MonoBehaviour
     //게임자체 재시작
     public void GameRestart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     //버튼 누르면 설명창 반전
@@ -130,19 +159,5 @@ public class GameManager : MonoBehaviour
         isopen = !isopen;
         ExplainUI.SetActive(isopen);
     }
-
-    public void START()
-    {
-
-    }
-
-    public void STOP()
-    {
-
-    }
-
-    public void RESET()
-    {
-
-    }
 }
+

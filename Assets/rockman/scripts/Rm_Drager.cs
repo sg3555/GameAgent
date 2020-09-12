@@ -5,16 +5,17 @@ using UnityEngine;
 public class Rm_Drager : MonoBehaviour
 {
     /*
-     * Rigidbody Dynamic : 움직일 수 있는 형태
-     * Rigidbody Static : 움직일 수 없는 형태
-     * 두 Collider의 충돌여부 판정은 반드시 둘중 하나는 Dynamic상태여야 함
-     */
+    * Rigidbody Dynamic : 움직일 수 있는 형태
+    * Rigidbody Static : 움직일 수 없는 형태
+    * 두 Collider의 충돌여부 판정은 반드시 둘중 하나는 Dynamic상태여야 함
+    */
 
     //각각 최초위치, 마우스를 놓기전 위치, 최초 사이즈, 인벤사이즈
     Vector2 originPosition, //최초위치
         pastposition,   //마우스를 놓기전 위치
         originSize, //최초 사이즈
-        invenSize;  //인벤토리에 들어갔을 시 사이즈
+        invenSize,  //인벤토리에 들어갔을 시 사이즈
+        mousePosition; //마우스 현재위치
 
     //스프라이트구동기
     SpriteRenderer[] tiles;
@@ -29,7 +30,10 @@ public class Rm_Drager : MonoBehaviour
 
     public float minimunsize = 0.5f; //인벤토리에 들어갔을 때 사이즈(디폴트값 : 0.5)
 
-    GameObject Inventory, MovableItem;
+    GameObject Inventory, MovableItem;//아이템이 들어가는 위치
+
+    Ray mouseRay; // 마우스 인벤 충돌 감지용
+    RaycastHit2D invenhit;
 
     private void Awake()
     {
@@ -46,28 +50,9 @@ public class Rm_Drager : MonoBehaviour
         invenSize = new Vector2(minimunsize, minimunsize);
         deadlock = false;
         startGame = false;
-        enterinven = true;
         paststate = true;
-        InvenSetting(enterinven);
+        InvenSetting(true);
         LayerSetting("In");
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!startGame)
-        {
-            if (collision.tag == "Inventory")
-                enterinven = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (!startGame)
-        {
-            if (collision.tag == "Inventory")
-                enterinven = false;
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -91,9 +76,8 @@ public class Rm_Drager : MonoBehaviour
         {
             pastposition = this.gameObject.transform.position;
             rigid.bodyType = RigidbodyType2D.Dynamic;
-            paststate = enterinven;
-            InvenSetting(false);
             LayerSetting("In");
+            paststate = enterinven;
         }
 
     }
@@ -108,6 +92,13 @@ public class Rm_Drager : MonoBehaviour
             Vector2 objPosition = new Vector2(temp.x, temp.y); //
             transform.position = objPosition;
             DeadlockSetting(deadlock);
+
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            invenhit = Physics2D.Raycast(mousePosition, Vector2.zero, 0f, LayerMask.GetMask("UI"));
+            if (invenhit.collider)
+                InvenSetting(true);
+            else
+                InvenSetting(false);
         }
 
     }
@@ -125,16 +116,13 @@ public class Rm_Drager : MonoBehaviour
                 DeadlockSetting(deadlock);
                 if (paststate)
                 {
-                    InvenSetting(paststate);
+                    InvenSetting(true);
                     LayerSetting("In");
                 }
             }
             else
             {
-                InvenSetting(enterinven);
-                if (enterinven)
-                    LayerSetting("In");
-                else
+                if (!enterinven)
                     LayerSetting("Out");
             }
 
@@ -145,14 +133,16 @@ public class Rm_Drager : MonoBehaviour
     }
 
     //인벤 세팅 함수
-    private void InvenSetting(bool enterinven)
+    private void InvenSetting(bool etinven)
     {
-        if (enterinven)
+        if (etinven)
         {
             //인벤토리 객체의 자식으로 들어가기(화면이 움직일 때 같이 움직이기 위함)
             transform.SetParent(Inventory.transform);
             //객체크기 줄이기
             transform.localScale = invenSize;
+            //인벤여부 bool 확인
+            enterinven = true;
         }
         else
         {
@@ -160,6 +150,8 @@ public class Rm_Drager : MonoBehaviour
             transform.SetParent(MovableItem.transform);
             //객체크기 원상태
             transform.localScale = originSize;
+            //인벤여부 bool 확인
+            enterinven = false;
         }
     }
 
@@ -168,22 +160,20 @@ public class Rm_Drager : MonoBehaviour
      * In : 인벤토리 안(인벤토리보다 위에 보이게)
      * Out : 인벤토리 밖(인벤토리에 가려저 안보이게)
     */
+
     private void LayerSetting(string where)
     {
         if (where == "In")
         {
             foreach (SpriteRenderer objec in tiles)
                 objec.sortingLayerName = "Inven 4";
+            this.gameObject.layer = 12;
         }
         else if (where == "Out")
         {
             foreach (SpriteRenderer objec in tiles)
                 objec.sortingLayerName = "Item out Inventory 3";
-        }
-        else
-        {
-            Debug.Log("잘못된 레이어 세팅");
-            return;
+            this.gameObject.layer = 0;
         }
     }
 
@@ -203,6 +193,38 @@ public class Rm_Drager : MonoBehaviour
         }
     }
 
+    public void StartGame()
+    {
+        startGame = true;
+        //rigid.bodyType = RigidbodyType2D.Static;
+        if (tag == "Sign")
+        {
+           // foreach (SpriteRenderer objec in tiles)
+                //objec.color = new Color(255, 255, 255, 0.3f);
+            colid.isTrigger = true;
+        }
+    }
+
+    public void StopGame()
+    {
+        startGame = false;
+        rigid.bodyType = RigidbodyType2D.Kinematic;
+        colid.isTrigger = false;
+        foreach (SpriteRenderer objec in tiles)
+            objec.color = new Color(255, 255, 255, 1f);
+    }
+
+    public void ResetGame()
+    {
+        startGame = false;
+        transform.position = originPosition;
+        InvenSetting(true);
+        LayerSetting("In");
+        rigid.bodyType = RigidbodyType2D.Kinematic;
+        colid.isTrigger = false;
+        foreach (SpriteRenderer objec in tiles)
+            objec.color = new Color(255, 255, 255, 1f);
+    }
 }
 
 

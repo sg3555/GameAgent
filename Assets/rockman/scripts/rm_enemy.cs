@@ -15,6 +15,7 @@ public class rm_enemy : MonoBehaviour
     public bool damage = false;
     public float speed;
     bool isleft = true;
+    bool iscolide=false;
 
     // Start is called before the first frame update
     void Awake()
@@ -54,6 +55,17 @@ public class rm_enemy : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 isleft = true;
             }
+        }
+       
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+
+
+            transform.Translate(Vector2.zero);
+            
         }
     }
     //적이 데미지를 받았을 시 하는 행동

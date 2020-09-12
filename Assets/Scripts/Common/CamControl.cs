@@ -14,7 +14,7 @@ public class CamControl : MonoBehaviour
     
     public GameObject characterObject;    //추적대상 캐릭터(주인공)의 게임오브젝트
     Transform actor;    //캐릭터 게임오브젝트의 트랜스폼 컴포넌트
-    Vector2 originPosition; //카메라 최초위치
+    Vector3 originPosition; //카메라 최초위치
 
     public bool isStart;
 

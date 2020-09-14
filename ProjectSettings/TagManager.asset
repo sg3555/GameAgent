@@ -12,6 +12,7 @@ TagManager:
   - Damage
   - Inventory
   - Sign
+  - Test
   layers:
   - Default
   - TransparentFX

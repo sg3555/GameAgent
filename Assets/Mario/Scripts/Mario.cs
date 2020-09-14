@@ -100,13 +100,7 @@ public class Mario : MonoBehaviour
         mario_speed();
         mario_fall();
         mario_inverse();
-
-        //클리어시 국기봉에서 내려오는 모션
-        if (clear && transform.position.y >= -5.5)
-        {
-            transform.Translate(new Vector3(0, -0.15f, 0));
-        }
-
+        slipflag();
     }
 
     //게임 시작
@@ -160,6 +154,13 @@ public class Mario : MonoBehaviour
         anim.SetBool("IsGoal", false);
         sprit.flipX = false;
         startGame = true;
+    }
+
+    //클리어시 국기봉에서 내려오는 모션
+    void slipflag()
+    {
+        if (clear && transform.position.y >= -5.5)
+            transform.Translate(new Vector3(0, -0.15f, 0));
     }
 
     //사망모션

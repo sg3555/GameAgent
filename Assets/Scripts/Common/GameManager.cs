@@ -62,13 +62,13 @@ public class GameManager : MonoBehaviour
         //메인 배경음 볼륨 0으로 줄이고 사망 배경음 재생
         MainBGM.SetVolume(0);
         DeadBGM.PlaySound();
-
         //버튼 비활성화
         disableButton();
         //2.712초 후(배경음 재생 완료 후) 게임상태 Stop상태로 전환, 버튼 활성화
         Invoke("stopGame", 2.712f);
         Invoke("enableButton", 2.712f);
     }
+
 
     //캐릭터 클리어시 행동
     public void goalAction()

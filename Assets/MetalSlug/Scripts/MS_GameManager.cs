@@ -9,10 +9,14 @@ public class MS_GameManager : MonoBehaviour
     public MS_PlayerController player; //플레이어블 캐릭터
     public Button[] buttons = new Button[3]; //시작, 정지, 초기화 버튼
 
+    public Drager[] MovableTile, Inventory; //아이템창
+    public CamControl mainCam; //카메라
+
     // Start is called before the first frame update
     void Start()
     {
-
+        MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
+        Inventory = GameObject.Find("Inventory").GetComponentsInChildren<Drager>();
     }
 
     private void FixedUpdate()
@@ -27,7 +31,13 @@ public class MS_GameManager : MonoBehaviour
     //캐릭터 행동개시
     public void goButton()
     {
+        mainCam.StartGame();
         player.startMove();
+        foreach (Drager dr in MovableTile)
+            dr.StartGame();
+        foreach (Drager dr in Inventory)
+            dr.StartGame();
+        //MainBGM.SetVolume(1.0f);
     }
 
     public void stopButton()

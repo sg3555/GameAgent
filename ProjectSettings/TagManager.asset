@@ -12,6 +12,7 @@ TagManager:
   - Damage
   - Inventory
   - Sign
+  - Test
   layers:
   - Default
   - TransparentFX
@@ -42,7 +43,7 @@ TagManager:
   - Enemy_Bullet
   - Trigger
   - 
-  - 
+  - Test
   - 
   - 
   m_SortingLayers:

@@ -8,6 +8,7 @@ public class rm_playerAttack : MonoBehaviour
     public Transform pos;
     public rm_move rm;
     public rm_enemy re;
+    public GameObject sign_A;
     AudioSource audiosource;
     public AudioClip Audioshoot;
     //public float cooltime;
@@ -27,6 +28,7 @@ public class rm_playerAttack : MonoBehaviour
     bool isladder;
     public void rockman_Attack()
     {
+        Debug.Log("fire");
         anim.SetBool("isrunAttack", true);
         Instantiate(Bullet, pos.position, transform.rotation);
         rm.PlaySound(Audioshoot);

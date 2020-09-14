@@ -25,13 +25,14 @@ public class rm_bullet : MonoBehaviour
         {
             if(ray.collider.tag=="Enemy")
             {
-                DestroyBullet();
+                
                 Debug.Log("명중");
                 onAttack(ray.collider.transform);
+                Invoke("DestroyBullet", 1f);
                 
 
             }
-            DestroyBullet();
+            Invoke("DestroyBullet", 1f);
         }
         //총의 방향을 정하는 것
         if (transform.rotation.y == 0)

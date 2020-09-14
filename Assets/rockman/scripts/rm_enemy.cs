@@ -15,7 +15,7 @@ public class rm_enemy : MonoBehaviour
     public bool damage = false;
     public float speed;
     bool isleft = true;
-    bool iscolide=false;
+    //bool enemystop=false;
 
     // Start is called before the first frame update
     void Awake()
@@ -37,6 +37,10 @@ public class rm_enemy : MonoBehaviour
                 transform.Translate(Vector2.zero);
             else
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector2.zero);
         }
         
     }
@@ -79,6 +83,10 @@ public class rm_enemy : MonoBehaviour
         anim.SetTrigger("destroy");
         rm.PlaySound(des_sound);
         Invoke("DeActive", 0.5f);
+        
+    }
+    public void enemyStop()
+    {
         
     }
     public void enemyMove()

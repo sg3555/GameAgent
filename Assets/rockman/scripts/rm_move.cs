@@ -18,6 +18,7 @@ public class rm_move : MonoBehaviour
     public AudioClip audioWarp;
     Animator anim;
     public static rm_move rm;
+    public bool GM_isdead;
     SpriteRenderer sprite;
     
 
@@ -31,6 +32,7 @@ public class rm_move : MonoBehaviour
         PlaySound(audioWarp);
         originPosition = this.gameObject.transform.position;
         rigid.bodyType = RigidbodyType2D.Static;
+        GM_isdead = false;
         
 
     }
@@ -55,7 +57,11 @@ public class rm_move : MonoBehaviour
 
     public void ResetGame()
     {
+        
+        gameObject.SetActive(true);
+        anim.SetBool("isstart", true);
         gameObject.transform.position = originPosition;
+        rigid.bodyType = RigidbodyType2D.Static;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -84,12 +90,14 @@ public class rm_move : MonoBehaviour
 
         //sprite.color = new Color(1, 1, 1, 0.4f);
 
-        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+        int dirc = transform.position.x - targetPos.x > 0 ? 2 : -2;
         rigid.AddForce(new Vector2(dirc, 1)*3, ForceMode2D.Impulse);
 
         //애니메이션
-        anim.SetTrigger("damaged");      
-        Invoke("Deact", 1f);
+        anim.SetTrigger("damaged");
+        GM_isdead = true;
+        Invoke("Deact", 0.5f);
+
     }
     void Deact()
     {
@@ -101,7 +109,7 @@ public class rm_move : MonoBehaviour
         {
             anim.SetBool("isjump", true);
         }
-        rigid.AddForce(Vector2.up * 12, ForceMode2D.Impulse);
+        rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
         PlaySound(audiojump);
        
 
@@ -117,7 +125,7 @@ public class rm_move : MonoBehaviour
         if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1,LayerMask.GetMask("ground"));
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 5,LayerMask.GetMask("ground"));
             if (rayHit.collider != null)
             {
                 //Debug.Log(rayHit.collider.tag);
@@ -126,6 +134,7 @@ public class rm_move : MonoBehaviour
 
                     //anim.SetBool("isrun", true);
                     anim.SetBool("isjump", false);
+                    Debug.Log("점프");
                 }
 
             }

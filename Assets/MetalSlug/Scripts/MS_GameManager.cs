@@ -42,7 +42,7 @@ public class MS_GameManager : MonoBehaviour
 
     public void stopButton()
     {
-        player.stopGame();
+        player.resetGame();
     }
 
     public void resetButton()

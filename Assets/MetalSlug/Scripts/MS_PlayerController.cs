@@ -46,53 +46,16 @@ public class MS_PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //게임 시작상태에서만 움직임 활성화
-        if (startGame)
-        {
-            useKnife();
-            if (!clear)
-            {
-                groundLineCheck = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-                if (groundLineCheck && groundColCheck)
-                    onGround = true;
-                else
-                    onGround = false;
-
-                rigid.AddForce(Vector2.right * 1f, ForceMode2D.Impulse);
-                //최대속력 설정
-                if (rigid.velocity.x > maxSpeed && !clear)
-                    rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
-                else if (rigid.velocity.x < -maxSpeed && !clear)
-                    rigid.velocity = new Vector2(-maxSpeed, rigid.velocity.y);
-                anim.SetBool("IsRunning", true);
-                //움직일때 달리는 모션
-                //if (Mathf.Abs(rigid.velocity.x) > 0.3)
-                //    anim.SetBool("IsRunning", true);
-                //else
-                //    anim.SetBool("IsRunning", false);
-
-            }
-            else
-            {
-                rigid.velocity = new Vector2(0, 0);
-                //anim.SetBool("IsRunning", false);
-
-                if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife") && !anim.GetBool("IsClear"))
-                {
-                    Debug.Log(anim.GetCurrentAnimatorStateInfo(0));
-                    anim.SetBool("IsClear", true);
-                }
-            }
-        }
+        useKnife();
+        eri_move();
+        eri_speed();
+        eri_inverse();
+        groundCheck1();
+        eri_clear();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.layer != playerLayerNum && collision.gameObject.layer != PBulletLayerNum)
-        //{ 
-
-        //}
-
         //점프
         if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame && onGround)
         {
@@ -101,13 +64,6 @@ public class MS_PlayerController : MonoBehaviour
             rigid.AddForce(Vector2.up * jumpForce);
         }
 
-        //나이프
-        //if (collision.tag.Contains("Test") && !anim.GetBool("IsKnife") && startGame)
-        //{
-        //    Debug.Log("Enter Test");
-        //    isKnife = true;
-        //}
-
         if (collision.gameObject.layer == goalLayerNum)
         {
             isKnife = true;
@@ -115,13 +71,6 @@ public class MS_PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag.Contains("Test") && startGame)
-        {
-            //Debug.Log("Stay Test");
-        }
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -145,20 +94,66 @@ public class MS_PlayerController : MonoBehaviour
         }
     }
 
+    void eri_move()
+    {
+        //게임 시작상태에서만 움직임 활성화
+        if (startGame)
+            rigid.AddForce(Vector2.right * 1f, ForceMode2D.Impulse);
+    }
+    void eri_speed()
+    {
+        //최대속력 설정
+        if (rigid.velocity.x > maxSpeed && !clear)
+            rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
+        else if (rigid.velocity.x < -maxSpeed && !clear)
+            rigid.velocity = new Vector2(-maxSpeed, rigid.velocity.y);
+        //클리어 시 정지
+        else if (clear)
+            rigid.velocity = new Vector2(0, 0);
+    }
+    void eri_inverse()
+    {
+        if (Mathf.Abs(rigid.velocity.x) > 0.3)
+        {
+            anim.SetBool("IsRunning", true);
+        }
+        else
+            anim.SetBool("IsRunning", false);
+    }
+    void eri_clear()
+    {
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife") && !anim.GetBool("IsClear") && clear)
+        {
+            Debug.Log(anim.GetCurrentAnimatorStateInfo(0));
+            anim.SetBool("IsClear", true);
+        }
+    }
+    void groundCheck1()
+    {
+        groundLineCheck = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        if (groundLineCheck && groundColCheck)
+            onGround = true;
+        else
+            onGround = false;
+    }
+
     public void startMove()
     {
         Debug.Log("start");
+        rigid.bodyType = RigidbodyType2D.Dynamic;
         startGame = true;
-    }
-
-    public void stopGame()
-    {
-        Debug.Log("stop");
     }
 
     public void resetGame()
     {
         Debug.Log("reset");
+        rigid.bodyType = RigidbodyType2D.Static;
+        anim.SetBool("IsRunning", false);
+        anim.SetBool("IsKnife", false);
+        anim.SetBool("IsJump", false);
+        anim.SetBool("IsClear", false);
+        gameObject.transform.position = originPosition;
+        startGame = false;
     }
 
     //GameManager나 다른 오브젝트에서 플레이어의 상태를 조회

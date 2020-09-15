@@ -4,31 +4,44 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class stage : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class stage : MonoBehaviour
 {
-    public Transform buttonscale;//버튼의 크기를 결정하는 변수
+    public GameObject Main, Btns; // 캔버스
     Vector3 defaultScale;//버튼의 원래 크기 설정
+    bool turnscreen;
+
     private void Start()
     {
-        defaultScale = buttonscale.localScale;//원래 버튼의 크기를 초기화한다.
+        turnscreen = false;
+        Main.SetActive(true);
+        Btns.SetActive(false);
+    }
+
+    public void ChangeScene()
+    {
+        if(turnscreen == false)
+        {
+            turnscreen = true;
+            Main.SetActive(false);
+            Btns.SetActive(true);
+        }
     }
 
     public void marioscn()//마리오 씬으로 넘어가는 함수
     {
-        SceneManager.LoadScene("SampleScene");
-    }
-    public void backbtn()//뒤를 눌렀을 경우 넘어가는 함수
-    {
-        SceneManager.LoadScene("mainscene");
+        SceneManager.LoadScene("Mario_1");
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void magamanscn()//뒤를 눌렀을 경우 넘어가는 함수
     {
-        buttonscale.localScale = defaultScale * 1.2f;//초기값의 1.2배하고 버튼의 스케일 변수에 넣는다.
+        SceneManager.LoadScene("rockman_1");
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void metalslugscn()
     {
-        buttonscale.localScale = defaultScale;
+        //SceneManager.LoadScene("rockman_1");
+        Debug.Log("미구현");
     }
+
+
 }

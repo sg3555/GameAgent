@@ -7,7 +7,7 @@ public class rm_bullet : MonoBehaviour
 {
     public float speed;
     public float distance;
-    public LayerMask isLayer;
+    //public LayerMask isLayer;
     bool isshoot = false;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class rm_bullet : MonoBehaviour
     //총알이 적에게 맞았는지 확인하는 함수
     void Update()
     {
-        RaycastHit2D ray = Physics2D.Raycast(transform.position,transform.right,distance,isLayer);
+        RaycastHit2D ray = Physics2D.Raycast(transform.position,transform.right,distance);
         if (ray.collider != null)
         {
             if(ray.collider.tag=="Enemy")
@@ -28,7 +28,7 @@ public class rm_bullet : MonoBehaviour
                 
                 Debug.Log("명중");
                 onAttack(ray.collider.transform);
-                Invoke("DestroyBullet", 1f);
+                DestroyBullet();
                 
 
             }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class rm_Signcheck : MonoBehaviour
 {
     public Animator anim;
-    public float jumpPower;
+    //public float jumpPower;
     Rigidbody2D rigid;
     [SerializeField]
     float checkRadius;
@@ -18,7 +18,7 @@ public class rm_Signcheck : MonoBehaviour
     LayerMask islayer;
     public rm_move rm;
     public rm_playerAttack rp;
-    public LayerMask isLayer;
+    //public LayerMask isLayer;
     public int distance;
     ///public rm_bullet rb;
     // Start is called before the first frame update

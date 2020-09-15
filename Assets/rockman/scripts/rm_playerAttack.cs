@@ -15,6 +15,7 @@ public class rm_playerAttack : MonoBehaviour
     //private float curtime;
     Animator anim;
     Rigidbody2D rigid;
+    public bool isshoot=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +29,21 @@ public class rm_playerAttack : MonoBehaviour
     bool isladder;
     public void rockman_Attack()
     {
-        Debug.Log("fire");
-        anim.SetBool("isrunAttack", true);
-        Instantiate(Bullet, pos.position, transform.rotation);
-        rm.PlaySound(Audioshoot);
+        if (isshoot == false)
+        {
+            Debug.Log("fire");
+            anim.SetBool("isrunAttack", true);
+            Instantiate(Bullet, pos.position, transform.rotation);
+            rm.PlaySound(Audioshoot);
+            isshoot = true;
+        }
+        Invoke("rockman_isshoot", 1f);
 
 
+    }
+    public void rockman_isshoot()
+    {
+        isshoot = false;
     }
     public void rockman_DeAttack()
     {

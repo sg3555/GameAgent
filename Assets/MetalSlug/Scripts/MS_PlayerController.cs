@@ -53,7 +53,7 @@ public class MS_PlayerController : MonoBehaviour
         eri_speed();
         eri_inverse();
         groundCheck1();
-        eri_clear();
+        //eri_clear();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -116,7 +116,11 @@ public class MS_PlayerController : MonoBehaviour
         if (collision.gameObject.layer == goalLayerNum)
         {
             isKnife = true;
-            clear = true;
+            rigid.velocity = new Vector2(0, 0);
+            startGame = false;
+            Invoke("eri_clear", 1.5f);
+            
+            //clear = true;
         }
     }
 
@@ -171,6 +175,7 @@ public class MS_PlayerController : MonoBehaviour
     }
     void eri_clear()
     {
+        clear = true;
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife") && !anim.GetBool("IsClear") && clear)
         {
             Debug.Log(anim.GetCurrentAnimatorStateInfo(0));

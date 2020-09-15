@@ -13,6 +13,11 @@ TagManager:
   - Inventory
   - Sign
   - Test
+  - ground
+  - Clear
+  - endpoint
+  - Enemy
+  - ladder
   layers:
   - Default
   - TransparentFX
@@ -28,7 +33,7 @@ TagManager:
   - Damage
   - Platform_in_Inven
   - 
-  - 
+  - ground
   - 
   - 
   - 

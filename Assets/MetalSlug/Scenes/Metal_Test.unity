@@ -428,7 +428,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 943429103}
         m_MethodName: GameRestart
         m_Mode: 1
         m_Arguments:
@@ -3067,6 +3067,8 @@ MonoBehaviour:
   MovableTile: []
   Inventory: []
   mainCam: {fileID: 219798191}
+  ClearUI: {fileID: 1680985905}
+  ExplainUI: {fileID: 2127100007}
 --- !u!4 &943429104
 Transform:
   m_ObjectHideFlags: 0
@@ -6240,7 +6242,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 943429103}
         m_MethodName: OpenExplain
         m_Mode: 1
         m_Arguments:

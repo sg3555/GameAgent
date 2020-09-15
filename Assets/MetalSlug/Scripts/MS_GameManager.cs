@@ -11,10 +11,15 @@ public class MS_GameManager : MonoBehaviour
 
     public Drager[] MovableTile, Inventory; //아이템창
     public CamControl mainCam; //카메라
+    public GameObject ClearUI, ExplainUI; //깃발, 클리어UI, 설명창UI
+    bool isopen; //설명창 전용 bool
 
     // Start is called before the first frame update
     void Start()
     {
+        isopen = false;
+        ExplainUI.SetActive(isopen);
+
         MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
         Inventory = GameObject.Find("Inventory").GetComponentsInChildren<Drager>();
     }
@@ -24,6 +29,7 @@ public class MS_GameManager : MonoBehaviour
         //클리어 여부 체크
         if (player.getState().Equals("clear"))
         {
+            clearScreen();
             //Debug.Log(player.getState());
         }
     }
@@ -42,13 +48,25 @@ public class MS_GameManager : MonoBehaviour
 
     public void stopButton()
     {
+        mainCam.StopGame();
         player.resetGame();
+        foreach (Drager dr in MovableTile)
+            dr.StopGame();
+        foreach (Drager dr in Inventory)
+            dr.StopGame();
+        //MainBGM.SetVolume(0.7f);
     }
 
     public void resetButton()
     {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        mainCam.ResetGame();
         player.resetGame();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        foreach (Drager dr in MovableTile)
+            dr.ResetGame();
+        foreach (Drager dr in Inventory)
+            dr.ResetGame();
+        //MainBGM.SetVolume(0.7f);
     }
 
     //버튼 비활성화 함수
@@ -65,5 +83,21 @@ public class MS_GameManager : MonoBehaviour
         buttons[0].interactable = true;
         buttons[1].interactable = true;
         buttons[2].interactable = true;
+    }
+    public void clearScreen()
+    {
+        ClearUI.SetActive(true);
+    }
+    //게임자체 재시작
+    public void GameRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    //버튼 누르면 설명창 반전
+    public void OpenExplain()
+    {
+        isopen = !isopen;
+        ExplainUI.SetActive(isopen);
     }
 }

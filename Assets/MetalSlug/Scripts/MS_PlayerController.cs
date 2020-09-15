@@ -14,7 +14,8 @@ public class MS_PlayerController : MonoBehaviour
     public bool startGame;  //게임 시작상태 bool
     public bool clear; //클리어 여부 
     public float maxSpeed = 5f; // Player Speed
-    public int jumpForce = 450; // Player jump force
+    //public int jumpForce = 450; // Player jump force
+    public int height; // Player jump force
     public int groundLayerNum = 21; // ground의 레이어 번호
     public int playerLayerNum = 22; // ground의 레이어 번호
     public int goalLayerNum = 24; 
@@ -42,6 +43,7 @@ public class MS_PlayerController : MonoBehaviour
         clear = false;
         originPosition = this.gameObject.transform.position;
         groundCheck = gameObject.transform.Find("GroundCheck");
+        height = 10;
     }
 
     void FixedUpdate()
@@ -57,11 +59,58 @@ public class MS_PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //점프
-        if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame && onGround)
+        //if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame && onGround)
+        //{
+        //    Debug.Log("Enter Test");
+        //    anim.SetBool("IsJump", true);
+        //    rigid.AddForce(Vector2.up * jumpForce);
+        //}
+
+
+        if (collision.tag == "Sign")
         {
-            Debug.Log("Enter Test");
-            anim.SetBool("IsJump", true);
-            rigid.AddForce(Vector2.up * jumpForce);
+            if (collision.name.Contains("Sign_Up"))
+            {
+                if (!anim.GetBool("IsJump") && startGame)
+                {
+                    rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+                    anim.SetBool("IsJump", true);
+                    //PlaySound(audioJump);
+                }
+            }
+            if (collision.name.Contains("Sign_Down"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Left"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Right"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_A"))
+            {
+                if (!anim.GetBool("IsJump") && startGame)
+                {
+                    rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+                    anim.SetBool("IsJump", true);
+                    //PlaySound(audioJump);
+                }
+            }
+            if (collision.name.Contains("Sign_B"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_X"))
+            {
+
+            }
+            if (collision.name.Contains("Sign_Y"))
+            {
+
+            }
         }
 
         if (collision.gameObject.layer == goalLayerNum)

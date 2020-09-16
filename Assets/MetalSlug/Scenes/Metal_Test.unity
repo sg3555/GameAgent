@@ -2815,7 +2815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108ebe83d8d2c3841b50d4039ae7b9cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 27df4af51d7fb6c4cad6cc18fe8c1d41, type: 3}
+  sound: {fileID: 8300000, guid: cf710685195046546af7ac82468a0cfb, type: 3}
 --- !u!1 &839914757
 GameObject:
   m_ObjectHideFlags: 0
@@ -3064,6 +3064,10 @@ MonoBehaviour:
   - {fileID: 150139846}
   - {fileID: 1346291546}
   - {fileID: 1223737111}
+  MainBGM: {fileID: 822950728}
+  DeadBGM: {fileID: 1204843941}
+  Goal1: {fileID: 575820165}
+  Goal2: {fileID: 378679710}
   MovableTile: []
   Inventory: []
   mainCam: {fileID: 219798191}
@@ -4150,6 +4154,9 @@ MonoBehaviour:
   PBulletLayerNum: 25
   knife: {fileID: 1580139403}
   isKnife: 0
+  GM_isdead: 0
+  GM_goal: 0
+  GM_clear: 0
 --- !u!4 &1234427926
 Transform:
   m_ObjectHideFlags: 0

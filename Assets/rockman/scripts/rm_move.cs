@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//버튼을 누르면 캐릭터가 움직이는 Actor객체의 스크립트
+
 public class rm_move : MonoBehaviour
 {
     Vector2 originPosition;
@@ -96,9 +96,7 @@ public class rm_move : MonoBehaviour
     }
     void onDamagedEnemy(Vector2 targetPos)
     {
-        //gameObject.layer = 12;
 
-        //sprite.color = new Color(1, 1, 1, 0.4f);
 
         int dirc = transform.position.x - targetPos.x > 0 ? 2 : -2;
         rigid.AddForce(new Vector2(dirc, 1)*3, ForceMode2D.Impulse);
@@ -150,18 +148,18 @@ public class rm_move : MonoBehaviour
             anim.SetBool("isstart", false);
         }
         rockman_move();
-        //rockman_jump();
+
         if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 5,LayerMask.GetMask("ground"));
             if (rayHit.collider != null)
             {
-                //Debug.Log(rayHit.collider.tag);
+              
                 if (rayHit.distance <= 1f)
                 {
 
-                    //anim.SetBool("isrun", true);
+                    
                     anim.SetBool("isjump", false);
                    
                 }

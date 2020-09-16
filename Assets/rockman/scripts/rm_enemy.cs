@@ -19,9 +19,7 @@ public class rm_enemy : MonoBehaviour
     bool isleft = true;
     bool emove = false;
     Vector2 originPosition;
-    //bool enemystop=false;
 
-    // Start is called before the first frame update
     void Awake()
     {
         rigid=GetComponent<Rigidbody2D>();
@@ -32,7 +30,6 @@ public class rm_enemy : MonoBehaviour
         originPosition= this.gameObject.transform.position;
     }
 
-    // Update is called once per frame
     void Update()//적이 데미지를 받았을 경우 그 자리에서 멈추게 하고 그렇지 않으면 이동하게 하는 것
     {
         if (emove)
@@ -45,45 +42,7 @@ public class rm_enemy : MonoBehaviour
                 transform.Translate(Vector2.left * 2 * Time.deltaTime);
             }
         }
-        //if (gm.start)
-        //{
-        //    if (damage == true)
-        //        transform.Translate(Vector2.zero);
-        //    else
-        //    {
-
-        //        transform.Translate(Vector2.left * speed * Time.deltaTime);
-        //    }
-        //}
-        //else if(gm.reset&&(!gm.start))
-        //{
-        //    Debug.Log("reset");
-        //    if (damage == true) 
-        //    {
-        //        Debug.Log("reset_dm");
-        //        gameObject.SetActive(true);
-        //        damage = false;
-        //    }
-
-        //    gameObject.transform.position = originPosition;
-        //    transform.Translate(Vector2.zero);
-        //    collide.enabled = true;
-        //    gm.reset = false;
-        //}
-        //else if (gm.stop && (!gm.start))
-        //{
-        //    Debug.Log("stop");
-        //    if (damage == true)
-        //    {
-        //        Debug.Log("stop_dm");
-        //        Active();
-        //        damage = false;
-        //    }
-        //    gameObject.transform.position = originPosition;
-        //    transform.Translate(Vector2.zero);
-        //    collide.enabled = true;
-        //    gm.stop = false;
-        //}
+     
 
 
     }
@@ -125,10 +84,7 @@ public class rm_enemy : MonoBehaviour
     public void OnDamaged()
     {
         damage = true;
-        //spriteRenderer.color = new Color(1, 1, 1, 0.5f);
-        //spriteRenderer.flipY = true;
         collide.enabled = false;
-        //rigid.AddForce(Vector2.down * 5, ForceMode2D.Impulse);
         anim.SetTrigger("destroy");
         rm.PlaySound(des_sound);
         Invoke("DeActive", 0.5f);

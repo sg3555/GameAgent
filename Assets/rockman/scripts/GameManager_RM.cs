@@ -33,10 +33,9 @@ public class GameManager_RM : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        //startBtn();
+
         if (rm.GM_isdead)
         {
             deadAction();
@@ -54,7 +53,7 @@ public class GameManager_RM : MonoBehaviour
             dr.StartGame();
         foreach (rm_enemy en in enemy)
             en.enemyMove();
-        //rm.Start_move();
+       
 
     }
     public void resetGame()
@@ -92,7 +91,7 @@ public class GameManager_RM : MonoBehaviour
     {
         MainBgm.StopSound();
         Invoke("deadBgm", 0.1f);
-        //DeadBgm.PlaySound();
+        DeadBgm.PlaySound();
         start = false;
         disableButton();
         Invoke("StopGame", 3f);

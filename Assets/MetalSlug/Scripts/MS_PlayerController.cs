@@ -26,6 +26,7 @@ public class MS_PlayerController : MonoBehaviour
     private bool onGround = false;
     private bool groundLineCheck = false;
     private bool groundColCheck = false;
+    public bool GM_isdead, GM_goal, GM_clear; //게임매니저 수신용
 
     void Awake()
     {
@@ -116,8 +117,7 @@ public class MS_PlayerController : MonoBehaviour
         if (collision.gameObject.layer == goalLayerNum)
         {
             isKnife = true;
-            rigid.velocity = new Vector2(0, 0);
-            startGame = false;
+            clear = true;
             Invoke("eri_clear", 1.5f);
             
             //clear = true;
@@ -175,12 +175,8 @@ public class MS_PlayerController : MonoBehaviour
     }
     void eri_clear()
     {
-        clear = true;
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife") && !anim.GetBool("IsClear") && clear)
-        {
-            Debug.Log(anim.GetCurrentAnimatorStateInfo(0));
-            anim.SetBool("IsClear", true);
-        }
+        anim.SetBool("IsClear", true);
+        GM_clear = true;
     }
     void groundCheck1()
     {
@@ -213,7 +209,7 @@ public class MS_PlayerController : MonoBehaviour
     //GameManager나 다른 오브젝트에서 플레이어의 상태를 조회
     public string getState()
     {
-        if (clear)
+        if (GM_clear)
         {
             return "clear";
         }

@@ -54,7 +54,7 @@ public class MS_PlayerController : MonoBehaviour
         eri_move();
         eri_speed();
         eri_inverse();
-        groundCheck1();
+        multiGroundCheck();
         useKnifeLayer();
         //eri_clear();
     }
@@ -120,9 +120,7 @@ public class MS_PlayerController : MonoBehaviour
         {
             useKnife();
             clear = true;
-            Invoke("eri_clear", 1.5f);
-            
-            //clear = true;
+            Invoke("eri_clear", 1.2f);
         }
     }
 
@@ -180,7 +178,7 @@ public class MS_PlayerController : MonoBehaviour
         anim.SetBool("IsClear", true);
         GM_clear = true;
     }
-    void groundCheck1()
+    void multiGroundCheck()
     {
         groundLineCheck = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
         if (groundLineCheck && groundColCheck)
@@ -201,7 +199,6 @@ public class MS_PlayerController : MonoBehaviour
         Debug.Log("reset");
         rigid.bodyType = RigidbodyType2D.Static;
         anim.SetBool("IsRunning", false);
-        anim.SetBool("IsKnife", false);
         anim.SetBool("IsJump", false);
         anim.SetBool("IsClear", false);
         gameObject.transform.position = originPosition;
@@ -222,16 +219,11 @@ public class MS_PlayerController : MonoBehaviour
     }
     private void useKnife()
     {
-        if (!anim.GetBool("IsKnife") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife"))
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife"))
         {
-            anim.SetBool("IsKnife", true);
+            anim.SetTrigger("useKnife");
             PlaySound(audioKnife_rope);
-            Invoke("knife_off", 0.1f);
         }
-    }
-    private void knife_off()
-    {
-        anim.SetBool("IsKnife", false);
     }
     private void useKnifeLayer()
     {

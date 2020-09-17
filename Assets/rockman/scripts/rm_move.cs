@@ -71,9 +71,10 @@ public class rm_move : MonoBehaviour
             PlaySound(audioClear);
             Invoke("Deact", 4f);
             GameManager_RM.gm.clearAction();
-            
-            
-            
+
+
+
+
         }
         if (collision.gameObject.tag == "Dead")
         {

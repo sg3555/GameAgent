@@ -106,7 +106,7 @@ public class GameManager_RM : MonoBehaviour
     }
     public void clearAction()
     {
-        clearScreen();
+        Invoke("clearScreen", 4f);
         disableButton();
         MainBgm.StopSound();
         clear.PlaySound();

@@ -49,7 +49,7 @@ public class MS_PlayerController : MonoBehaviour
         clear = false;
         originPosition = this.gameObject.transform.position;
         groundCheck = gameObject.transform.Find("GroundCheck");
-        height = 14;
+        height = 15;
     }
 
     void FixedUpdate()
@@ -66,7 +66,20 @@ public class MS_PlayerController : MonoBehaviour
         }
         else if (anim.GetBool("IsJump") && rigid.velocity.y < 0)
         {
-            Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
+
+            Debug.DrawRay(rigid.position, Vector2.down, new Color(0, 255, 0));
+            RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.transform.position, Vector2.down, 1, LayerMask.GetMask("Ground"));
+            if (rayHit.collider != null)
+                //if (rayHit.distance > 0.5f)
+                Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
+
+            //Vector3 vec = new Vector3(0, -1.2f, 0);
+            //bool check = Physics2D.Linecast(groundCheck.transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+            //if (groundLineCheck)
+            //{
+            //    Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
+            //}
+
         }
 
         //if (rigid.velocity.y < 0)

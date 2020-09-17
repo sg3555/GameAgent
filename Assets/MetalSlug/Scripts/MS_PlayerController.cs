@@ -28,6 +28,8 @@ public class MS_PlayerController : MonoBehaviour
     private bool groundColCheck = false;
     public bool GM_isdead, GM_goal, GM_clear; //게임매니저 수신용
 
+    public AudioClip audioKnife_rope;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -49,11 +51,11 @@ public class MS_PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        useKnife();
         eri_move();
         eri_speed();
         eri_inverse();
         groundCheck1();
+        useKnifeLayer();
         //eri_clear();
     }
 
@@ -116,7 +118,7 @@ public class MS_PlayerController : MonoBehaviour
 
         if (collision.gameObject.layer == goalLayerNum)
         {
-            isKnife = true;
+            useKnife();
             clear = true;
             Invoke("eri_clear", 1.5f);
             
@@ -218,18 +220,21 @@ public class MS_PlayerController : MonoBehaviour
             return "null";
         }
     }
-
     private void useKnife()
     {
-        //근접공격
-        if (isKnife)
+        if (!anim.GetBool("IsKnife") && !anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife"))
         {
             anim.SetBool("IsKnife", true);
-            isKnife = false;
+            PlaySound(audioKnife_rope);
+            Invoke("knife_off", 0.1f);
         }
-        else
-            anim.SetBool("IsKnife", false);
-
+    }
+    private void knife_off()
+    {
+        anim.SetBool("IsKnife", false);
+    }
+    private void useKnifeLayer()
+    {
         //근접공격 중 칼날에 타격판정 부여
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife"))
         {
@@ -240,5 +245,10 @@ public class MS_PlayerController : MonoBehaviour
         {
             knife.layer = playerLayerNum;
         }
+    }
+    void PlaySound(AudioClip action)
+    {
+        audioSource.clip = action;
+        audioSource.Play();
     }
 }

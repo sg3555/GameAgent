@@ -147,6 +147,12 @@ public class GameManager : MonoBehaviour
         buttons[2].interactable = true;
     }
 
+    //다음스테이지
+    public void Next_rockman()
+    {
+        SceneManager.LoadScene("rockman_1");
+    }
+
     //게임자체 재시작
     public void GameRestart()
     {

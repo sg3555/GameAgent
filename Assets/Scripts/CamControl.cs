@@ -87,6 +87,7 @@ public class CamControl : MonoBehaviour
     public void StopGame()
     {
         isStart = false;
+        transform.position = originPosition;
     }
 
     public void ResetGame()

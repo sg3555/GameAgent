@@ -39,8 +39,7 @@ public class stage : MonoBehaviour
 
     public void metalslugscn()
     {
-        //SceneManager.LoadScene("rockman_1");
-        Debug.Log("미구현");
+        SceneManager.LoadScene("MetalSlug_1");
     }
 
 

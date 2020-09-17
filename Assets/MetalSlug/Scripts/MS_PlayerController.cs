@@ -17,11 +17,13 @@ public class MS_PlayerController : MonoBehaviour
     //public int jumpForce = 450; // Player jump force
     public int height; // Player jump force
     public int groundLayerNum = 21; // ground의 레이어 번호
-    public int playerLayerNum = 22; // ground의 레이어 번호
+    public int playerLayerNum = 22;
     public int goalLayerNum = 24; 
     public int PBulletLayerNum = 25; 
+    public int PlatformLayerNum = 8; 
     public GameObject knife;
     public bool isKnife = false;
+    private bool isJump = false;
     private Transform groundCheck;
     private bool onGround = false;
     private bool groundLineCheck = false;
@@ -42,11 +44,12 @@ public class MS_PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         startGame = false;
         clear = false;
         originPosition = this.gameObject.transform.position;
         groundCheck = gameObject.transform.Find("GroundCheck");
-        height = 10;
+        height = 14;
     }
 
     void FixedUpdate()
@@ -56,6 +59,24 @@ public class MS_PlayerController : MonoBehaviour
         eri_inverse();
         multiGroundCheck();
         useKnifeLayer();
+
+        if (anim.GetBool("IsJump") && rigid.velocity.y > 0)
+        {
+            Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, true);
+        }
+        else if (anim.GetBool("IsJump") && rigid.velocity.y < 0)
+        {
+            Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
+        }
+
+        //if (rigid.velocity.y < 0)
+        //{
+        //    Physics2D.IgnoreLayerCollision(playerLayerNum, PlatformLayerNum, false);
+        //}
+        //else
+        //{
+        //    Physics2D.IgnoreLayerCollision(playerLayerNum, PlatformLayerNum, true);
+        //}
         //eri_clear();
     }
 
@@ -70,6 +91,61 @@ public class MS_PlayerController : MonoBehaviour
         //}
 
 
+        //if (collision.tag == "Sign")
+        //{
+        //    if (collision.name.Contains("Sign_Up"))
+        //    {
+        //        if (!anim.GetBool("IsJump") && startGame)
+        //        {
+        //            rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+        //            anim.SetBool("IsJump", true);
+        //            //PlaySound(audioJump);
+        //        }
+        //    }
+        //    if (collision.name.Contains("Sign_Down"))
+        //    {
+
+        //    }
+        //    if (collision.name.Contains("Sign_Left"))
+        //    {
+
+        //    }
+        //    if (collision.name.Contains("Sign_Right"))
+        //    {
+
+        //    }
+        //    if (collision.name.Contains("Sign_A"))
+        //    {
+        //        if (!anim.GetBool("IsJump") && startGame)
+        //        {
+        //            rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+        //            anim.SetBool("IsJump", true);
+        //            //PlaySound(audioJump);
+        //        }
+        //    }
+        //    if (collision.name.Contains("Sign_B"))
+        //    {
+
+        //    }
+        //    if (collision.name.Contains("Sign_X"))
+        //    {
+
+        //    }
+        //    if (collision.name.Contains("Sign_Y"))
+        //    {
+
+        //    }
+        //}
+
+        if (collision.gameObject.layer == goalLayerNum && onGround)
+        {
+            useKnife();
+            clear = true;
+            Invoke("eri_clear", 1.2f);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         if (collision.tag == "Sign")
         {
             if (collision.name.Contains("Sign_Up"))
@@ -115,15 +191,7 @@ public class MS_PlayerController : MonoBehaviour
 
             }
         }
-
-        if (collision.gameObject.layer == goalLayerNum)
-        {
-            useKnife();
-            clear = true;
-            Invoke("eri_clear", 1.2f);
-        }
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

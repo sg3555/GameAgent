@@ -99,4 +99,4 @@ MonoBehaviour:
   distance: 0.5
   isLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 8388608

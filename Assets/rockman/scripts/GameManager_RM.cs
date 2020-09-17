@@ -53,12 +53,14 @@ public class GameManager_RM : MonoBehaviour
             dr.StartGame();
         foreach (rm_enemy en in enemy)
             en.enemyMove();
+        rm.rockman_move();
        
 
     }
     public void resetGame()
     {
         start = false;
+        stop = false;
         reset = true;   
         mainCam.ResetGame();
         rm.ResetGame();
@@ -69,13 +71,15 @@ public class GameManager_RM : MonoBehaviour
         foreach (rm_enemy en in enemy)
             en.enemyStop();
         MainBgm.PlaySound();
-        MainBgm.SetVolume(0f);
+        rm.movestart = false;
     }
 
     public void stopGame()
     {
+        MainBgm.PlaySound();
         start = false;
         stop = true;
+        reset = false;
         mainCam.StopGame();
         rm.ResetGame();
         foreach (Drager dr in MovableTile)
@@ -84,8 +88,7 @@ public class GameManager_RM : MonoBehaviour
             dr.StopGame();
         foreach (rm_enemy en in enemy)
             en.enemyStop();
-        MainBgm.PlaySound();
-        MainBgm.SetVolume(0f);
+        rm.movestart = false;
     }
     public void deadAction()
     {

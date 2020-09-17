@@ -17,7 +17,7 @@ public class rm_enemy : MonoBehaviour
     public bool damage = false;
     public float speed;
     bool isleft = true;
-    bool emove = false;
+    public bool emove = false;
     Vector2 originPosition;
 
     void Awake()
@@ -36,12 +36,14 @@ public class rm_enemy : MonoBehaviour
         {
             if (damage == true)
                 transform.Translate(Vector2.zero);
+       
             else
             {
                 
                 transform.Translate(Vector2.left * 2 * Time.deltaTime);
             }
         }
+    
      
 
 

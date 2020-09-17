@@ -2886,6 +2886,7 @@ MonoBehaviour:
   des_sound: {fileID: 8300000, guid: 5550f886ad996a14285291d26cc7996b, type: 3}
   damage: 0
   speed: 2
+  emove: 0
 --- !u!50 &1341872219
 Rigidbody2D:
   serializedVersion: 4
@@ -4736,13 +4737,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxspeed: 3
   start: 0
-  JumpPower: 14
+  JumpPower: 11
   audiojump: {fileID: 8300000, guid: 0a4e66e1482e91e47b1a82510ed5665e, type: 3}
   audioClear: {fileID: 8300000, guid: f484746065f31f648a1260fd83b74295, type: 3}
   audioWarp: {fileID: 8300000, guid: 946fe575014d541408e38d8a45a159f2, type: 3}
   GM_isdead: 0
   re: {fileID: 1341872218}
   clear: 0
+  movestart: 0
 --- !u!82 &1879180684
 AudioSource:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager_RM : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameManager_RM : MonoBehaviour
     public bool start = false;
     public CamControl mainCam; //카메라
     public Button[] Btn = new Button[3];
-    public GameObject ExplainUI;
+    public GameObject ClearUI, ExplainUI;
     bool isopen;
     public bool reset = false;
     public bool stop = false;
@@ -46,7 +47,6 @@ public class GameManager_RM : MonoBehaviour
     {
         mainCam.StartGame();
         start = true;
-        disableButton();
         foreach (Drager dr in MovableTile)
             dr.StartGame();
         foreach (Drager dr in Inventory)
@@ -106,10 +106,25 @@ public class GameManager_RM : MonoBehaviour
     }
     public void clearAction()
     {
+        Invoke("clearScreen", 4f);
         disableButton();
         MainBgm.StopSound();
         clear.PlaySound();
       
+    }
+    public void clearScreen()
+    {
+        ClearUI.SetActive(true);
+    }
+
+    public void Next_Metal()
+    {
+        SceneManager.LoadScene("MetalSlug_1");
+    }
+
+    public void GameRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void disableButton()
     {

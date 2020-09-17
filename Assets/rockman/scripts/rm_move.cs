@@ -86,6 +86,7 @@ public class rm_move : MonoBehaviour
             PlaySound(audioClear);
             Invoke("Deact", 4f);
             GameManager_RM.gm.clearAction();
+            clearact();
             
             
         }
@@ -123,6 +124,7 @@ public class rm_move : MonoBehaviour
     public void clearact()
     {
         clear = true;
+        movestart = false;
         transform.Translate(Vector2.zero);
         anim.SetBool("isclear", true);
         

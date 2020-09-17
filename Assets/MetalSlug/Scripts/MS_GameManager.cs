@@ -8,20 +8,22 @@ public class MS_GameManager : MonoBehaviour
 {
     public MS_PlayerController player; //플레이어블 캐릭터
     public Button[] buttons = new Button[3]; //시작, 정지, 초기화 버튼
-    public BgmController MainBGM, DeadBGM, Goal1, Goal2; //배경음 관리자
+    public BgmController MainBGM, StartBGM, GoalBGM; //배경음 관리자
     public Drager[] MovableTile, Inventory; //아이템창
     public CamControl mainCam; //카메라
     public GameObject ClearUI, ExplainUI; //깃발, 클리어UI, 설명창UI
     bool isopen; //설명창 전용 bool
-
+    bool clearOnce;
     // Start is called before the first frame update
     void Start()
     {
         MainBGM.PlaySound();
         MainBGM.SetLoop(true);
         MainBGM.SetVolume(0.7f);
+        StartBGM.PlaySound();
 
         isopen = false;
+        clearOnce = false;
         ExplainUI.SetActive(isopen);
 
         MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
@@ -31,10 +33,12 @@ public class MS_GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         //클리어 여부 체크
-        if (player.getState().Equals("clear"))
+        if (player.getState().Equals("clear") && !clearOnce)
         {
             MainBGM.StopSound();
+            GoalBGM.PlaySound();
             clearScreen();
+            clearOnce = true;
             //Debug.Log(player.getState());
         }
     }

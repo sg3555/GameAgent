@@ -5226,7 +5226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxspeed: 3
   start: 0
-  JumpPower: 12
+  JumpPower: 10
   audiojump: {fileID: 8300000, guid: 0a4e66e1482e91e47b1a82510ed5665e, type: 3}
   audioClear: {fileID: 8300000, guid: f484746065f31f648a1260fd83b74295, type: 3}
   audioWarp: {fileID: 8300000, guid: 946fe575014d541408e38d8a45a159f2, type: 3}

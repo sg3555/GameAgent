@@ -42,21 +42,6 @@ public class rm_move : MonoBehaviour
     public void rockman_move()
     {
         movestart = true;
-        //if (GameManager_RM.gm.start)
-        //{
-
-        //    rigid.bodyType = RigidbodyType2D.Dynamic;
-        //    transform.Translate(Vector2.right * 0.05f);
-        //    anim.SetBool("isrun", true);
-        //}
-        //else
-        //{
-        //    anim.SetBool("isrun", false);
-        //}
-        
-
-
-
     }
 
     public void ResetGame()
@@ -80,13 +65,13 @@ public class rm_move : MonoBehaviour
     {
         if (collision.gameObject.tag == "Clear")
         {
+            clearact();
             GameManager_RM.gm.start = false;
-            transform.Translate(Vector2.zero);
             anim.SetBool("isclear",true);
             PlaySound(audioClear);
             Invoke("Deact", 4f);
             GameManager_RM.gm.clearAction();
-            clearact();
+            
             
             
         }
@@ -115,9 +100,7 @@ public class rm_move : MonoBehaviour
         transform.Translate(Vector2.zero);
         rigid.AddForce(Vector2.up*7, ForceMode2D.Impulse);
         rigid.gravityScale = 2;
-        re.emove = false;
-        //애니메이션
-        
+        re.emove = false;  
         GM_isdead = true;
         Invoke("Deact", 0.67f);
     }
@@ -140,7 +123,7 @@ public class rm_move : MonoBehaviour
         {
             anim.SetBool("isjump", true);
         }
-        rigid.gravityScale = 4;
+        rigid.gravityScale = 3;
         rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
         PlaySound(audiojump);
        

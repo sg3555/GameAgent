@@ -15,7 +15,7 @@ public class GameManager_RM : MonoBehaviour
     public bool start = false;
     public CamControl mainCam; //카메라
     public Button[] Btn = new Button[3];
-    public GameObject ClearUI, ExplainUI;
+    public GameObject ClearUI, ExplainUI,rockman;
     bool isopen;
     public bool reset = false;
     public bool stop = false;
@@ -45,6 +45,7 @@ public class GameManager_RM : MonoBehaviour
     }
    public void startBtn()
     {
+        
         mainCam.StartGame();
         start = true;
         foreach (Drager dr in MovableTile)
@@ -76,6 +77,10 @@ public class GameManager_RM : MonoBehaviour
 
     public void stopGame()
     {
+        if (rm.isact == false)
+        {
+            rm.act();
+        }
         MainBgm.PlaySound();
         start = false;
         stop = true;
@@ -99,6 +104,7 @@ public class GameManager_RM : MonoBehaviour
         disableButton();
         Invoke("StopGame", 3f);
         Invoke("enableButton", 3f);
+        Invoke("stopGame", 3f);
     }
     void deadBgm()
     {

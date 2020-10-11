@@ -62,6 +62,11 @@ public class rm_Signcheck : MonoBehaviour
                 rp.rockman_Attack();
               
             }
+            if (collision.name.Contains("Sign_DoubleUp"))
+            {
+                GameObject.Find("collision").transform.Find("doubleup").gameObject.SetActive(true);
+                rm.rockman_jump();
+            }
             //if (collision.name.Contains("Sign_B"))
             //{
 

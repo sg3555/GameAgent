@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class rm_playerAttack : MonoBehaviour
 {
@@ -30,17 +31,21 @@ public class rm_playerAttack : MonoBehaviour
         {
             Debug.Log("fire");
             anim.SetBool("isrunAttack", true);
+            Debug.Log("anim");
             Instantiate(Bullet, pos.position, transform.rotation);
             rm.PlaySound(Audioshoot);
             isshoot = true;
         }
-        Invoke("rockman_isshoot", 1f);
+        Invoke("rockman_isshoot", 0.5f);
 
 
     }
     public void rockman_isshoot()
     {
+       
+        anim.SetBool("isrunAttack", false);
         isshoot = false;
+       
     }
     public void rockman_DeAttack()
     {
@@ -48,10 +53,7 @@ public class rm_playerAttack : MonoBehaviour
     }
     void Update()
     {
-        if (re.damage)
-        {
-            anim.SetBool("isrunAttack", false);
-        }
+        
    
  
     }

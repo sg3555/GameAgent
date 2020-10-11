@@ -28,19 +28,34 @@ public class rm_enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         audiosource = GetComponent<AudioSource>();
         originPosition= this.gameObject.transform.position;
+        
+    }
+    private void Start()
+    {
+        rigid.bodyType = RigidbodyType2D.Static;
     }
 
     void Update()//적이 데미지를 받았을 경우 그 자리에서 멈추게 하고 그렇지 않으면 이동하게 하는 것
     {
+  
         if (emove)
         {
-            if (damage == true)
-                transform.Translate(Vector2.zero);
-       
-            else
+            if (gameObject.tag == "trap")
             {
-                
-                transform.Translate(Vector2.left * 2 * Time.deltaTime);
+                rigid.bodyType = RigidbodyType2D.Dynamic;
+
+            }
+            else if (gameObject.tag == "Enemy")
+            {
+                rigid.bodyType = RigidbodyType2D.Dynamic;
+                if (damage == true)
+                    transform.Translate(Vector2.zero);
+
+                else
+                {
+
+                    transform.Translate(Vector2.left * 2 * Time.deltaTime);
+                }
             }
         }
     
@@ -94,6 +109,7 @@ public class rm_enemy : MonoBehaviour
     }
     public void enemyStop()
     {
+        rigid.bodyType = RigidbodyType2D.Static;
         gameObject.SetActive(true);
         collide.enabled = true;
         gameObject.transform.position = originPosition;

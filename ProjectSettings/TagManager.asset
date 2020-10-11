@@ -19,6 +19,8 @@ TagManager:
   - Enemy
   - ladder
   - Dead
+  - trap
+  - Doubleup
   layers:
   - Default
   - TransparentFX

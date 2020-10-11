@@ -23,7 +23,7 @@ public class rm_move : MonoBehaviour
     SpriteRenderer sprite;
     public bool clear = false;
     public bool movestart = false;
-    
+    public bool isact;
 
     private void Awake()
     {
@@ -59,7 +59,13 @@ public class rm_move : MonoBehaviour
         {
             onDamagedEnemy(collision.transform.position);
         }
-       
+        if(collision.gameObject.tag == "trap")
+        {
+            OnDamagedDeath(collision.transform.position);
+
+        }
+        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -80,15 +86,18 @@ public class rm_move : MonoBehaviour
         {
             OnDamagedDeath(collision.transform.position);
         }
-
+        if (collision.tag == "Doubleup")
+        {
+            rockman_jump();
+        }
     }
     void onDamagedEnemy(Vector2 targetPos)
     {
 
         re.emove = false;
         anim.SetTrigger("damaged");
-        int dirc = transform.position.x - targetPos.x > 0 ? 2 : -2;
-        rigid.AddForce(Vector2.up*5, ForceMode2D.Impulse);
+        int dirc = transform.position.x - targetPos.x > 0 ? 5 : -5;
+        rigid.AddForce(Vector2.up*7, ForceMode2D.Impulse);
         GM_isdead = true;
         Invoke("Deact", 0.8f);
 
@@ -97,9 +106,8 @@ public class rm_move : MonoBehaviour
     {
         movestart = false;
         anim.SetTrigger("damaged");
-        int dirc = transform.position.x - targetPos.x > 0 ? 2 : -2;
+        rigid.bodyType = RigidbodyType2D.Static;
         transform.Translate(Vector2.zero);
-        rigid.AddForce(Vector2.up*7, ForceMode2D.Impulse);
         rigid.gravityScale = 2;
         re.emove = false;  
         GM_isdead = true;
@@ -114,9 +122,16 @@ public class rm_move : MonoBehaviour
         
 
     }
+    public void act()
+    {
+        gameObject.SetActive(true);
+        isact = true;
+    }
     void Deact()
     {
         gameObject.SetActive(false);
+        isact = false;
+        
     }
     public void rockman_jump()
     {

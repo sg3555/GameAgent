@@ -24,7 +24,8 @@ public class rm_move : MonoBehaviour
     public bool clear = false;
     public bool movestart = false;
     public bool isact;
-
+    public rm_Signcheck rs;
+    
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -86,18 +87,18 @@ public class rm_move : MonoBehaviour
         {
             OnDamagedDeath(collision.transform.position);
         }
-        if (collision.tag == "Doubleup")
-        {
-            rockman_jump();
-        }
+        //if (collision.tag == "Doubleup")
+        //{
+        //   rockman_jump();
+        //}
     }
     void onDamagedEnemy(Vector2 targetPos)
     {
 
         re.emove = false;
         anim.SetTrigger("damaged");
-        int dirc = transform.position.x - targetPos.x > 0 ? 5 : -5;
-        rigid.AddForce(Vector2.up*7, ForceMode2D.Impulse);
+        int dirc = transform.position.x - targetPos.x > 0 ? 4 : -4;
+        rigid.AddForce(Vector2.up*6, ForceMode2D.Impulse);
         GM_isdead = true;
         Invoke("Deact", 0.8f);
 
@@ -135,14 +136,22 @@ public class rm_move : MonoBehaviour
     }
     public void rockman_jump()
     {
-        if (anim.GetBool("isrun")==true)
+        if (anim.GetBool("isrun")==true&&anim.GetBool("isjump") == true)
+        {
+            Debug.Log("jump2");
+            rigid.gravityScale = 4;
+            rigid.AddForce(Vector2.up * (JumpPower-4), ForceMode2D.Impulse);
+            PlaySound(audiojump);
+        }
+        else if (anim.GetBool("isrun")==true)
         {
             anim.SetBool("isjump", true);
         }
-        rigid.gravityScale = 3;
+        
+        rigid.gravityScale = 4;
         rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
         PlaySound(audiojump);
-       
+      
 
     }
     private void FixedUpdate()
@@ -163,29 +172,61 @@ public class rm_move : MonoBehaviour
         {
             anim.SetBool("isstart", false);
         }
-        
+
 
         if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 5,LayerMask.GetMask("ground"));
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 7,LayerMask.GetMask("ground"));
+            
             if (rayHit.collider != null)
             {
-              
-                if (rayHit.distance <= 1f)
-                {
+                    if (rayHit.distance <= 1f)
+                    {
 
-                    
-                    anim.SetBool("isjump", false);
-                    rigid.gravityScale = 5;
-                   
-                }
+                        
+                        anim.SetBool("isjump", false);
+                        rigid.gravityScale = 5;
+
+                    }
 
             }
-        }
-     
+            if (rs.doubleup == true)
+            {
+                RaycastHit2D doubleHit = Physics2D.Raycast(rigid.position, Vector3.down, 10, LayerMask.GetMask("Dead"));
+                RaycastHit2D trapHit = Physics2D.Raycast(rigid.position, Vector3.down, 2, LayerMask.GetMask("Trap"));
+                if (doubleHit.collider != null)
+                {
+                    if (doubleHit.distance <= 4f)
+                    {
+                        Debug.Log(rs.doubleup);
+                        rockman_jump();
+                        rs.doubleup = false;
+                    }
+                }
+                if (trapHit.collider != null)
+                {
+                    if (trapHit.distance <= 1f)
+                    {
+                       
+                        rockman_jump();
+                        rs.doubleup = false;
+                    }
+                }
+            }
+            //if (doubleHit.collider!=null)            
+            //{
 
-    }
+            //    if (doubleHit.distance <= 1f)
+            //    {
+            //        Debug.Log("jump");
+            //        rockman_jump();
+
+            //    }
+            //}
+        }
+
+            }
 
   
     public void Start_move()

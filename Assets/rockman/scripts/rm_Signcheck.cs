@@ -19,6 +19,7 @@ public class rm_Signcheck : MonoBehaviour
     public rm_playerAttack rp;
     public int distance;
     bool isGround;
+    public bool doubleup;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -64,7 +65,9 @@ public class rm_Signcheck : MonoBehaviour
             }
             if (collision.name.Contains("Sign_DoubleUp"))
             {
-                GameObject.Find("collision").transform.Find("doubleup").gameObject.SetActive(true);
+
+                doubleup = true;
+                //doubleup.SetActive(true);
                 rm.rockman_jump();
             }
             //if (collision.name.Contains("Sign_B"))

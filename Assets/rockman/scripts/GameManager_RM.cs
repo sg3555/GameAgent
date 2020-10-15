@@ -26,6 +26,7 @@ public class GameManager_RM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         MainBgm.PlaySound();
         MainBgm.SetLoop(true);
         MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
@@ -45,7 +46,7 @@ public class GameManager_RM : MonoBehaviour
     }
    public void startBtn()
     {
-        
+       
         mainCam.StartGame();
         start = true;
         foreach (Drager dr in MovableTile)
@@ -60,6 +61,7 @@ public class GameManager_RM : MonoBehaviour
     }
     public void resetGame()
     {
+      
         start = false;
         stop = false;
         reset = true;   
@@ -77,6 +79,7 @@ public class GameManager_RM : MonoBehaviour
 
     public void stopGame()
     {
+       
         if (rm.isact == false)
         {
             rm.act();

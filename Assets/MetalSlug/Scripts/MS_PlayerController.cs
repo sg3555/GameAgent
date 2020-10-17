@@ -126,6 +126,10 @@ public class MS_PlayerController : MonoBehaviour
             {
                 anim.SetBool("IsJump", false);
             }
+            else if (anim.GetBool("IsFall"))
+            {
+                anim.SetBool("IsFall", false);
+            }
         }
     }
 
@@ -166,6 +170,7 @@ public class MS_PlayerController : MonoBehaviour
     }
     void eri_jump()
     {
+
         if (anim.GetBool("IsJump") && rigid.velocity.y > 0)
         {
             Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, true);
@@ -178,6 +183,20 @@ public class MS_PlayerController : MonoBehaviour
             {
                 Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
             }
+        }
+
+
+        if(!anim.GetBool("IsJump") && rigid.velocity.y < 0 && onGround == false)
+        {
+            RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
+            if (rayHit.collider == null)
+            {
+                anim.SetBool("IsFall", true);
+            }
+        }
+        else if(onGround == true)
+        {
+            anim.SetBool("IsFall", false);
         }
     }
     void eri_clear()
@@ -218,6 +237,7 @@ public class MS_PlayerController : MonoBehaviour
         anim.SetBool("IsRunning", false);
         anim.SetBool("IsJump", false);
         anim.SetBool("IsClear", false);
+        anim.SetBool("IsFall", false);
         gameObject.transform.position = originPosition;
         Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
         startGame = false;

@@ -1241,7 +1241,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Clikc Screen to Start
+  m_Text: Click Screen to Start
 --- !u!222 &909042682
 CanvasRenderer:
   m_ObjectHideFlags: 0

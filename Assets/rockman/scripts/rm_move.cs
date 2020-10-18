@@ -25,7 +25,10 @@ public class rm_move : MonoBehaviour
     public bool movestart = false;
     public bool isact;
     public rm_Signcheck rs;
-    
+    public bool climbstart = false;
+    public rm_enemy[] enemy;
+    public bool isladder = false;
+    public float distance;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -37,7 +40,8 @@ public class rm_move : MonoBehaviour
         originPosition = this.gameObject.transform.position;
         rigid.bodyType = RigidbodyType2D.Static;
         GM_isdead = false;
-        
+        enemy = GameObject.Find("Enemy").GetComponentsInChildren<rm_enemy>();
+
 
     }
     public void rockman_move()
@@ -65,9 +69,12 @@ public class rm_move : MonoBehaviour
             OnDamagedDeath(collision.transform.position);
 
         }
+
         
 
     }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Clear")
@@ -87,21 +94,20 @@ public class rm_move : MonoBehaviour
         {
             OnDamagedDeath(collision.transform.position);
         }
-        //if (collision.tag == "Doubleup")
-        //{
-        //   rockman_jump();
-        //}
+       
     }
     void onDamagedEnemy(Vector2 targetPos)
     {
 
-        re.emove = false;
+        movestart = false;
         anim.SetTrigger("damaged");
         int dirc = transform.position.x - targetPos.x > 0 ? 4 : -4;
-        rigid.AddForce(Vector2.up*6, ForceMode2D.Impulse);
+        rigid.AddForce(Vector2.up*dirc, ForceMode2D.Impulse);
+        foreach (rm_enemy en in enemy)
+            en.emove = false;
         GM_isdead = true;
         Invoke("Deact", 0.8f);
-
+     
     }
     void OnDamagedDeath(Vector2 targetPos)
     {
@@ -114,6 +120,7 @@ public class rm_move : MonoBehaviour
         GM_isdead = true;
         Invoke("Deact", 0.67f);
     }
+    
     public void clearact()
     {
         clear = true;
@@ -138,29 +145,31 @@ public class rm_move : MonoBehaviour
     {
         if (anim.GetBool("isrun")==true&&anim.GetBool("isjump") == true)
         {
-            Debug.Log("jump2");
             rigid.gravityScale = 4;
-            rigid.AddForce(Vector2.up * (JumpPower-4), ForceMode2D.Impulse);
-            PlaySound(audiojump);
+            rigid.AddForce(Vector2.up * 23f, ForceMode2D.Impulse);          
+            rs.doubleup = false;
+           PlaySound(audiojump);
         }
         else if (anim.GetBool("isrun")==true)
-        {
-            anim.SetBool("isjump", true);
-        }
-        
-        rigid.gravityScale = 4;
-        rigid.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+        {     
+        anim.SetBool("isjump", true);       
+        rigid.gravityScale = 2;
+        rigid.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
         PlaySound(audiojump);
-      
+        }
 
+       
     }
     private void FixedUpdate()
     {
+       
         if (movestart)
         {
 
             rigid.bodyType = RigidbodyType2D.Dynamic;
             transform.Translate(Vector2.right * 0.05f);
+            rigid.gravityScale = 5;
+            anim.SetBool("isclimb", false);
             anim.SetBool("isrun", true);
         }
         else
@@ -173,7 +182,7 @@ public class rm_move : MonoBehaviour
             anim.SetBool("isstart", false);
         }
 
-
+       
         if (rigid.velocity.y < 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
@@ -187,43 +196,42 @@ public class rm_move : MonoBehaviour
                         
                         anim.SetBool("isjump", false);
                         rigid.gravityScale = 5;
+                        rs.doubleup = false;
 
                     }
 
             }
-            if (rs.doubleup == true)
-            {
-                RaycastHit2D doubleHit = Physics2D.Raycast(rigid.position, Vector3.down, 10, LayerMask.GetMask("Dead"));
-                RaycastHit2D trapHit = Physics2D.Raycast(rigid.position, Vector3.down, 2, LayerMask.GetMask("Trap"));
+       
+            if (rs.doubleup==true)
+            {               
+                RaycastHit2D doubleHit = Physics2D.Raycast(rigid.position, Vector3.down,10f, LayerMask.GetMask("Dead"));
+                RaycastHit2D trapHit = Physics2D.Raycast(rigid.position, Vector3.down, 2f,LayerMask.GetMask("Trap"));
                 if (doubleHit.collider != null)
                 {
+                    Debug.Log("double");
                     if (doubleHit.distance <= 4f)
                     {
-                        Debug.Log(rs.doubleup);
+                        
+
+                        Debug.Log("double1");
                         rockman_jump();
                         rs.doubleup = false;
                     }
+                    
+                    
                 }
                 if (trapHit.collider != null)
                 {
                     if (trapHit.distance <= 1f)
                     {
-                       
+                        Debug.Log("trap");
                         rockman_jump();
                         rs.doubleup = false;
                     }
+                    
                 }
             }
-            //if (doubleHit.collider!=null)            
-            //{
-
-            //    if (doubleHit.distance <= 1f)
-            //    {
-            //        Debug.Log("jump");
-            //        rockman_jump();
-
-            //    }
-            //}
+  
         }
 
             }

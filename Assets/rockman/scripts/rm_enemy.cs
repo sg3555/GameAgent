@@ -33,7 +33,7 @@ public class rm_enemy : MonoBehaviour
     private void Start()
     {
         rigid.bodyType = RigidbodyType2D.Static;
-        //Time.timeScale = 0;
+       
     }
 
     void Update()//적이 데미지를 받았을 경우 그 자리에서 멈추게 하고 그렇지 않으면 이동하게 하는 것
@@ -41,7 +41,7 @@ public class rm_enemy : MonoBehaviour
   
         if (emove)
         {
-            Time.timeScale = 1f;
+            
             if (gameObject.tag == "trap")
             {
                 rigid.bodyType = RigidbodyType2D.Dynamic;
@@ -93,7 +93,7 @@ public class rm_enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
-        {
+       {
 
 
             transform.Translate(Vector2.zero);
@@ -103,12 +103,13 @@ public class rm_enemy : MonoBehaviour
     //적이 데미지를 받았을 시 하는 행동
     public void OnDamaged()
     {
+        Invoke("DeActive", 0.2f);
         damage = true;
-        collide.enabled = false;
         anim.SetTrigger("destroy");
         PlaySound(des_sound);
-        Invoke("DeActive", 0.5f);
-        
+       
+
+
     }
     public void enemyStop()
     {
@@ -134,6 +135,7 @@ public class rm_enemy : MonoBehaviour
     void DeActive()//적이 사라지게 만드는 함수
     {
         gameObject.SetActive(false);
+        collide.enabled = false;
     }
     public void PlaySound(AudioClip action)
     {

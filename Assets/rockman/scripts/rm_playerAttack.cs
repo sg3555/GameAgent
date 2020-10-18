@@ -29,9 +29,9 @@ public class rm_playerAttack : MonoBehaviour
     {
         if (isshoot == false)
         {
-            Debug.Log("fire");
+          
             anim.SetBool("isrunAttack", true);
-            Debug.Log("anim");
+
             Instantiate(Bullet, pos.position, transform.rotation);
             rm.PlaySound(Audioshoot);
             isshoot = true;
@@ -51,20 +51,5 @@ public class rm_playerAttack : MonoBehaviour
     {
         anim.SetBool("isrunAttack", false);
     }
-    void Update()
-    {
-        
    
- 
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("ladder")) { isladder = true; }
-
-
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("ladder")) { isladder = false; }
-    }
 }

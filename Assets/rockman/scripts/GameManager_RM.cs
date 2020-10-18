@@ -15,10 +15,11 @@ public class GameManager_RM : MonoBehaviour
     public bool start = false;
     public CamControl mainCam; //카메라
     public Button[] Btn = new Button[3];
-    public GameObject ClearUI, ExplainUI;
+    public GameObject ClearUI, ExplainUI,rockman;
     bool isopen;
     public bool reset = false;
     public bool stop = false;
+    public rm_obj[] obj;
     private void Awake()
     {
         gm = this;
@@ -26,11 +27,13 @@ public class GameManager_RM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         MainBgm.PlaySound();
         MainBgm.SetLoop(true);
         MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
         Inventory = GameObject.Find("Inventory").GetComponentsInChildren<Drager>();
         enemy= GameObject.Find("Enemy").GetComponentsInChildren<rm_enemy>();
+        obj = GameObject.Find("Obj").GetComponentsInChildren<rm_obj>();
     }
 
 
@@ -45,6 +48,7 @@ public class GameManager_RM : MonoBehaviour
     }
    public void startBtn()
     {
+       
         mainCam.StartGame();
         start = true;
         foreach (Drager dr in MovableTile)
@@ -54,11 +58,14 @@ public class GameManager_RM : MonoBehaviour
         foreach (rm_enemy en in enemy)
             en.enemyMove();
         rm.rockman_move();
+        foreach (rm_obj ob in obj)
+            ob.DeActive();
        
 
     }
     public void resetGame()
     {
+      
         start = false;
         stop = false;
         reset = true;   
@@ -70,12 +77,19 @@ public class GameManager_RM : MonoBehaviour
             dr.ResetGame();
         foreach (rm_enemy en in enemy)
             en.enemyStop();
+        foreach (rm_obj ob in obj)
+            ob.Active();
         MainBgm.PlaySound();
         rm.movestart = false;
     }
 
     public void stopGame()
     {
+       
+        if (rm.isact == false)
+        {
+            rm.act();
+        }
         MainBgm.PlaySound();
         start = false;
         stop = true;
@@ -88,6 +102,8 @@ public class GameManager_RM : MonoBehaviour
             dr.StopGame();
         foreach (rm_enemy en in enemy)
             en.enemyStop();
+        foreach (rm_obj ob in obj)
+            ob.Active();
         rm.movestart = false;
     }
     public void deadAction()
@@ -99,6 +115,7 @@ public class GameManager_RM : MonoBehaviour
         disableButton();
         Invoke("StopGame", 3f);
         Invoke("enableButton", 3f);
+        Invoke("stopGame", 3f);
     }
     void deadBgm()
     {

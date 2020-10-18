@@ -22,7 +22,7 @@ public class rm_bullet : MonoBehaviour
             if(ray.collider.tag=="Enemy")
             {
                 
-                Debug.Log("명중");
+              
                 onAttack(ray.collider.transform);
                 DestroyBullet();
                 

@@ -3027,15 +3027,18 @@ TextureImporter:
       name: KakaoTalk_20200715_231520662_102
       rect:
         serializedVersion: 2
-        x: 412
+        x: 426
         y: 86
-        width: 31
+        width: 17
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7.5, y: -8}
+        - {x: 0.5, y: 5}
+        - {x: 8.5, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 5bc889a147cd06170800000000000000
@@ -4416,12 +4419,20 @@ TextureImporter:
         x: 393
         y: 52
         width: 16
-        height: 18
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -8}
+        - {x: -5, y: -1}
+        - {x: 0, y: 8}
+        - {x: 5, y: -1}
+        - {x: 4, y: -8}
+      - - {x: -4, y: -8}
+        - {x: -4, y: -8}
+        - {x: -4, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: a07edade408947320800000000000000

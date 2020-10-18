@@ -23,7 +23,6 @@ public class MS_PlayerController : MonoBehaviour
     public int PlatformLayerNum = 8; 
     public GameObject knife;
     public bool isKnife = false;
-    private bool isJump = false;
     private Transform groundCheck;
     private bool onGround = false;
     private bool groundLineCheck = false;
@@ -44,7 +43,6 @@ public class MS_PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         startGame = false;
         clear = false;
         originPosition = this.gameObject.transform.position;
@@ -56,100 +54,13 @@ public class MS_PlayerController : MonoBehaviour
     {
         eri_move();
         eri_speed();
-        eri_inverse();
+        eri_jump();
         multiGroundCheck();
         useKnifeLayer();
-
-        if (anim.GetBool("IsJump") && rigid.velocity.y > 0)
-        {
-            Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, true);
-        }
-        else if (anim.GetBool("IsJump") && rigid.velocity.y < 0)
-        {
-
-            Debug.DrawRay(rigid.position, Vector2.down, new Color(0, 255, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.transform.position, Vector2.down, 1, LayerMask.GetMask("Ground"));
-            if (rayHit.collider != null)
-                //if (rayHit.distance > 0.5f)
-                Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
-
-            //Vector3 vec = new Vector3(0, -1.2f, 0);
-            //bool check = Physics2D.Linecast(groundCheck.transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-            //if (groundLineCheck)
-            //{
-            //    Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
-            //}
-
-        }
-
-        //if (rigid.velocity.y < 0)
-        //{
-        //    Physics2D.IgnoreLayerCollision(playerLayerNum, PlatformLayerNum, false);
-        //}
-        //else
-        //{
-        //    Physics2D.IgnoreLayerCollision(playerLayerNum, PlatformLayerNum, true);
-        //}
-        //eri_clear();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //점프
-        //if (collision.tag.Contains("Test") && !anim.GetBool("IsJump") && startGame && onGround)
-        //{
-        //    Debug.Log("Enter Test");
-        //    anim.SetBool("IsJump", true);
-        //    rigid.AddForce(Vector2.up * jumpForce);
-        //}
-
-
-        //if (collision.tag == "Sign")
-        //{
-        //    if (collision.name.Contains("Sign_Up"))
-        //    {
-        //        if (!anim.GetBool("IsJump") && startGame)
-        //        {
-        //            rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
-        //            anim.SetBool("IsJump", true);
-        //            //PlaySound(audioJump);
-        //        }
-        //    }
-        //    if (collision.name.Contains("Sign_Down"))
-        //    {
-
-        //    }
-        //    if (collision.name.Contains("Sign_Left"))
-        //    {
-
-        //    }
-        //    if (collision.name.Contains("Sign_Right"))
-        //    {
-
-        //    }
-        //    if (collision.name.Contains("Sign_A"))
-        //    {
-        //        if (!anim.GetBool("IsJump") && startGame)
-        //        {
-        //            rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
-        //            anim.SetBool("IsJump", true);
-        //            //PlaySound(audioJump);
-        //        }
-        //    }
-        //    if (collision.name.Contains("Sign_B"))
-        //    {
-
-        //    }
-        //    if (collision.name.Contains("Sign_X"))
-        //    {
-
-        //    }
-        //    if (collision.name.Contains("Sign_Y"))
-        //    {
-
-        //    }
-        //}
-
         if (collision.gameObject.layer == goalLayerNum && onGround)
         {
             useKnife();
@@ -167,7 +78,6 @@ public class MS_PlayerController : MonoBehaviour
                 {
                     rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
                     anim.SetBool("IsJump", true);
-                    //PlaySound(audioJump);
                 }
             }
             if (collision.name.Contains("Sign_Down"))
@@ -188,7 +98,6 @@ public class MS_PlayerController : MonoBehaviour
                 {
                     rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
                     anim.SetBool("IsJump", true);
-                    //PlaySound(audioJump);
                 }
             }
             if (collision.name.Contains("Sign_B"))
@@ -212,7 +121,8 @@ public class MS_PlayerController : MonoBehaviour
         if (collision.gameObject.layer == groundLayerNum)
         {
             groundColCheck = true;
-            if (anim.GetBool("IsJump") && groundLineCheck)
+            //if (anim.GetBool("IsJump") && groundLineCheck)
+            if (anim.GetBool("IsJump"))
             {
                 anim.SetBool("IsJump", false);
             }
@@ -231,8 +141,17 @@ public class MS_PlayerController : MonoBehaviour
     void eri_move()
     {
         //게임 시작상태에서만 움직임 활성화
-        if (startGame)
+        if (startGame && !clear)
+        {
             rigid.AddForce(Vector2.right * 1f, ForceMode2D.Impulse);
+        }
+
+        if (Mathf.Abs(rigid.velocity.x) > 0.3)
+        {
+            anim.SetBool("IsRunning", true);
+        }
+        else
+            anim.SetBool("IsRunning", false);
     }
     void eri_speed()
     {
@@ -245,14 +164,21 @@ public class MS_PlayerController : MonoBehaviour
         else if (clear)
             rigid.velocity = new Vector2(0, 0);
     }
-    void eri_inverse()
+    void eri_jump()
     {
-        if (Mathf.Abs(rigid.velocity.x) > 0.3)
+        if (anim.GetBool("IsJump") && rigid.velocity.y > 0)
         {
-            anim.SetBool("IsRunning", true);
+            Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, true);
         }
-        else
-            anim.SetBool("IsRunning", false);
+        else if (anim.GetBool("IsJump") && rigid.velocity.y < 0)
+        {
+            Debug.DrawRay(groundCheck.position, Vector2.down * 0.5f, new Color(0, 255, 0));
+            RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.5f, LayerMask.GetMask("Ground"));
+            if (rayHit.collider != null)
+            {
+                Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
+            }
+        }
     }
     void eri_clear()
     {
@@ -261,7 +187,17 @@ public class MS_PlayerController : MonoBehaviour
     }
     void multiGroundCheck()
     {
-        groundLineCheck = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.5f, LayerMask.GetMask("Ground"));
+        if (rayHit.collider != null)
+        {
+            //Debug.Log(rayHit.distance);
+            groundLineCheck = true;
+        }
+        else
+        {
+            groundLineCheck = false;
+        }
+
         if (groundLineCheck && groundColCheck)
             onGround = true;
         else
@@ -283,6 +219,7 @@ public class MS_PlayerController : MonoBehaviour
         anim.SetBool("IsJump", false);
         anim.SetBool("IsClear", false);
         gameObject.transform.position = originPosition;
+        Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
         startGame = false;
     }
 

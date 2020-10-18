@@ -11,7 +11,6 @@ public class rm_enemy : MonoBehaviour
     BoxCollider2D collide;
     public GameManager_RM gm;
     Animator anim;
-    public rm_move rm;
     public AudioClip des_sound;
     AudioSource audiosource;
     public bool damage = false;
@@ -28,19 +27,38 @@ public class rm_enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         audiosource = GetComponent<AudioSource>();
         originPosition= this.gameObject.transform.position;
+       
+        
+    }
+    private void Start()
+    {
+        rigid.bodyType = RigidbodyType2D.Static;
+       
     }
 
     void Update()//적이 데미지를 받았을 경우 그 자리에서 멈추게 하고 그렇지 않으면 이동하게 하는 것
     {
+  
         if (emove)
         {
-            if (damage == true)
-                transform.Translate(Vector2.zero);
-       
-            else
+            
+            if (gameObject.tag == "trap")
             {
-                
-                transform.Translate(Vector2.left * 2 * Time.deltaTime);
+                rigid.bodyType = RigidbodyType2D.Dynamic;
+
+            }
+            else if (gameObject.tag == "Enemy")
+            {
+                rigid.bodyType = RigidbodyType2D.Dynamic;
+                anim.gameObject.SetActive(true);
+                if (damage == true)
+                    transform.Translate(Vector2.zero);
+
+                else
+                {
+
+                    transform.Translate(Vector2.left * 2 * Time.deltaTime);
+                }
             }
         }
     
@@ -75,7 +93,7 @@ public class rm_enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
-        {
+       {
 
 
             transform.Translate(Vector2.zero);
@@ -85,15 +103,17 @@ public class rm_enemy : MonoBehaviour
     //적이 데미지를 받았을 시 하는 행동
     public void OnDamaged()
     {
+        Invoke("DeActive", 0.2f);
         damage = true;
-        collide.enabled = false;
         anim.SetTrigger("destroy");
-        rm.PlaySound(des_sound);
-        Invoke("DeActive", 0.5f);
-        
+        PlaySound(des_sound);
+       
+
+
     }
     public void enemyStop()
     {
+        rigid.bodyType = RigidbodyType2D.Static;
         gameObject.SetActive(true);
         collide.enabled = true;
         gameObject.transform.position = originPosition;
@@ -115,6 +135,12 @@ public class rm_enemy : MonoBehaviour
     void DeActive()//적이 사라지게 만드는 함수
     {
         gameObject.SetActive(false);
+        collide.enabled = false;
     }
-    
+    public void PlaySound(AudioClip action)
+    {
+        audiosource.clip = action;
+        audiosource.Play();
+    }
+
 }

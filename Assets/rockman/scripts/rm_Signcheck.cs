@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,7 @@ public class rm_Signcheck : MonoBehaviour
     public rm_playerAttack rp;
     public int distance;
     bool isGround;
+    public bool doubleup;
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -40,40 +42,24 @@ public class rm_Signcheck : MonoBehaviour
                 rm.rockman_jump();
             }
             
-     
-
-
-
-
-            //if (collision.name.Contains("Sign_Down"))
-            //{
-
-            //}
-            //if (collision.name.Contains("Sign_Left"))
-            //{
-
-            //}
-            //if (collision.name.Contains("Sign_Right"))
-            //{
-
-            //}
             if (collision.name.Contains("Sign_A"))
             {
                 rp.rockman_Attack();
               
             }
-            //if (collision.name.Contains("Sign_B"))
-            //{
+            if (collision.name.Contains("Sign_DoubleUp"))
+            {
 
-            //}
-            //if (collision.name.Contains("Sign_X"))
-            //{
-
-            //}
-            //if (collision.name.Contains("Sign_Y"))
-            //{
-
-            //}
+                doubleup = true;
+                rm.rockman_jump();
+            }
+            
         }
+     
+        
+          
+        
+            
     }
+
 }

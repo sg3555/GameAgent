@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class rm_playerAttack : MonoBehaviour
 {
@@ -28,41 +29,27 @@ public class rm_playerAttack : MonoBehaviour
     {
         if (isshoot == false)
         {
-            Debug.Log("fire");
+          
             anim.SetBool("isrunAttack", true);
+
             Instantiate(Bullet, pos.position, transform.rotation);
             rm.PlaySound(Audioshoot);
             isshoot = true;
         }
-        Invoke("rockman_isshoot", 1f);
+        Invoke("rockman_isshoot", 0.5f);
 
 
     }
     public void rockman_isshoot()
     {
+       
+        anim.SetBool("isrunAttack", false);
         isshoot = false;
+       
     }
     public void rockman_DeAttack()
     {
         anim.SetBool("isrunAttack", false);
     }
-    void Update()
-    {
-        if (re.damage)
-        {
-            anim.SetBool("isrunAttack", false);
-        }
    
- 
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("ladder")) { isladder = true; }
-
-
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("ladder")) { isladder = false; }
-    }
 }

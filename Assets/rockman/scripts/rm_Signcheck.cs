@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,23 +42,6 @@ public class rm_Signcheck : MonoBehaviour
                 rm.rockman_jump();
             }
             
-     
-
-
-
-
-            //if (collision.name.Contains("Sign_Down"))
-            //{
-
-            //}
-            //if (collision.name.Contains("Sign_Left"))
-            //{
-
-            //}
-            //if (collision.name.Contains("Sign_Right"))
-            //{
-
-            //}
             if (collision.name.Contains("Sign_A"))
             {
                 rp.rockman_Attack();
@@ -67,21 +51,15 @@ public class rm_Signcheck : MonoBehaviour
             {
 
                 doubleup = true;
-                //doubleup.SetActive(true);
                 rm.rockman_jump();
             }
-            //if (collision.name.Contains("Sign_B"))
-            //{
-
-            //}
-            //if (collision.name.Contains("Sign_X"))
-            //{
-
-            //}
-            //if (collision.name.Contains("Sign_Y"))
-            //{
-
-            //}
+            
         }
+     
+        
+          
+        
+            
     }
+
 }

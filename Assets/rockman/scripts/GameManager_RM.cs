@@ -19,6 +19,7 @@ public class GameManager_RM : MonoBehaviour
     bool isopen;
     public bool reset = false;
     public bool stop = false;
+    public rm_obj[] obj;
     private void Awake()
     {
         gm = this;
@@ -32,6 +33,7 @@ public class GameManager_RM : MonoBehaviour
         MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
         Inventory = GameObject.Find("Inventory").GetComponentsInChildren<Drager>();
         enemy= GameObject.Find("Enemy").GetComponentsInChildren<rm_enemy>();
+        obj = GameObject.Find("Obj").GetComponentsInChildren<rm_obj>();
     }
 
 
@@ -56,6 +58,8 @@ public class GameManager_RM : MonoBehaviour
         foreach (rm_enemy en in enemy)
             en.enemyMove();
         rm.rockman_move();
+        foreach (rm_obj ob in obj)
+            ob.DeActive();
        
 
     }
@@ -73,6 +77,8 @@ public class GameManager_RM : MonoBehaviour
             dr.ResetGame();
         foreach (rm_enemy en in enemy)
             en.enemyStop();
+        foreach (rm_obj ob in obj)
+            ob.Active();
         MainBgm.PlaySound();
         rm.movestart = false;
     }
@@ -96,6 +102,8 @@ public class GameManager_RM : MonoBehaviour
             dr.StopGame();
         foreach (rm_enemy en in enemy)
             en.enemyStop();
+        foreach (rm_obj ob in obj)
+            ob.Active();
         rm.movestart = false;
     }
     public void deadAction()

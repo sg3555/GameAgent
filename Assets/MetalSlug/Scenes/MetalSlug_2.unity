@@ -2321,7 +2321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fbed7060c6d9e4c8ff793419ff995a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PBulletLayerNum: 25
   audioThanks: {fileID: 8300000, guid: de57013985d813b40be6b804c2862b47, type: 3}
 --- !u!95 &1098306879
 Animator:
@@ -2437,7 +2436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098306877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.86, y: -0.53, z: 0}
+  m_LocalPosition: {x: 12.54, y: -0.53, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1068454711}
@@ -2631,6 +2630,8 @@ GameObject:
   - component: {fileID: 1186413197}
   - component: {fileID: 1186413196}
   - component: {fileID: 1186413194}
+  - component: {fileID: 1186413195}
+  - component: {fileID: 1186413201}
   m_Layer: 23
   m_Name: Arabian
   m_TagString: Untagged
@@ -2734,6 +2735,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1186413195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186413193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ab6ecc5717a5a49882e7e1cb3ff01b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioDie: {fileID: 0}
+  knife: {fileID: 1996457561}
 --- !u!95 &1186413196
 Animator:
   serializedVersion: 3
@@ -2848,7 +2863,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186413193}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.2, y: 3.08, z: 33.996094}
+  m_LocalPosition: {x: 7.82, y: -5.055, z: 33.996094}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1652456815}
@@ -2856,6 +2871,19 @@ Transform:
   m_Father: {fileID: 1654102788}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1186413201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186413193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a86790feae68a4d912d4812e837a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 10
 --- !u!1 &1198524561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,15 +3297,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGame: 0
   clear: 0
-  maxSpeed: 5
-  height: 450
-  groundLayerNum: 21
-  playerLayerNum: 22
-  goalLayerNum: 24
-  PBulletLayerNum: 25
-  PlatformLayerNum: 8
+  dead: 0
   knife: {fileID: 1580139403}
-  isKnife: 0
   GM_isdead: 0
   GM_goal: 0
   GM_clear: 0
@@ -3290,7 +3311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234427924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.56, y: -1.85, z: 0}
+  m_LocalPosition: {x: -5.6, y: -2.13, z: 0}
   m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children:
   - {fileID: 2082532435}
@@ -4499,7 +4520,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

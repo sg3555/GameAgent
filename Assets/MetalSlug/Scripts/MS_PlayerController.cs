@@ -13,16 +13,19 @@ public class MS_PlayerController : MonoBehaviour
 
     public bool startGame;  //게임 시작상태 bool
     public bool clear; //클리어 여부 
-    public float maxSpeed = 5f; // Player Speed
+    public bool dead;
+    private float maxSpeed = 5f; // Player Speed
     //public int jumpForce = 450; // Player jump force
-    public int height; // Player jump force
-    public int groundLayerNum = 21; // ground의 레이어 번호
-    public int playerLayerNum = 22;
-    public int goalLayerNum = 24; 
-    public int PBulletLayerNum = 25; 
-    public int PlatformLayerNum = 8; 
+    private int height = 15; // Player jump force
+    private int groundLayerNum = 21; // ground의 레이어 번호
+    private int playerLayerNum = 22;
+    private int goalLayerNum = 24; 
+    private int P_BulletLayerNum = 25; 
+    private int E_BulletLayerNum = 26; 
+    //private int PlatformLayerNum = 8; 
+    private int enemyLayerNum = 23; 
     public GameObject knife;
-    public bool isKnife = false;
+    //public bool isKnife = false;
     private Transform groundCheck;
     private bool onGround = false;
     private bool groundLineCheck = false;
@@ -45,9 +48,10 @@ public class MS_PlayerController : MonoBehaviour
     {
         startGame = false;
         clear = false;
+        dead = false;
         originPosition = this.gameObject.transform.position;
         groundCheck = gameObject.transform.Find("GroundCheck");
-        height = 15;
+        Physics2D.IgnoreLayerCollision(playerLayerNum, enemyLayerNum, true);
     }
 
     void FixedUpdate()
@@ -66,6 +70,20 @@ public class MS_PlayerController : MonoBehaviour
             useKnife();
             clear = true;
             Invoke("eri_clear", 1.2f);
+        }
+
+        if (collision.gameObject.layer == E_BulletLayerNum && !dead)
+        {
+            startGame = false;
+            rigid.bodyType = RigidbodyType2D.Static;
+            anim.SetTrigger("Die");
+            GM_isdead = true;
+            col.isTrigger = true;
+            // 여기에 플레이어 죽는 애니메이션
+            //Debug.Log(collision.gameObject.name);
+            dead = true;
+            //anim.SetBool("IsDead", true);
+            //Invoke("stopScene", 1.0f);
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -159,13 +177,18 @@ public class MS_PlayerController : MonoBehaviour
     }
     void eri_speed()
     {
-        //최대속력 설정
-        if (rigid.velocity.x > maxSpeed && !clear)
-            rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
-        else if (rigid.velocity.x < -maxSpeed && !clear)
-            rigid.velocity = new Vector2(-maxSpeed, rigid.velocity.y);
+        if (startGame)
+        {
+            //최대속력 설정
+            if (rigid.velocity.x > maxSpeed && !clear)
+                rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
+            else if (rigid.velocity.x < -maxSpeed && !clear)
+                rigid.velocity = new Vector2(-maxSpeed, rigid.velocity.y);
+        }
+        
+
         //클리어 시 정지
-        else if (clear)
+        if (clear || dead)
             rigid.velocity = new Vector2(0, 0);
     }
     void eri_jump()
@@ -268,13 +291,17 @@ public class MS_PlayerController : MonoBehaviour
         //근접공격 중 칼날에 타격판정 부여
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife"))
         {
-            knife.layer = PBulletLayerNum;
+            knife.layer = P_BulletLayerNum;
             //Debug.Log(knife.layer);
         }
         else
         {
             knife.layer = playerLayerNum;
         }
+    }
+    private void stopScene()
+    {
+        Time.timeScale = 0f;
     }
     void PlaySound(AudioClip action)
     {

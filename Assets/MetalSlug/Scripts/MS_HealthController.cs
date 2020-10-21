@@ -6,14 +6,21 @@ public class MS_HealthController : MonoBehaviour
 {
     private int P_BulletLayerNum = 25;
     public int Health;
+    bool isDead = false;
 
     // Start is called before the first frame update
     void FixedUpdate()
     {
         // 해당 오브젝트 파괴
-        if (Health <= 0)
+        if (Health <= 0 && !isDead)
         {
-            
+            isDead = true;
+            if(gameObject.name == "Arabian")
+            {
+                //Debug.Log(gameObject.name);
+                MS_Arabian ar = gameObject.GetComponent<MS_Arabian>();
+                ar.Die();
+            }
         }
     }
 
@@ -21,8 +28,11 @@ public class MS_HealthController : MonoBehaviour
     {
         if (collision.gameObject.layer == P_BulletLayerNum)
         {
-            //Debug.Log(collision.gameObject.name);
-            // HP를 잃음
+            if(collision.gameObject.name == "Player_Bullet")
+            {
+                Health -= 10;
+                //Debug.Log(Health);
+            }
         }
     }
 }

@@ -57,4 +57,9 @@ public class MS_Arabian : MonoBehaviour
         audioSource.clip = action;
         audioSource.Play();
     }
+
+    public void Die()
+    {
+        Debug.Log("arabian die");
+    }
 }

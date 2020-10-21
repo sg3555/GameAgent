@@ -31,7 +31,10 @@ public class MS_PlayerController : MonoBehaviour
     private bool groundLineCheck = false;
     private bool groundColCheck = false;
     public bool GM_isdead, GM_goal, GM_clear; //게임매니저 수신용
-
+    private float fireRate = 0.6f;
+    private float nextFire = 0f;
+    public Transform muzzle;
+    public GameObject bulletPrefab;
     public AudioClip audioKnife_rope;
 
     void Awake()
@@ -61,6 +64,7 @@ public class MS_PlayerController : MonoBehaviour
         eri_jump();
         multiGroundCheck();
         useKnifeLayer();
+        fire();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -298,6 +302,24 @@ public class MS_PlayerController : MonoBehaviour
         {
             knife.layer = playerLayerNum;
         }
+    }
+    private void fire()
+    {
+        Debug.DrawRay(this.gameObject.transform.position, Vector2.right * 12f, new Color(0, 255, 0));
+        RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.right, 12f, LayerMask.GetMask("Enemy"));
+        if (rayHit.collider != null && startGame && onGround && Time.time > nextFire)
+        {
+            Debug.Log(startGame);
+            anim.SetTrigger("Fire");
+            nextFire = Time.time + fireRate;
+            GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+            //tempBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
+        }
+        else
+        {
+            //anim.SetBool("IsAttack", false);
+        }
+
     }
     private void stopScene()
     {

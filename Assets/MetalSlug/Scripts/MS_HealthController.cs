@@ -28,7 +28,7 @@ public class MS_HealthController : MonoBehaviour
     {
         if (collision.gameObject.layer == P_BulletLayerNum)
         {
-            if(collision.gameObject.name == "Player_Bullet")
+            if(collision.gameObject.name == "Player_Bullet(Clone)")
             {
                 Health -= 10;
                 //Debug.Log(Health);

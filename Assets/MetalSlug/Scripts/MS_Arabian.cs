@@ -58,13 +58,13 @@ public class MS_Arabian : MonoBehaviour
         audioSource.Play();
     }
 
-    public void Die()
+    public void die()
     {
         Debug.Log("arabian die");
         anim.SetTrigger("Die");
-        Invoke("DestroyObj", 0.4f);
+        Invoke("destroyObj", 0.4f);
     }
-    void DestroyObj()
+    void destroyObj()
     {
         Destroy(gameObject);
     }

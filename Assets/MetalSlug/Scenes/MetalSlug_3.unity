@@ -2042,6 +2042,8 @@ GameObject:
   - component: {fileID: 846056386}
   - component: {fileID: 846056387}
   - component: {fileID: 846056390}
+  - component: {fileID: 846056392}
+  - component: {fileID: 846056391}
   m_Layer: 23
   m_Name: Soldier
   m_TagString: Untagged
@@ -2057,7 +2059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846056384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.6, y: -0.17, z: 0}
+  m_LocalPosition: {x: 10.34, y: -0.13, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 824793444}
@@ -2267,6 +2269,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &846056391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846056384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a86790feae68a4d912d4812e837a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 10
+--- !u!114 &846056392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846056384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce14f5338eaabee4fbace577ab91202b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioDie: {fileID: 0}
+  muzzle: {fileID: 1157316398}
+  bulletPrefab: {fileID: 3195685236102644936, guid: 3c0c71e2a96b79b41913fa58704af843,
+    type: 3}
 --- !u!1 &863588747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2869,7 +2900,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157316398}
-  - component: {fileID: 1157316399}
   m_Layer: 23
   m_Name: Muzzle
   m_TagString: Untagged
@@ -2885,28 +2915,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157316397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.641, y: -0.045, z: 0}
+  m_LocalPosition: {x: -0.534, y: -0.018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 846056385}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1157316399
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157316397}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.125
 --- !u!1 &1167026218
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,8 +18,12 @@ public class MS_HealthController : MonoBehaviour
             if(gameObject.name == "Arabian")
             {
                 //Debug.Log(gameObject.name);
-                MS_Arabian ar = gameObject.GetComponent<MS_Arabian>();
-                ar.Die();
+                MS_Arabian arabian = gameObject.GetComponent<MS_Arabian>();
+                arabian.die();
+            }else if (gameObject.name == "Soldier")
+            {
+                MS_Soldier soldier = gameObject.GetComponent<MS_Soldier>();
+                soldier.die();
             }
         }
     }

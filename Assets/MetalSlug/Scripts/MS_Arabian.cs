@@ -61,5 +61,11 @@ public class MS_Arabian : MonoBehaviour
     public void Die()
     {
         Debug.Log("arabian die");
+        anim.SetTrigger("Die");
+        Invoke("DestroyObj", 0.4f);
+    }
+    void DestroyObj()
+    {
+        Destroy(gameObject);
     }
 }

@@ -310,13 +310,15 @@ public class MS_PlayerController : MonoBehaviour
         if (rayHit.collider != null && startGame && onGround && Time.time > nextFire)
         {
             Debug.Log(startGame);
-            anim.SetTrigger("Fire");
+            //anim.SetTrigger("Fire");
+            anim.SetBool("IsFire", true);
             nextFire = Time.time + fireRate;
             GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
             //tempBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
         }
         else
         {
+            anim.SetBool("IsFire", false);
             //anim.SetBool("IsAttack", false);
         }
 

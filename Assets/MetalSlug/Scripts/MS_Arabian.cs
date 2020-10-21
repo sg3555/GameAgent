@@ -20,10 +20,25 @@ public class MS_Arabian : MonoBehaviour
 
     void FixedUpdate()
     {
+        attack();
         useKnifeLayer();
     }
 
-    private void useKnifeLayer()
+    void attack()
+    {
+        Debug.DrawRay(this.gameObject.transform.position, Vector2.left * 4f, new Color(0, 255, 0));
+        RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.left, 4f, LayerMask.GetMask("Player"));
+        if (rayHit.collider != null)
+        {
+            anim.SetBool("IsAttack", true);
+        }
+        else
+        {
+            anim.SetBool("IsAttack", false);
+        }
+    }
+
+    void useKnifeLayer()
     {
         //근접공격 중 칼날에 타격판정 부여
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Arabian_Attack"))

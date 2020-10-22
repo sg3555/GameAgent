@@ -23,8 +23,8 @@ public class MS_Grenade : MonoBehaviour
         isHit = false;
         Physics2D.IgnoreLayerCollision(this.gameObject.layer, E_BulletLayerNum, true);
 
-        rigid.AddForce(Vector2.up * 400f);
-        rigid.AddForce(Vector2.right * 300f);
+        rigid.AddForce(Vector2.up * 500f);
+        rigid.AddForce(Vector2.right * 400f);
     }
 
     void FixedUpdate()

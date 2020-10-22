@@ -293,6 +293,9 @@ public class MS_PlayerController : MonoBehaviour
         if (GM_clear)
         {
             return "clear";
+        }else if (GM_isdead)
+        {
+            return "dead";
         }
         else
         {
@@ -323,21 +326,48 @@ public class MS_PlayerController : MonoBehaviour
     private void fire()
     {
         Debug.DrawRay(this.gameObject.transform.position, Vector2.right * 12f, new Color(0, 255, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.right, 12f, LayerMask.GetMask("Enemy"));
-        if (rayHit.collider != null && startGame && onGround && Time.time > nextFire)
+        //RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.right, 12f, LayerMask.GetMask("Enemy"));
+        RaycastHit2D rayHit = Physics2D.Raycast(muzzle.transform.position, Vector2.right, 12f);
+        Debug.Log(rayHit.collider);
+
+        if(rayHit.collider != null)
         {
-            Debug.Log(startGame);
-            //anim.SetTrigger("Fire");
-            anim.SetBool("IsFire", true);
-            nextFire = Time.time + fireRate;
-            GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
-            //tempBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
+            if(startGame && onGround && Time.time > nextFire)
+            {
+                if(rayHit.collider.name == "Arabian" || rayHit.collider.name == "Soldier")
+                {
+                    //    //anim.SetTrigger("Fire");
+                    anim.SetBool("IsFire", true);
+                    nextFire = Time.time + fireRate;
+                    //    //GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+                    Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+                }
+                else
+                {
+                    anim.SetBool("IsFire", false);
+                }
+            }
+            else
+            {
+                anim.SetBool("IsFire", false);
+            }
+
         }
-        else
-        {
-            anim.SetBool("IsFire", false);
-            //anim.SetBool("IsAttack", false);
-        }
+        //if (rayHit.collider != null && startGame && onGround && Time.time > nextFire)
+        //{
+        //    Debug.Log(rayHit.collider.name);
+        //    //anim.SetTrigger("Fire");
+        //    anim.SetBool("IsFire", true);
+        //    nextFire = Time.time + fireRate;
+        //    //GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+        //    Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+        //    //tempBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
+        //}
+        //else
+        //{
+        //    anim.SetBool("IsFire", false);
+        //    //anim.SetBool("IsAttack", false);
+        //}
     }
 
     private void throwGrenade()

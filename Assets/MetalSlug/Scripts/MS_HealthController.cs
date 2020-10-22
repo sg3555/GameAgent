@@ -5,8 +5,14 @@ using UnityEngine;
 public class MS_HealthController : MonoBehaviour
 {
     private int P_BulletLayerNum = 25;
+    public int originHealth;
     public int Health;
     bool isDead = false;
+
+    private void Start()
+    {
+        originHealth = Health;
+    }
 
     // Start is called before the first frame update
     void FixedUpdate()
@@ -49,7 +55,15 @@ public class MS_HealthController : MonoBehaviour
             if (collision.gameObject.name == "Grenade(Clone)")
             {
                 Health -= 100;
+                Debug.Log(Health);
             }
         }
+    }
+
+    //게임 리셋
+    public void ResetGame()
+    {
+        isDead = false;
+        Health = originHealth;
     }
 }

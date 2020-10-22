@@ -14,10 +14,12 @@ public class MS_Soldier : MonoBehaviour
     private float nextFire = 0f;
     public Transform muzzle;
     public GameObject bulletPrefab;
+    bool isDead;
     void Awake()
     {
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        isDead = false;
     }
 
     void FixedUpdate()
@@ -27,15 +29,18 @@ public class MS_Soldier : MonoBehaviour
 
     void fire()
     {
-        if (Time.time > nextFire)
+        if (!isDead)
         {
-            anim.SetBool("IsFire", true);
-            nextFire = Time.time + fireRate;
-            Invoke("bullet", 0.1f);
-        }
-        else
-        {
-            anim.SetBool("IsFire", false);
+            if (Time.time > nextFire)
+            {
+                anim.SetBool("IsFire", true);
+                nextFire = Time.time + fireRate;
+                Invoke("bullet", 0.1f);
+            }
+            else
+            {
+                anim.SetBool("IsFire", false);
+            }
         }
     }
     void bullet()
@@ -50,6 +55,7 @@ public class MS_Soldier : MonoBehaviour
 
     public void die()
     {
+        isDead = true;
         Debug.Log("soldier die");
         anim.SetTrigger("Die");
         Invoke("destroyObj", 0.4f);

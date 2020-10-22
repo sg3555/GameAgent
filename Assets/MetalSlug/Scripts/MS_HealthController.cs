@@ -15,7 +15,9 @@ public class MS_HealthController : MonoBehaviour
         if (Health <= 0 && !isDead)
         {
             isDead = true;
-            if(gameObject.name == "Arabian")
+            Physics2D.IgnoreLayerCollision(this.gameObject.layer, P_BulletLayerNum, true);
+            //Physics2D.IgnoreLayerCollision(this.gameObject.layer, 22, true);
+            if (gameObject.name == "Arabian")
             {
                 //Debug.Log(gameObject.name);
                 MS_Arabian arabian = gameObject.GetComponent<MS_Arabian>();
@@ -36,6 +38,17 @@ public class MS_HealthController : MonoBehaviour
             {
                 Health -= 10;
                 //Debug.Log(Health);
+            }
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == P_BulletLayerNum)
+        {
+            if (collision.gameObject.name == "Grenade(Clone)")
+            {
+                Health -= 100;
             }
         }
     }

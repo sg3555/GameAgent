@@ -33,8 +33,12 @@ public class MS_PlayerController : MonoBehaviour
     public bool GM_isdead, GM_goal, GM_clear; //게임매니저 수신용
     private float fireRate = 0.6f;
     private float nextFire = 0f;
+    private float throwRate = 2f;
+    private float nextThrow = 0f;
     public Transform muzzle;
+    public Transform grenade;
     public GameObject bulletPrefab;
+    public GameObject grenadePrefab;
     public AudioClip audioKnife_rope;
 
     void Awake()
@@ -88,6 +92,19 @@ public class MS_PlayerController : MonoBehaviour
             dead = true;
             //anim.SetBool("IsDead", true);
             //Invoke("stopScene", 1.0f);
+        }
+
+        if (collision.tag == "Sign")
+        {
+            if (collision.name.Contains("Sign_B"))
+            {
+                if (startGame)
+                {
+                    anim.SetTrigger("Grenade");
+                    Invoke("throwGrenade", 0.4f);
+                    //throwGrenade();
+                }
+            }
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -321,12 +338,26 @@ public class MS_PlayerController : MonoBehaviour
             anim.SetBool("IsFire", false);
             //anim.SetBool("IsAttack", false);
         }
-
     }
+
+    private void throwGrenade()
+    {
+        if (Time.time > nextThrow)
+        {
+            nextThrow = Time.time + throwRate;
+            GameObject tempGrenade = Instantiate(grenadePrefab, grenade.position, grenade.rotation);
+        }
+        else
+        {
+            //anim.SetBool("IsFire", false);
+        }
+    }
+
     private void stopScene()
     {
         Time.timeScale = 0f;
     }
+
     void PlaySound(AudioClip action)
     {
         audioSource.clip = action;

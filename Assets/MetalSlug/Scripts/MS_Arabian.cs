@@ -107,6 +107,7 @@ public class MS_Arabian : MonoBehaviour
     public void ResetGame()
     {
         anim.SetBool("IsAttack", false);
+        anim.SetTrigger("Reset");
         rigid.bodyType = RigidbodyType2D.Static;
         colid.enabled = false;
         startGame = false;

@@ -38,6 +38,7 @@ public class MS_HealthController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.name);
         if (collision.gameObject.layer == P_BulletLayerNum)
         {
             if(collision.gameObject.name == "Player_Bullet(Clone)")
@@ -50,6 +51,7 @@ public class MS_HealthController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.collider.name);
         if (collision.gameObject.layer == P_BulletLayerNum)
         {
             if (collision.gameObject.name == "Grenade(Clone)")
@@ -63,6 +65,7 @@ public class MS_HealthController : MonoBehaviour
     //게임 리셋
     public void ResetGame()
     {
+        Physics2D.IgnoreLayerCollision(this.gameObject.layer, P_BulletLayerNum, false);
         isDead = false;
         Health = originHealth;
     }

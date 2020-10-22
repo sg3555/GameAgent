@@ -23,7 +23,6 @@ public class MS_Enemy_Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("tri");
         isHit = true;
         transform.Translate(Vector3.left * 0.7f);
         destroyBullet();
@@ -32,9 +31,7 @@ public class MS_Enemy_Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("col");
         isHit = true;
-
         transform.Translate(Vector3.left * 0.7f);
         destroyBullet();
     }

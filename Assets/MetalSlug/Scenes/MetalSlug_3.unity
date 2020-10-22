@@ -2539,7 +2539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce14f5338eaabee4fbace577ab91202b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioDie: {fileID: 0}
+  audioDie: {fileID: 8300000, guid: 80649a8fe20bb5048aa872afb6642090, type: 3}
   muzzle: {fileID: 1157316398}
   bulletPrefab: {fileID: 3195685236102644936, guid: 3c0c71e2a96b79b41913fa58704af843,
     type: 3}
@@ -3748,7 +3748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ab6ecc5717a5a49882e7e1cb3ff01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioDie: {fileID: 0}
+  audioDie: {fileID: 8300000, guid: 08ac7e8e86db43f4a948ea0fd8952ccc, type: 3}
   knife: {fileID: 1996457561}
 --- !u!95 &1186413196
 Animator:
@@ -4312,6 +4312,9 @@ MonoBehaviour:
   grenadePrefab: {fileID: 1784044030272906777, guid: 5709f83a506b74a40994ac1078e386a2,
     type: 3}
   audioKnife_rope: {fileID: 8300000, guid: ee348d995e61864439cc8fe46d82fa9f, type: 3}
+  audioGun_fire: {fileID: 8300000, guid: 4c547078e673cd243ac0b45aef62289c, type: 3}
+  audioDie: {fileID: 8300000, guid: 13bb74324c46276449d98ff16cc1d988, type: 3}
+  audioAmmo: {fileID: 8300000, guid: 517702b00039e1948a48d9ebe48a8adb, type: 3}
 --- !u!4 &1234427926
 Transform:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ public class MS_PlayerController : MonoBehaviour
     private bool groundLineCheck = false;
     private bool groundColCheck = false;
     public bool GM_isdead, GM_goal, GM_clear; //게임매니저 수신용
-    private float fireRate = 0.6f;
+    private float fireRate = 0.4f;
     private float nextFire = 0f;
     private float throwRate = 2f;
     private float nextThrow = 0f;
@@ -43,7 +43,11 @@ public class MS_PlayerController : MonoBehaviour
     public Transform grenade;
     public GameObject bulletPrefab;
     public GameObject grenadePrefab;
+
     public AudioClip audioKnife_rope;
+    public AudioClip audioGun_fire;
+    public AudioClip audioDie;
+    public AudioClip audioAmmo;
 
     void Awake()
     {
@@ -92,6 +96,7 @@ public class MS_PlayerController : MonoBehaviour
             rigid.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Die");
             GM_isdead = true;
+            PlaySound(audioDie);
             //col.isTrigger = true;
             // 여기에 플레이어 죽는 애니메이션
             //Debug.Log(collision.gameObject.name);
@@ -115,6 +120,7 @@ public class MS_PlayerController : MonoBehaviour
 
         if(collision.name == "Ammo")
         {
+            PlaySound(audioAmmo);
             isLoaded = true;
         }
     }
@@ -352,13 +358,14 @@ public class MS_PlayerController : MonoBehaviour
         {
             if(startGame && anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Running") && isLoaded && Time.time > nextFire)
             {
-                if(rayHit.collider.name == "Arabian" || rayHit.collider.name == "Soldier")
+                if(rayHit.collider.name == "Arabian" || rayHit.collider.name == "Soldier" && !anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Fire"))
                 {
-                    //    //anim.SetTrigger("Fire");
-                    anim.SetBool("IsFire", true);
+                    anim.SetTrigger("Fire");
+                    PlaySound(audioGun_fire);
+                    //anim.SetBool("IsFire", true);
                     nextFire = Time.time + fireRate;
                     //    //GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
-                    Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+                    Invoke("fireBullet", 0.2f);
                 }
                 else
                 {
@@ -369,7 +376,6 @@ public class MS_PlayerController : MonoBehaviour
             {
                 anim.SetBool("IsFire", false);
             }
-
         }
         //if (rayHit.collider != null && startGame && onGround && Time.time > nextFire)
         //{
@@ -386,6 +392,11 @@ public class MS_PlayerController : MonoBehaviour
         //    anim.SetBool("IsFire", false);
         //    //anim.SetBool("IsAttack", false);
         //}
+    }
+
+    void fireBullet()
+    {
+        Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
     }
 
     private void throwGrenade()

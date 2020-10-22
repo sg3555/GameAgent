@@ -109,6 +109,7 @@ public class MS_Soldier : MonoBehaviour
         isDead = true;
         Debug.Log("soldier die");
         anim.SetTrigger("Die");
+        PlaySound(audioDie);
         Invoke("destroyObj", 0.4f);
     }
     void destroyObj()

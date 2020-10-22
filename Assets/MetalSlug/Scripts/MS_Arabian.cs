@@ -87,6 +87,7 @@ public class MS_Arabian : MonoBehaviour
         isDead = true;
         Debug.Log("arabian die");
         anim.SetTrigger("Die");
+        PlaySound(audioDie);
         Invoke("destroyObj", 0.4f);
     }
     void destroyObj()

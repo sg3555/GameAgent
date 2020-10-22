@@ -12,6 +12,7 @@ public class MS_GameManager : MonoBehaviour
     public Drager[] MovableTile, Inventory; //아이템창
     public CamControl mainCam; //카메라
     public GameObject ClearUI, ExplainUI; //깃발, 클리어UI, 설명창UI
+    public GameObject ammoBox;
 
     MS_Arabian[] arabian;
     MS_Soldier[] soldier;
@@ -66,10 +67,21 @@ public class MS_GameManager : MonoBehaviour
             player.GM_clear = false;
         }
 
+        if (player.GM_goal)
+        {
+            disableButton();
+            player.GM_goal = false;
+        }
+
         if (player.GM_isdead)
         {
             deadAction();
             player.GM_isdead = false;
+        }
+
+        if (player.isLoaded)
+        {
+            ammoBox.SetActive(false);
         }
     }
 
@@ -115,6 +127,7 @@ public class MS_GameManager : MonoBehaviour
             so.ResetGame();
         foreach (MS_HealthController hc in healthController)
             hc.ResetGame();
+        ammoBox.SetActive(true);
         MainBGM.SetVolume(0.7f);
         buttonArea.enabled = true;
     }
@@ -132,6 +145,7 @@ public class MS_GameManager : MonoBehaviour
             so.ResetGame();
         foreach (MS_HealthController hc in healthController)
             hc.ResetGame();
+        ammoBox.SetActive(true);
         MainBGM.SetVolume(0.7f);
         buttonArea.enabled = true;
     }

@@ -14,6 +14,7 @@ public class MS_PlayerController : MonoBehaviour
     public bool startGame;  //게임 시작상태 bool
     public bool clear; //클리어 여부 
     public bool dead;
+    public bool isLoaded;
     private float maxSpeed = 5f; // Player Speed
     //public int jumpForce = 450; // Player jump force
     private int height = 15; // Player jump force
@@ -35,6 +36,8 @@ public class MS_PlayerController : MonoBehaviour
     private float nextFire = 0f;
     private float throwRate = 2f;
     private float nextThrow = 0f;
+
+
     public Transform muzzle;
     public Transform grenade;
     public GameObject bulletPrefab;
@@ -56,6 +59,7 @@ public class MS_PlayerController : MonoBehaviour
         startGame = false;
         clear = false;
         dead = false;
+        isLoaded = false;
         originPosition = this.gameObject.transform.position;
         groundCheck = gameObject.transform.Find("GroundCheck");
         Physics2D.IgnoreLayerCollision(playerLayerNum, enemyLayerNum, true);
@@ -77,6 +81,7 @@ public class MS_PlayerController : MonoBehaviour
         {
             useKnife();
             clear = true;
+            GM_goal = true;
             Invoke("eri_clear", 1.2f);
         }
 
@@ -105,6 +110,11 @@ public class MS_PlayerController : MonoBehaviour
                     //throwGrenade();
                 }
             }
+        }
+
+        if(collision.name == "Ammo")
+        {
+            isLoaded = true;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -282,26 +292,27 @@ public class MS_PlayerController : MonoBehaviour
         anim.SetBool("IsJump", false);
         anim.SetBool("IsClear", false);
         anim.SetBool("IsFall", false);
+        isLoaded = false;
         gameObject.transform.position = originPosition;
         Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
         startGame = false;
     }
 
     //GameManager나 다른 오브젝트에서 플레이어의 상태를 조회
-    public string getState()
-    {
-        if (GM_clear)
-        {
-            return "clear";
-        }else if (GM_isdead)
-        {
-            return "dead";
-        }
-        else
-        {
-            return "null";
-        }
-    }
+    //public string getState()
+    //{
+    //    if (GM_clear)
+    //    {
+    //        return "clear";
+    //    }else if (GM_isdead)
+    //    {
+    //        return "dead";
+    //    }
+    //    else
+    //    {
+    //        return "null";
+    //    }
+    //}
     private void useKnife()
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife"))
@@ -328,11 +339,11 @@ public class MS_PlayerController : MonoBehaviour
         Debug.DrawRay(this.gameObject.transform.position, Vector2.right * 12f, new Color(0, 255, 0));
         //RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.right, 12f, LayerMask.GetMask("Enemy"));
         RaycastHit2D rayHit = Physics2D.Raycast(muzzle.transform.position, Vector2.right, 12f);
-        Debug.Log(rayHit.collider);
+        //Debug.Log(rayHit.collider);
 
         if(rayHit.collider != null)
         {
-            if(startGame && onGround && Time.time > nextFire)
+            if(startGame && onGround && isLoaded && Time.time > nextFire)
             {
                 if(rayHit.collider.name == "Arabian" || rayHit.collider.name == "Soldier")
                 {

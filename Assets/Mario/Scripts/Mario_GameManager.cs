@@ -18,6 +18,7 @@ public class Mario_GameManager : MonoBehaviour
     public bool clear;
     bool isopen; //설명창 전용 bool
     float flagposition_y;
+    Collider2D buttonArea;
 
     private void Start()
     {
@@ -34,6 +35,7 @@ public class Mario_GameManager : MonoBehaviour
         MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
         Inventory = GameObject.Find("Inventory").GetComponentsInChildren<Drager>();
         Goomba = GameObject.Find("Enemies").GetComponentsInChildren<Mario_Goomba>();
+        buttonArea = GameObject.Find("ButtonArea").GetComponent<Collider2D>();
     }
 
     private void FixedUpdate()
@@ -118,6 +120,7 @@ public class Mario_GameManager : MonoBehaviour
         foreach (Mario_Goomba gm in Goomba)
             gm.StartGame();
         MainBGM.SetVolume(1.0f);
+        buttonArea.enabled = false;
     }
 
     //캐릭터 행동 중단
@@ -132,6 +135,7 @@ public class Mario_GameManager : MonoBehaviour
         foreach (Mario_Goomba gm in Goomba)
             gm.ResetGame();
         MainBGM.SetVolume(0.7f);
+        buttonArea.enabled = true;
     }
 
     //맵 초기화
@@ -146,6 +150,7 @@ public class Mario_GameManager : MonoBehaviour
         foreach (Mario_Goomba gm in Goomba)
             gm.ResetGame();
         MainBGM.SetVolume(0.7f);
+        buttonArea.enabled = true;
     }
 
     //버튼 비활성화 함수
@@ -162,18 +167,6 @@ public class Mario_GameManager : MonoBehaviour
         buttons[0].interactable = true;
         buttons[1].interactable = true;
         buttons[2].interactable = true;
-    }
-
-    //다음스테이지
-    public void Next_rockman()
-    {
-        SceneManager.LoadScene("rockman_1");
-    }
-
-    //게임자체 재시작
-    public void GameRestart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     //버튼 누르면 설명창 반전

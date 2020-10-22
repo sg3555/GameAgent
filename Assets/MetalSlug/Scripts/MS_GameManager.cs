@@ -14,6 +14,7 @@ public class MS_GameManager : MonoBehaviour
     public GameObject ClearUI, ExplainUI; //깃발, 클리어UI, 설명창UI
     bool isopen; //설명창 전용 bool
     bool clearOnce;
+    Collider2D buttonArea;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class MS_GameManager : MonoBehaviour
 
         MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
         Inventory = GameObject.Find("Inventory").GetComponentsInChildren<Drager>();
+        buttonArea = GameObject.Find("ButtonArea").GetComponent<Collider2D>();
     }
 
     private void FixedUpdate()
@@ -53,6 +55,7 @@ public class MS_GameManager : MonoBehaviour
         foreach (Drager dr in Inventory)
             dr.StartGame();
         MainBGM.SetVolume(1.0f);
+        buttonArea.enabled = false;
     }
 
     public void stopButton()
@@ -64,6 +67,7 @@ public class MS_GameManager : MonoBehaviour
         foreach (Drager dr in Inventory)
             dr.StopGame();
         MainBGM.SetVolume(0.7f);
+        buttonArea.enabled = true;
     }
 
     public void resetButton()
@@ -76,6 +80,7 @@ public class MS_GameManager : MonoBehaviour
         foreach (Drager dr in Inventory)
             dr.ResetGame();
         MainBGM.SetVolume(0.7f);
+        buttonArea.enabled = true;
     }
 
     //버튼 비활성화 함수

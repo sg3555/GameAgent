@@ -20,6 +20,7 @@ public class GameManager_RM : MonoBehaviour
     public bool reset = false;
     public bool stop = false;
     public rm_obj[] obj;
+    Collider2D buttonArea;
     private void Awake()
     {
         gm = this;
@@ -34,6 +35,7 @@ public class GameManager_RM : MonoBehaviour
         Inventory = GameObject.Find("Inventory").GetComponentsInChildren<Drager>();
         enemy= GameObject.Find("Enemy").GetComponentsInChildren<rm_enemy>();
         obj = GameObject.Find("Obj").GetComponentsInChildren<rm_obj>();
+        buttonArea = GameObject.Find("ButtonArea").GetComponent<Collider2D>();
     }
 
 
@@ -60,7 +62,8 @@ public class GameManager_RM : MonoBehaviour
         rm.rockman_move();
         foreach (rm_obj ob in obj)
             ob.DeActive();
-       
+        buttonArea.enabled = false;
+
 
     }
     public void resetGame()
@@ -81,6 +84,7 @@ public class GameManager_RM : MonoBehaviour
             ob.Active();
         MainBgm.PlaySound();
         rm.movestart = false;
+        buttonArea.enabled = true;
     }
 
     public void stopGame()
@@ -105,6 +109,7 @@ public class GameManager_RM : MonoBehaviour
         foreach (rm_obj ob in obj)
             ob.Active();
         rm.movestart = false;
+        buttonArea.enabled = true;
     }
     public void deadAction()
     {

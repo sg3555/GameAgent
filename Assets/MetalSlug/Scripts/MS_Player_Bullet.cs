@@ -11,7 +11,7 @@ public class MS_Player_Bullet : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        //Destroy(gameObject, destroyTime);
+        Destroy(gameObject, destroyTime);
         isHit = false;
     }
 
@@ -25,7 +25,7 @@ public class MS_Player_Bullet : MonoBehaviour
     {
         // Debug.Log(collision);
         isHit = true;
-        Destroy(gameObject);
+        //Destroy(gameObject);
         transform.Translate(Vector3.right * 0.7f);
         anim.SetTrigger("Hit");
         Invoke("destroyBullet", 0.4f);

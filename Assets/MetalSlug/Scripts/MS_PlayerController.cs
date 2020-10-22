@@ -350,7 +350,7 @@ public class MS_PlayerController : MonoBehaviour
 
         if(rayHit.collider != null)
         {
-            if(startGame && onGround && isLoaded && Time.time > nextFire)
+            if(startGame && anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Running") && isLoaded && Time.time > nextFire)
             {
                 if(rayHit.collider.name == "Arabian" || rayHit.collider.name == "Soldier")
                 {

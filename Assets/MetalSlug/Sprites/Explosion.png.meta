@@ -1,73 +1,64 @@
 fileFormatVersion: 2
-guid: 980ef16262e5ffc42b1795ef48674584
+guid: 1869fef2cc9af5d4787eb84a484a39ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9048377410813159155
-    second: Weapon SFX_0
+      213: 5986030973748356752
+    second: Explosion_0
   - first:
-      213: -3578228083535091040
-    second: Weapon SFX_1
+      213: -5600206312213581617
+    second: Explosion_1
   - first:
-      213: 1509278159918726164
-    second: Weapon SFX_2
+      213: 3815954189206336483
+    second: Explosion_2
   - first:
-      213: -703374750196139064
-    second: Weapon SFX_3
+      213: -3690502768834906923
+    second: Explosion_3
   - first:
-      213: -1087503202876785429
-    second: Weapon SFX_4
+      213: -49130668184793455
+    second: Explosion_4
   - first:
-      213: 298630553350811931
-    second: Weapon SFX_5
+      213: -2330519403281856691
+    second: Explosion_5
   - first:
-      213: 4899968830315130667
-    second: Weapon SFX_6
+      213: -4796932125324312052
+    second: Explosion_6
   - first:
-      213: -8157420994356331735
-    second: Weapon SFX_7
+      213: 4348620978117878488
+    second: Explosion_7
   - first:
-      213: -8692209418503891632
-    second: Weapon SFX_8
+      213: 7788287979965792003
+    second: Explosion_8
   - first:
-      213: 1172684684001551942
-    second: Weapon SFX_9
+      213: -5876230404456235001
+    second: Explosion_9
   - first:
-      213: 629186383499449701
-    second: Weapon SFX_10
+      213: -7061159883300251746
+    second: Explosion_10
   - first:
-      213: -4944421921578477620
-    second: Weapon SFX_11
+      213: 497560801652076451
+    second: Explosion_11
   - first:
-      213: -2286475129524835752
-    second: Weapon SFX_12
+      213: -222035745519106718
+    second: Explosion_12
   - first:
-      213: 552963721572166547
-    second: Weapon SFX_13
+      213: -5197271548307897853
+    second: Explosion_13
   - first:
-      213: 280368887008811591
-    second: Weapon SFX_14
+      213: -3806839202968226997
+    second: Explosion_14
   - first:
-      213: -1352752103179696920
-    second: Weapon SFX_15
+      213: 1213653969873606975
+    second: Explosion_15
   - first:
-      213: -5069148712984291960
-    second: Weapon SFX_16
+      213: -4915350518889871028
+    second: Explosion_16
   - first:
-      213: -4858211081477339845
-    second: Weapon SFX_17
+      213: -966352174932169086
+    second: Explosion_17
   - first:
-      213: 9163656402496529843
-    second: Weapon SFX_18
-  - first:
-      213: -7200989248140424882
-    second: Weapon SFX_19
-  - first:
-      213: -5261888245657219121
-    second: Weapon SFX_20
-  - first:
-      213: 7578449229678325960
-    second: Weapon SFX_21
+      213: 5240812164920822625
+    second: Explosion_18
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -109,8 +100,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -126,7 +117,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -138,7 +129,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 8192
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -152,13 +143,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Weapon SFX_0
+      name: Explosion_0
       rect:
         serializedVersion: 2
         x: 3
-        y: 398
-        width: 14
-        height: 18
+        y: 362
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f6ef25905b429d70800000000000000
-      internalID: 9048377410813159155
+      spriteID: 096a1cc8477a21350800000000000000
+      internalID: 5986030973748356752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_1
+      name: Explosion_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 398
-        width: 13
-        height: 21
+        x: 69
+        y: 362
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa609b2484975ec0800000000000000
-      internalID: -3578228083535091040
+      spriteID: fc0fb9bb7021842b0800000000000000
+      internalID: -5600206312213581617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_2
+      name: Explosion_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 398
-        width: 13
-        height: 21
+        x: 135
+        y: 362
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41cf53d6d7802f410800000000000000
-      internalID: 1509278159918726164
+      spriteID: 3e3bec60e1ef4f430800000000000000
+      internalID: 3815954189206336483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_3
+      name: Explosion_3
       rect:
         serializedVersion: 2
-        x: 50
-        y: 399
-        width: 15
-        height: 19
+        x: 201
+        y: 362
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cb749e246c1d36f0800000000000000
-      internalID: -703374750196139064
+      spriteID: 5d4fffce843b8ccc0800000000000000
+      internalID: -3690502768834906923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_4
+      name: Explosion_4
       rect:
         serializedVersion: 2
-        x: 68
-        y: 399
-        width: 17
-        height: 18
+        x: 267
+        y: 362
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +241,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: becfd6c499968e0f0800000000000000
-      internalID: -1087503202876785429
+      spriteID: 19e8447eae3715ff0800000000000000
+      internalID: -49130668184793455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_5
+      name: Explosion_5
       rect:
         serializedVersion: 2
-        x: 88
-        y: 400
-        width: 18
-        height: 16
+        x: 334
+        y: 362
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +262,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b11bd83f7e2f42400800000000000000
-      internalID: 298630553350811931
+      spriteID: d47ca3943f458afd0800000000000000
+      internalID: -2330519403281856691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_6
+      name: Explosion_6
       rect:
         serializedVersion: 2
-        x: 109
-        y: 401
-        width: 19
-        height: 15
+        x: 401
+        y: 362
+        width: 66
+        height: 161
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2f6b65a0bf200440800000000000000
-      internalID: 4899968830315130667
+      spriteID: c028262b5afdd6db0800000000000000
+      internalID: -4796932125324312052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_7
+      name: Explosion_7
       rect:
         serializedVersion: 2
-        x: 131
-        y: 401
-        width: 19
-        height: 15
+        x: 468
+        y: 362
+        width: 66
+        height: 161
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +304,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92bb31453d40bce80800000000000000
-      internalID: -8157420994356331735
+      spriteID: 8d227875db7695c30800000000000000
+      internalID: 4348620978117878488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_8
+      name: Explosion_8
       rect:
         serializedVersion: 2
-        x: 153
-        y: 401
-        width: 18
-        height: 14
+        x: 3
+        y: 202
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +325,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05555c056911f5780800000000000000
-      internalID: -8692209418503891632
+      spriteID: 30f3e4657ae851c60800000000000000
+      internalID: 7788287979965792003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_9
+      name: Explosion_9
       rect:
         serializedVersion: 2
-        x: 174
-        y: 401
-        width: 19
-        height: 13
+        x: 69
+        y: 202
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,20 +346,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6462477c186364010800000000000000
-      internalID: 1172684684001551942
+      spriteID: 700490ca49f637ea0800000000000000
+      internalID: -5876230404456235001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_10
+      name: Explosion_10
       rect:
         serializedVersion: 2
-        x: 196
-        y: 401
-        width: 18
-        height: 13
+        x: 138
+        y: 201
+        width: 68
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,20 +367,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5655ff5aea15bb800800000000000000
-      internalID: 629186383499449701
+      spriteID: e9756ad6f78b10e90800000000000000
+      internalID: -7061159883300251746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_11
+      name: Explosion_11
       rect:
         serializedVersion: 2
-        x: 217
-        y: 400
-        width: 17
-        height: 15
+        x: 208
+        y: 201
+        width: 68
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,20 +388,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc719a08572e16bb0800000000000000
-      internalID: -4944421921578477620
+      spriteID: 3af61a4b9e0b7e600800000000000000
+      internalID: 497560801652076451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_12
+      name: Explosion_12
       rect:
         serializedVersion: 2
-        x: 237
-        y: 399
-        width: 17
-        height: 17
+        x: 280
+        y: 201
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +409,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85a28e4ebfec440e0800000000000000
-      internalID: -2286475129524835752
+      spriteID: 26505e47aab2becf0800000000000000
+      internalID: -222035745519106718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_13
+      name: Explosion_13
       rect:
         serializedVersion: 2
-        x: 257
-        y: 398
-        width: 15
-        height: 20
+        x: 348
+        y: 201
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,20 +430,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39bacf533958ca700800000000000000
-      internalID: 552963721572166547
+      spriteID: 3020dd920159fd7b0800000000000000
+      internalID: -5197271548307897853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_14
+      name: Explosion_14
       rect:
         serializedVersion: 2
-        x: 275
-        y: 398
-        width: 13
-        height: 19
+        x: 414
+        y: 201
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,20 +451,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74a5b3c640214e300800000000000000
-      internalID: 280368887008811591
+      spriteID: b433c061ae36b2bc0800000000000000
+      internalID: -3806839202968226997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_15
+      name: Explosion_15
       rect:
         serializedVersion: 2
-        x: 291
-        y: 398
-        width: 11
-        height: 20
+        x: 480
+        y: 201
+        width: 66
+        height: 160
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,134 +472,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e4cfcc112f0a3de0800000000000000
-      internalID: -1352752103179696920
+      spriteID: f391f8afad3c7d010800000000000000
+      internalID: 1213653969873606975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_16
+      name: Explosion_16
       rect:
         serializedVersion: 2
-        x: 218
-        y: 137
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3
+        y: 27
+        width: 66
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88551f06a14c6a9b0800000000000000
-      internalID: -5069148712984291960
+      spriteID: c498907eeba29cbb0800000000000000
+      internalID: -4915350518889871028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Weapon SFX_17
+      name: Explosion_17
       rect:
         serializedVersion: 2
-        x: 253
-        y: 137
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 69
+        y: 27
+        width: 66
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b354da4e2ca249cb0800000000000000
-      internalID: -4858211081477339845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon SFX_18
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 137
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b52a8a62f8db2f70800000000000000
-      internalID: 9163656402496529843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon SFX_19
-      rect:
-        serializedVersion: 2
-        x: 323
-        y: 137
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e49ce296e62f01c90800000000000000
-      internalID: -7200989248140424882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon SFX_20
-      rect:
-        serializedVersion: 2
-        x: 358
-        y: 137
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcf4ccde4840af6b0800000000000000
-      internalID: -5261888245657219121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Weapon SFX_21
-      rect:
-        serializedVersion: 2
-        x: 393
-        y: 137
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c03f4b0c6f0c2960800000000000000
-      internalID: 7578449229678325960
+      spriteID: 28eed3d11d3d692f0800000000000000
+      internalID: -966352174932169086
       vertices: []
       indices: 
       edges: []

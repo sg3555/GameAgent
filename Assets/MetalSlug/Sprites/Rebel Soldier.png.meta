@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: c188bb68a9e11c949acc09fc0f00eb4f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1725347154678387358
+    second: Rebel Soldier_0
+  - first:
+      213: 294793238146961902
+    second: Rebel Soldier_1
+  - first:
+      213: 4990947554812359527
+    second: Rebel Soldier_2
+  - first:
+      213: -144913473270062580
+    second: Rebel Soldier_3
+  - first:
+      213: -1063398204369484938
+    second: Rebel Soldier_4
+  - first:
+      213: -8891517779772820206
+    second: Rebel Soldier_5
+  - first:
+      213: 4684091839103994177
+    second: Rebel Soldier_6
+  - first:
+      213: -7351351046145376778
+    second: Rebel Soldier_7
+  - first:
+      213: 7143656820612338409
+    second: Rebel Soldier_8
+  - first:
+      213: -4763471058447343357
+    second: Rebel Soldier_9
+  - first:
+      213: -4983450378639963371
+    second: Rebel Soldier_10
+  - first:
+      213: -8536683888518936812
+    second: Rebel Soldier_11
+  - first:
+      213: -1861718153781730286
+    second: Rebel Soldier_12
+  - first:
+      213: 5956153898481823203
+    second: Rebel Soldier_13
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rebel Soldier_0
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1193
+        width: 30
+        height: 42
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26de92377e55e08e0800000000000000
+      internalID: -1725347154678387358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rebel Soldier_1
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1193
+        width: 36
+        height: 42
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1dfe163e0571400800000000000000
+      internalID: 294793238146961902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rebel Soldier_2
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1193
+        width: 39
+        height: 42
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763f131ab58634540800000000000000
+      internalID: 4990947554812359527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rebel Soldier_3
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1193
+        width: 40
+        height: 41
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02e19eb6f92dfdf0800000000000000
+      internalID: -144913473270062580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rebel Soldier_4
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1193
+        width: 39
+        height: 31
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673c4cd97fc0e31f0800000000000000
+      internalID: -1063398204369484938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rebel Soldier_5
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 1215
+        width: 44
+        height: 20
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215329640bbfa9480800000000000000
+      internalID: -8891517779772820206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rebel Soldier_6
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1193
+        width: 45
+        height: 19
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1498915d5bc310140800000000000000
+      internalID: 4684091839103994177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class MS_Goal_NPC : MonoBehaviour
 {
     Animator anim;  //스프라이트 애니메이션
-    public int PBulletLayerNum = 25;
+    private int P_BulletLayerNum = 25;
     AudioSource audioSource; //소리제어자
     public AudioClip audioThanks;
 
@@ -19,7 +19,7 @@ public class MS_Goal_NPC : MonoBehaviour
     {
         //Debug.Log(collision.gameObject.layer);
         //플레이어의 공격이 닿았을 때
-        if (collision.gameObject.layer == PBulletLayerNum && !anim.GetBool("IsClear"))
+        if (collision.gameObject.layer == P_BulletLayerNum && !anim.GetBool("IsClear"))
         {
             anim.SetBool("IsClear", true);
             PlaySound(audioThanks);

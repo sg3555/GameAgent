@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class Mario_GameManager : MonoBehaviour
 {
-    public Mario Actor; //마리오
-    public Drager[] MovableTile, Inventory; //아이템창
+
+    Mario Actor; //마리오
+    Drager[] MovableTile, Inventory; //아이템창
+    Mario_Goomba[] Goomba;
     public BgmController MainBGM, DeadBGM, Goal1, Goal2; //배경음 관리자
     public Button[] buttons = new Button[3]; //시작, 정지, 초기화 버튼
     public GameObject flag, ClearUI, ExplainUI; //깃발, 클리어UI, 설명창UI
@@ -15,6 +17,7 @@ public class GameManager : MonoBehaviour
     //이건 클리어 여부 확인을 위한것이 아닌 클리어 후 애니메이션 설정을 위해 둔 bool값
     public bool clear;
     bool isopen; //설명창 전용 bool
+    float flagposition_y;
 
     private void Start()
     {
@@ -24,16 +27,19 @@ public class GameManager : MonoBehaviour
         MainBGM.SetVolume(0.7f);
         clear = false;
         isopen = false;
+        flagposition_y = flag.transform.position.y;
         ExplainUI.SetActive(isopen);
 
+        Actor = GameObject.Find("Mario").GetComponent<Mario>();
         MovableTile = GameObject.Find("MovableItem").GetComponentsInChildren<Drager>();
         Inventory = GameObject.Find("Inventory").GetComponentsInChildren<Drager>();
+        Goomba = GameObject.Find("Enemies").GetComponentsInChildren<Mario_Goomba>();
     }
 
     private void FixedUpdate()
     {
         //클리어 했을 시 깃발이 조금씩 내려오는 모션을 위한 부분
-        if (clear && flag.transform.position.y >= -5.5)
+        if (clear && flag.transform.position.y >= flagposition_y - 7)
             flag.transform.Translate(new Vector3(0, -0.15f, 0));
 
         if (Actor.GM_clear)
@@ -42,18 +48,18 @@ public class GameManager : MonoBehaviour
             Actor.GM_clear = false;
         }
 
-        if(Actor.GM_isdead)
+        if (Actor.GM_isdead)
         {
             deadAction();
             Actor.GM_isdead = false;
         }
 
-        if(Actor.GM_goal)
+        if (Actor.GM_goal)
         {
             goalAction();
             Actor.GM_goal = false;
         }
-            
+
     }
 
     //캐릭터 사망시 행동
@@ -67,6 +73,11 @@ public class GameManager : MonoBehaviour
         //2.712초 후(배경음 재생 완료 후) 게임상태 Stop상태로 전환, 버튼 활성화
         Invoke("stopGame", 2.712f);
         Invoke("enableButton", 2.712f);
+
+        //적들 애니메이션과 움직임 중지
+        foreach (Mario_Goomba gm in Goomba)
+            gm.StopGame();
+
     }
 
 
@@ -96,14 +107,16 @@ public class GameManager : MonoBehaviour
     }
 
     //캐릭터 행동개시
-    public void startUpGame()
+    public void startGame()
     {
         mainCam.StartGame();
-        Actor.StartMove();
+        Actor.StartGame();
         foreach (Drager dr in MovableTile)
             dr.StartGame();
         foreach (Drager dr in Inventory)
             dr.StartGame();
+        foreach (Mario_Goomba gm in Goomba)
+            gm.StartGame();
         MainBGM.SetVolume(1.0f);
     }
 
@@ -116,6 +129,8 @@ public class GameManager : MonoBehaviour
             dr.StopGame();
         foreach (Drager dr in Inventory)
             dr.StopGame();
+        foreach (Mario_Goomba gm in Goomba)
+            gm.ResetGame();
         MainBGM.SetVolume(0.7f);
     }
 
@@ -128,6 +143,8 @@ public class GameManager : MonoBehaviour
             dr.ResetGame();
         foreach (Drager dr in Inventory)
             dr.ResetGame();
+        foreach (Mario_Goomba gm in Goomba)
+            gm.ResetGame();
         MainBGM.SetVolume(0.7f);
     }
 

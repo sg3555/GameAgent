@@ -10,17 +10,22 @@ public class Mario : MonoBehaviour
     AudioSource audioSource; //소리제어자
     Collider2D colid; //충돌제어자
     SpriteRenderer sprit; //스프라이트제어자
+    GameObject flag;
 
-    public bool startGame; //게임 시작상태 bool
-    public float height; //점프 높이
+    bool startGame; //게임 시작상태 bool
+    float height; //점프 높이
     public float maxSpeed; //최대 속도
-    public float animSpeed; //애니메이션 속도
-    public bool clear;  //클리어 여부 
+    float animSpeed; //애니메이션 속도
+    bool clear;  //클리어 여부 
+    float direc; //캐릭터 이동 방향
+
 
     public bool GM_isdead, GM_goal, GM_clear; //게임매니저 수신용
     //public GameManager gm; //게임매니저 함수를 쓰기위한 객체
 
     public AudioClip audioJump; //점프 효과음
+    public AudioClip audioAttack; //공격 효과음
+    public float speed;
 
     void Awake()
     {
@@ -29,10 +34,12 @@ public class Mario : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         colid = GetComponent<Collider2D>();
         sprit = GetComponent<SpriteRenderer>();
+        flag = GameObject.Find("Goal");
     }
 
     private void Start()
     {
+        direc = 0.2f;
         startGame = false;
         clear = false;
         GM_isdead = false;
@@ -48,7 +55,7 @@ public class Mario : MonoBehaviour
     {
         //게임 시작상태에서만 움직임 활성화
         if (startGame)
-            rigid.AddForce(Vector2.right * 0.1f, ForceMode2D.Impulse);
+            rigid.AddForce(Vector2.right * direc, ForceMode2D.Impulse);
     }
 
     //속력설정
@@ -85,13 +92,22 @@ public class Mario : MonoBehaviour
     {
         //이동값(Vector변화량)에 따른 애니메이션 제어
         animSpeed = Mathf.Abs(rigid.velocity.x) / 10 + 0.5f;
-        if (Mathf.Abs(rigid.velocity.x) > 0.3)
+        if (Mathf.Abs(rigid.velocity.x) > 0.6)
         {
             anim.speed = animSpeed;
             anim.SetBool("IsMove", true);
         }
         else
             anim.SetBool("IsMove", false);
+
+        //반대방향으로 이동시 스프라이트 반전
+        if (rigid.velocity.x < 0)
+            sprit.flipX = true;
+        else if (rigid.velocity.x > 0)
+            sprit.flipX = false;
+
+        
+        
     }
 
     void FixedUpdate()
@@ -104,10 +120,11 @@ public class Mario : MonoBehaviour
     }
 
     //게임 시작
-    public void StartMove()
+    public void StartGame()
     {
         rigid.bodyType = RigidbodyType2D.Dynamic;
         startGame = true;
+        direc = 0.2f;
     }
 
     //게임 리셋
@@ -120,6 +137,7 @@ public class Mario : MonoBehaviour
         anim.SetBool("IsDead", false);
         colid.isTrigger = false;
         gameObject.transform.position = originPosition;
+        sprit.flipX = false;
         startGame = false;
     }
 
@@ -159,7 +177,7 @@ public class Mario : MonoBehaviour
     //클리어시 국기봉에서 내려오는 모션
     void slipflag()
     {
-        if (clear && transform.position.y >= -5.5)
+        if (clear && transform.position.y >= flag.transform.position.y)
             transform.Translate(new Vector3(0, -0.15f, 0));
     }
 
@@ -188,6 +206,36 @@ public class Mario : MonoBehaviour
         Invoke("flip", 1.2f);
     }
 
+    //공격
+    void OnAttack(Transform enemy)
+    {
+        //Reaction Force
+        rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+        //Enemy Die
+        if (enemy.name.Contains("Goomba"))
+        {
+            Mario_Goomba enem = enemy.GetComponent<Mario_Goomba>();
+            enem.OnDamaged();
+        }
+            
+        
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag.Contains("Enemy") && gameObject.layer == 9)
+        {
+            if (rigid.velocity.y < 0 && transform.position.y > collision.transform.position.y)
+            {
+                OnAttack(collision.transform);
+                PlaySound(audioAttack);
+            }
+            else
+                deadAction();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //사망
@@ -195,7 +243,6 @@ public class Mario : MonoBehaviour
         {
             deadAction();
         }
-
 
         //골인
         if (collision.tag.Contains("Finish"))
@@ -223,11 +270,11 @@ public class Mario : MonoBehaviour
             }
             if (collision.name.Contains("Sign_Left"))
             {
-
+                direc = -0.5f;
             }
             if (collision.name.Contains("Sign_Right"))
             {
-
+                direc = 0.5f;
             }
             if (collision.name.Contains("Sign_A"))
             {

@@ -522,15 +522,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1521269876}
-        m_MethodName: Next_Metal
-        m_Mode: 1
+      - m_Target: {fileID: 1521269878}
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: rockman_S4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &125279678
@@ -2269,7 +2269,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1521269876}
+      - m_Target: {fileID: 1521269878}
         m_MethodName: GameRestart
         m_Mode: 1
         m_Arguments:
@@ -3281,8 +3281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -186.1, y: -164}
-  m_SizeDelta: {x: 317.5, y: 366.1}
+  m_AnchoredPosition: {x: -182.27, y: -162.6}
+  m_SizeDelta: {x: 325.15, y: 363.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685920938
 MonoBehaviour:
@@ -3880,7 +3880,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uD328\uB110 \u2191\n\uC810\uD504\n\n\uD328\uB110 A\n\uB808\uC774\uC800
-    \uBC1C\uC0AC"
+    \uBC1C\uC0AC\n\n\uD328\uB110 \u2191\u2191\n\uB354\uBE14 \uC810\uD504"
 --- !u!222 &775931430
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5897,6 +5897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521269877}
   - component: {fileID: 1521269876}
+  - component: {fileID: 1521269878}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5955,6 +5956,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1521269878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521269875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d433a370e6e58ad45b7f7a85c883eb24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1539648382
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,8 +6084,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -954702951
-  m_SortingLayer: 3
+  m_SortingLayerID: 1539714877
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8352063bec70e9542ad73fd655960994, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}

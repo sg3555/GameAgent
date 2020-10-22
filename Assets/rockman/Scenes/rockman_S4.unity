@@ -146,12 +146,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65560740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1912446854}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &65560742
 MonoBehaviour:
@@ -408,7 +408,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uD328\uB110 \u2191\n\uC810\uD504\n\n\uD328\uB110 A\n\uB808\uC774\uC800
-    \uBC1C\uC0AC"
+    \uBC1C\uC0AC\n\n\uD328\uB110  \u2191\u2191\n\uB354\uBE14 \uC810\uD504"
 --- !u!222 &81397786
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2885,7 +2885,7 @@ Transform:
   m_LocalScale: {x: 5.970407, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1912446854}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &717256662
 Rigidbody2D:
@@ -2970,8 +2970,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -954702951
-  m_SortingLayer: 3
+  m_SortingLayerID: 1539714877
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8352063bec70e9542ad73fd655960994, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -4446,7 +4446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1912446854}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &946941091
 MonoBehaviour:
@@ -5356,7 +5356,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1912446854}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1104369011
 MonoBehaviour:
@@ -6110,6 +6110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1358813670}
   - component: {fileID: 1358813669}
+  - component: {fileID: 1358813671}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6168,6 +6169,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1358813671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358813668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d433a370e6e58ad45b7f7a85c883eb24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1365420499
 GameObject:
   m_ObjectHideFlags: 0
@@ -6514,7 +6527,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1912446854}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1577698707
 MonoBehaviour:
@@ -7377,15 +7390,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358813669}
-        m_MethodName: Next_Metal
-        m_Mode: 1
+      - m_Target: {fileID: 1358813671}
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MetalSlug_1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1792440349
@@ -7619,11 +7632,11 @@ Transform:
   m_Children:
   - {fileID: 1686333693}
   - {fileID: 393411000}
-  - {fileID: 65560741}
   - {fileID: 946941090}
   - {fileID: 1104369010}
   - {fileID: 717256661}
   - {fileID: 1577698706}
+  - {fileID: 65560741}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7928,7 +7941,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1358813669}
+      - m_Target: {fileID: 1358813671}
         m_MethodName: GameRestart
         m_Mode: 1
         m_Arguments:

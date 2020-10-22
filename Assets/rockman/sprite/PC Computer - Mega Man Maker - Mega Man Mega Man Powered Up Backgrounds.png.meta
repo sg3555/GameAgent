@@ -1,0 +1,823 @@
+fileFormatVersion: 2
+guid: 9eee22ce4dd44954d9d2e3e8fe29db07
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7800730356916018250
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_0
+  - first:
+      213: 8979297294972154581
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_1
+  - first:
+      213: 7882570409696142806
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_2
+  - first:
+      213: 8393564448860011558
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_3
+  - first:
+      213: 8410378804946161019
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_4
+  - first:
+      213: -7957276993247153673
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_5
+  - first:
+      213: 4594522053097828053
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_6
+  - first:
+      213: -7500859154692203101
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_7
+  - first:
+      213: 7811426167702471280
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_8
+  - first:
+      213: 1354425605996135093
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_9
+  - first:
+      213: -2274487524492094843
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_10
+  - first:
+      213: -2383300013397524676
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_11
+  - first:
+      213: -916112464482322531
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_12
+  - first:
+      213: 1045123725117766282
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_13
+  - first:
+      213: -1319756784686684578
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_14
+  - first:
+      213: -6358771647124451704
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_15
+  - first:
+      213: 1453209295157433804
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_16
+  - first:
+      213: 5188929637370390946
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_17
+  - first:
+      213: 4189085228662192269
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_18
+  - first:
+      213: 9210195822003499306
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_19
+  - first:
+      213: -6938057060729821201
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_20
+  - first:
+      213: -8233752803377012863
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_21
+  - first:
+      213: -8942113066512115530
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_22
+  - first:
+      213: 9160905733945078067
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_23
+  - first:
+      213: 3658891735505130990
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_24
+  - first:
+      213: 5129669443146883439
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_25
+  - first:
+      213: -5098049373528649582
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_26
+  - first:
+      213: -5080375066476479769
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_27
+  - first:
+      213: -648912664727669065
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_28
+  - first:
+      213: 8943327919711002794
+    second: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_29
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1130.8334
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cd598fde2c14c60800000000000000
+      internalID: 7800730356916018250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_1
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1130.8334
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2f07fb05fdc9c70800000000000000
+      internalID: 8979297294972154581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_2
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1136
+        width: 247
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5a1f22604846d60800000000000000
+      internalID: 7882570409696142806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_3
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1130.8334
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62cf5ad256eeb7470800000000000000
+      internalID: 8393564448860011558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_4
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1130.8334
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d4a4786faa7b470800000000000000
+      internalID: 8410378804946161019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 904.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f17d1eebb2129190800000000000000
+      internalID: -7957276993247153673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_6
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 904.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de2897e67503cf30800000000000000
+      internalID: 4594522053097828053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_7
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 904.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad955e075897e790800000000000000
+      internalID: -7500859154692203101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_8
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 916
+        width: 245
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072c81b76b2c76c60800000000000000
+      internalID: 7811426167702471280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_9
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 904.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2c710a9e2ebc210800000000000000
+      internalID: 1354425605996135093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 678.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5825790b5a56f60e0800000000000000
+      internalID: -2274487524492094843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_11
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 678.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fb14cd341dceed0800000000000000
+      internalID: -2383300013397524676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_12
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 678.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97393c31905943f0800000000000000
+      internalID: -916112464482322531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_13
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 678.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a3afd9d76018e00800000000000000
+      internalID: 1045123725117766282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_14
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 678.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56a6da52384fade0800000000000000
+      internalID: -1319756784686684578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 452.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e425d80ea11c7a0800000000000000
+      internalID: -6358771647124451704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_16
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 452.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5972e8726da2410800000000000000
+      internalID: 1453209295157433804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_17
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 452.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a965f75308c20840800000000000000
+      internalID: 5188929637370390946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_18
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 452.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88fe3c12de922a30800000000000000
+      internalID: 4189085228662192269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_19
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 452.8333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a213e4a6d4031df70800000000000000
+      internalID: 9210195822003499306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 226.83333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7eec7dcd117bf90800000000000000
+      internalID: -6938057060729821201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_21
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 226.83333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f165a1375dbbd80800000000000000
+      internalID: -8233752803377012863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_22
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 226.83333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b89a291b8b37e380800000000000000
+      internalID: -8942113066512115530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_23
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 226.83333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331b2ac7a33122f70800000000000000
+      internalID: 9160905733945078067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_24
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 226.83333
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee55566d5aef6c230800000000000000
+      internalID: 3658891735505130990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.83332825
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6122fd2e2f303740800000000000000
+      internalID: 5129669443146883439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_26
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0.83332825
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2901c6bfa171049b0800000000000000
+      internalID: -5098049373528649582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_27
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 0.83332825
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eafae44bc1ee79b0800000000000000
+      internalID: -5080375066476479769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_28
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 0.83332825
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6b7a89e599ef6f0800000000000000
+      internalID: -648912664727669065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Mega Man Maker - Mega Man Mega Man Powered Up Backgrounds_29
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 0.83332825
+        width: 258.2
+        height: 226.16667
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa02534fb551d1c70800000000000000
+      internalID: 8943327919711002794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

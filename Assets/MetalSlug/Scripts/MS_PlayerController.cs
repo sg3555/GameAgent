@@ -195,12 +195,12 @@ public class MS_PlayerController : MonoBehaviour
     void eri_move()
     {
         //게임 시작상태에서만 움직임 활성화
-        if (startGame && !clear)
+        if (startGame && !clear && !dead)
         {
             rigid.AddForce(Vector2.right * 1f, ForceMode2D.Impulse);
         }
 
-        if (Mathf.Abs(rigid.velocity.x) > 0.3)
+        if (Mathf.Abs(rigid.velocity.x) > 0.3 && !dead)
         {
             anim.SetBool("IsRunning", true);
         }
@@ -209,7 +209,7 @@ public class MS_PlayerController : MonoBehaviour
     }
     void eri_speed()
     {
-        if (startGame)
+        if (startGame && !dead)
         {
             //최대속력 설정
             if (rigid.velocity.x > maxSpeed && !clear)
@@ -220,38 +220,40 @@ public class MS_PlayerController : MonoBehaviour
         
 
         //클리어 시 정지
-        if (clear || dead)
+        if (clear)
             rigid.velocity = new Vector2(0, 0);
     }
     void eri_jump()
     {
-
-        if (anim.GetBool("IsJump") && rigid.velocity.y > 0)
+        if(startGame && !dead)
         {
-            Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, true);
-        }
-        else if (anim.GetBool("IsJump") && rigid.velocity.y < 0)
-        {
-            Debug.DrawRay(groundCheck.position, Vector2.down * 0.5f, new Color(0, 255, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.5f, LayerMask.GetMask("Ground"));
-            if (rayHit.collider != null)
+            if (anim.GetBool("IsJump") && rigid.velocity.y > 0)
             {
-                Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
+                Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, true);
             }
-        }
-
-
-        if(!anim.GetBool("IsJump") && rigid.velocity.y < 0 && onGround == false)
-        {
-            RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
-            if (rayHit.collider == null)
+            else if (anim.GetBool("IsJump") && rigid.velocity.y < 0)
             {
-                anim.SetBool("IsFall", true);
+                Debug.DrawRay(groundCheck.position, Vector2.down * 0.5f, new Color(0, 255, 0));
+                RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.5f, LayerMask.GetMask("Ground"));
+                if (rayHit.collider != null)
+                {
+                    Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
+                }
             }
-        }
-        else if(onGround == true)
-        {
-            anim.SetBool("IsFall", false);
+
+
+            if (!anim.GetBool("IsJump") && rigid.velocity.y < 0 && onGround == false)
+            {
+                RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
+                if (rayHit.collider == null)
+                {
+                    anim.SetBool("IsFall", true);
+                }
+            }
+            else if (onGround == true)
+            {
+                anim.SetBool("IsFall", false);
+            }
         }
     }
     void eri_clear()

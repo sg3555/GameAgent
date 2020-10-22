@@ -15,6 +15,7 @@ public class MS_PlayerController : MonoBehaviour
     public bool clear; //클리어 여부 
     public bool dead;
     public bool isLoaded;
+
     private float maxSpeed = 5f; // Player Speed
     //public int jumpForce = 450; // Player jump force
     private int height = 15; // Player jump force
@@ -91,7 +92,7 @@ public class MS_PlayerController : MonoBehaviour
             rigid.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Die");
             GM_isdead = true;
-            col.isTrigger = true;
+            //col.isTrigger = true;
             // 여기에 플레이어 죽는 애니메이션
             //Debug.Log(collision.gameObject.name);
             dead = true;
@@ -292,7 +293,11 @@ public class MS_PlayerController : MonoBehaviour
         anim.SetBool("IsJump", false);
         anim.SetBool("IsClear", false);
         anim.SetBool("IsFall", false);
+        anim.SetBool("IsDead", false);
+        anim.SetBool("IsFire", false);
+        anim.SetTrigger("Reset");
         isLoaded = false;
+        dead = false;
         gameObject.transform.position = originPosition;
         Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
         startGame = false;

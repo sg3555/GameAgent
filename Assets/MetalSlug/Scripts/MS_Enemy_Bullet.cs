@@ -23,13 +23,21 @@ public class MS_Enemy_Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("tri");
         isHit = true;
         transform.Translate(Vector3.left * 0.7f);
         destroyBullet();
         //anim.SetTrigger("Hit");
         //Invoke("DestroyBullet", 0.4f);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("col");
+        isHit = true;
 
+        transform.Translate(Vector3.left * 0.7f);
+        destroyBullet();
+    }
     void destroyBullet()
     {
         Destroy(gameObject);

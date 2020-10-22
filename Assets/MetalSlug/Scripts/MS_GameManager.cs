@@ -13,6 +13,7 @@ public class MS_GameManager : MonoBehaviour
     public CamControl mainCam; //카메라
     public GameObject ClearUI, ExplainUI; //깃발, 클리어UI, 설명창UI
     public GameObject ammoBox;
+    public GameObject sandBags;
 
     MS_Arabian[] arabian;
     MS_Soldier[] soldier;
@@ -95,6 +96,10 @@ public class MS_GameManager : MonoBehaviour
         Invoke("stopButton", 1.5f);
         Invoke("enableButton", 1.5f);
 
+        foreach (MS_Arabian ar in arabian)
+            ar.StopGame();
+        foreach (MS_Soldier so in soldier)
+            so.StopGame();
         //적들 애니메이션과 움직임 중지
         //foreach (Mario_Goomba gm in Goomba)
         //    gm.StopGame();
@@ -109,8 +114,20 @@ public class MS_GameManager : MonoBehaviour
             dr.StartGame();
         foreach (Drager dr in Inventory)
             dr.StartGame();
+        foreach (MS_Arabian ar in arabian)
+            ar.StartGame();
         foreach (MS_Soldier so in soldier)
             so.StartGame();
+
+        
+        SpriteRenderer sp = sandBags.GetComponent<SpriteRenderer>();
+        //Debug.Log(sp.sortingLayerName = "Item out Inventory 3");
+        Debug.Log(sp.sortingLayerName);
+        Rigidbody2D spR = sandBags.GetComponent<Rigidbody2D>();
+        if(sp.sortingLayerName == "Item out Inventory 3")
+        {
+            spR.bodyType = RigidbodyType2D.Dynamic;
+        }
         MainBGM.SetVolume(1.0f);
         buttonArea.enabled = false;
     }
@@ -123,6 +140,8 @@ public class MS_GameManager : MonoBehaviour
             dr.StopGame();
         foreach (Drager dr in Inventory)
             dr.StopGame();
+        foreach (MS_Arabian ar in arabian)
+            ar.ResetGame();
         foreach (MS_Soldier so in soldier)
             so.ResetGame();
         foreach (MS_HealthController hc in healthController)
@@ -141,6 +160,8 @@ public class MS_GameManager : MonoBehaviour
             dr.ResetGame();
         foreach (Drager dr in Inventory)
             dr.ResetGame();
+        foreach (MS_Arabian ar in arabian)
+            ar.ResetGame();
         foreach (MS_Soldier so in soldier)
             so.ResetGame();
         foreach (MS_HealthController hc in healthController)

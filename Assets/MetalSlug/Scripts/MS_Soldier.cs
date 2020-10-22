@@ -81,7 +81,7 @@ public class MS_Soldier : MonoBehaviour
         gameObject.transform.position = originPosition;
         this.gameObject.SetActive(true);
         //anim.SetTrigger("IsReset");
-        //anim.speed = 0;
+        anim.speed = 1;
     }
 
     public void StopGame()

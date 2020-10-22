@@ -4,20 +4,36 @@ using UnityEngine;
 
 public class MS_Arabian : MonoBehaviour
 {
-    Animator anim;  //스프라이트 애니메이션
+    Vector2 originPosition; //캐릭터 최초위치
+    Rigidbody2D rigid; //물리엔진
+    Animator anim;  //스프라이트 애니메이션 담당
+    Collider2D colid; //충돌제어자
     private int playerLayerNum = 22;
     private int enemyLayerNum = 23;
     private int P_BulletLayerNum = 25;
     private int E_BulletLayerNum = 26;
     AudioSource audioSource; //소리제어자
     public AudioClip audioDie;
+
+    bool startGame;
     bool isDead;
     public GameObject knife;
     void Awake()
     {
+        rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        colid = GetComponent<Collider2D>();
         audioSource = GetComponent<AudioSource>();
+    }
+
+    void Start()
+    {
+        colid.enabled = false;
+        startGame = false;
+        rigid.bodyType = RigidbodyType2D.Static;
         isDead = false;
+        //anim.speed = animSpeed;
+        originPosition = this.gameObject.transform.position;
     }
 
     void FixedUpdate()
@@ -28,15 +44,18 @@ public class MS_Arabian : MonoBehaviour
 
     void attack()
     {
-        Debug.DrawRay(this.gameObject.transform.position, Vector2.left * 4f, new Color(0, 255, 0));
-        RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.left, 4f, LayerMask.GetMask("Player"));
-        if (rayHit.collider != null)
+        if(startGame && !isDead)
         {
-            anim.SetBool("IsAttack", true);
-        }
-        else
-        {
-            anim.SetBool("IsAttack", false);
+            Debug.DrawRay(this.gameObject.transform.position, Vector2.left * 4f, new Color(0, 255, 0));
+            RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.left, 4f, LayerMask.GetMask("Player"));
+            if (rayHit.collider != null)
+            {
+                anim.SetBool("IsAttack", true);
+            }
+            else
+            {
+                anim.SetBool("IsAttack", false);
+            }
         }
     }
 
@@ -72,6 +91,37 @@ public class MS_Arabian : MonoBehaviour
     }
     void destroyObj()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        this.gameObject.SetActive(false);
     }
+
+    public void StartGame()
+    {
+        rigid.bodyType = RigidbodyType2D.Dynamic;
+        colid.enabled = true;
+        startGame = true;
+        anim.speed = 1;
+    }
+
+    //게임 리셋
+    public void ResetGame()
+    {
+        anim.SetBool("IsAttack", false);
+        rigid.bodyType = RigidbodyType2D.Static;
+        colid.enabled = false;
+        startGame = false;
+        isDead = false;
+        gameObject.transform.position = originPosition;
+        this.gameObject.SetActive(true);
+        //anim.SetTrigger("IsReset");
+        anim.speed = 1;
+    }
+
+    public void StopGame()
+    {
+        rigid.bodyType = RigidbodyType2D.Static;
+        startGame = false;
+        anim.speed = 0;
+    }
+
 }

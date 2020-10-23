@@ -4249,7 +4249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGame: 0
   clear: 0
-  dead: 0
+  isDead: 0
   isLoaded: 0
   knife: {fileID: 1580139403}
   GM_isdead: 0
@@ -5611,14 +5611,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 943429105}
-        m_MethodName: GameRestart
-        m_Mode: 1
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: mainscene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1991611718

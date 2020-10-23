@@ -211,7 +211,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: rockman_1
+          m_StringArgument: rockman_S1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &37495414
@@ -2005,7 +2005,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: rockman_4
+          m_StringArgument: rockman_S4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &956072478
@@ -2612,7 +2612,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: rockman_3
+          m_StringArgument: rockman_S3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1264200789
@@ -2818,7 +2818,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: rockman_2
+          m_StringArgument: rockman_S2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1337245642

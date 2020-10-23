@@ -354,7 +354,7 @@ public class MS_PlayerController : MonoBehaviour
         //RaycastHit2D rayHit = Physics2D.Raycast(muzzle.transform.position, Vector2.right, 12f);
         //Debug.Log(rayHit.collider);
 
-        if(rayHit.collider != null && startGame && isLoaded)
+        if(rayHit.collider != null && startGame && isLoaded && onGround)
         {
             
             anim.SetBool("IsFire", true);
@@ -362,8 +362,8 @@ public class MS_PlayerController : MonoBehaviour
             {
                 PlaySound(audioGun_fire);
                 nextFire = Time.time + fireRate;
-                fireBullet();
-                //Invoke("fireBullet", 0.2f);
+                //fireBullet();
+                Invoke("fireBullet", 0.2f);
             }
                     
                 //anim.SetTrigger("Fire");

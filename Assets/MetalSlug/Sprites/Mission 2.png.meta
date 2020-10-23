@@ -1,0 +1,1102 @@
+fileFormatVersion: 2
+guid: 0ac6441a2f0fb2b4792b933d2befb2f6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7934813549447837057
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_0
+  - first:
+      213: -4106324997556531230
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_1
+  - first:
+      213: 3431860429632442156
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_2
+  - first:
+      213: 7011003502650365845
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_3
+  - first:
+      213: 6887498790504564299
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_4
+  - first:
+      213: -2464327877625874897
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_5
+  - first:
+      213: 2345773353563388999
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_6
+  - first:
+      213: 453550399862173723
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_7
+  - first:
+      213: -6337887206969895196
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_8
+  - first:
+      213: -8212203534183031007
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_9
+  - first:
+      213: -5221141872791892466
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_10
+  - first:
+      213: 4364365312793460151
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_11
+  - first:
+      213: 4269127213821336287
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_12
+  - first:
+      213: -7982064763701899578
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_13
+  - first:
+      213: 2922133880487746650
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_14
+  - first:
+      213: -6796701857072721471
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_15
+  - first:
+      213: 487344745082701982
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_16
+  - first:
+      213: -4044940510051634531
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_17
+  - first:
+      213: -3998761266197169199
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_18
+  - first:
+      213: -8016045391488846275
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_19
+  - first:
+      213: -6187119510371710650
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_20
+  - first:
+      213: 406178981492948115
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_21
+  - first:
+      213: -1436893581199701405
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_22
+  - first:
+      213: 2172522497850322440
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_23
+  - first:
+      213: -4026198983902951528
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_24
+  - first:
+      213: 6022733188333870914
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_25
+  - first:
+      213: 7627310560735458058
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_26
+  - first:
+      213: 3151234910978570036
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_27
+  - first:
+      213: -2308569717377069788
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_28
+  - first:
+      213: -5947613985505212543
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_29
+  - first:
+      213: 1866435365474891049
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_30
+  - first:
+      213: 3267257159770152926
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_31
+  - first:
+      213: 8976810880142397241
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_32
+  - first:
+      213: -6226589523934624628
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_33
+  - first:
+      213: 659470260452815880
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_34
+  - first:
+      213: -4546057279062984614
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_35
+  - first:
+      213: 6184399300295142378
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_36
+  - first:
+      213: -7412096657321080803
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_37
+  - first:
+      213: 5700145388281705116
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_38
+  - first:
+      213: -1803884642639013811
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_39
+  - first:
+      213: 3931222302748313208
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_40
+  - first:
+      213: 2793610651622912939
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_41
+  - first:
+      213: -5563280068914291341
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_42
+  - first:
+      213: 9055337550267213974
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_43
+  - first:
+      213: 7901843117214501448
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_44
+  - first:
+      213: 6927973653343555079
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_45
+  - first:
+      213: 1372521812592069988
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_46
+  - first:
+      213: 6222861474100798156
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_47
+  - first:
+      213: -8378886336601570463
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_48
+  - first:
+      213: 5562863475633820388
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_49
+  - first:
+      213: 4506596818531971362
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_50
+  - first:
+      213: 6806557360168626962
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_51
+  - first:
+      213: 5658189772145424800
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_52
+  - first:
+      213: 4074133182121816600
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_53
+  - first:
+      213: 8774950339094517851
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_54
+  - first:
+      213: 1462946498364996823
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_55
+  - first:
+      213: -4612513138614006612
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_56
+  - first:
+      213: -112649283719678964
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_57
+  - first:
+      213: -8188165723682503929
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_58
+  - first:
+      213: -2853134030905095198
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_59
+  - first:
+      213: 2534530594372936784
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_60
+  - first:
+      213: 6595745165718046118
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_61
+  - first:
+      213: 2139830895519959370
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_62
+  - first:
+      213: -5496479686657668946
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_63
+  - first:
+      213: -4339819106259011920
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_64
+  - first:
+      213: -223085439985438948
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_65
+  - first:
+      213: -6934780785833149487
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_66
+  - first:
+      213: 1474679461830381703
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_67
+  - first:
+      213: -7515706210330900636
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_68
+  - first:
+      213: 5129501047768591027
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_69
+  - first:
+      213: 4515827333519290030
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_70
+  - first:
+      213: 8341927465055179838
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_71
+  - first:
+      213: 7759131191147994968
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_72
+  - first:
+      213: -3535604142416160707
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_73
+  - first:
+      213: -7586162205666137131
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_74
+  - first:
+      213: 4786771294150322181
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_75
+  - first:
+      213: -7218346982995919160
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_76
+  - first:
+      213: -4446484946510836485
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_77
+  - first:
+      213: -9018798218083238629
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_78
+  - first:
+      213: 8725841059374859461
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_79
+  - first:
+      213: 4033687727233156126
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_80
+  - first:
+      213: 1403978194338901008
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_81
+  - first:
+      213: 5575415908161002350
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_82
+  - first:
+      213: -2577737118285144987
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_83
+  - first:
+      213: -5171921555686218510
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_84
+  - first:
+      213: -4817221638900309397
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_85
+  - first:
+      213: -5886640525783144243
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_86
+  - first:
+      213: 3498088193277238520
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_87
+  - first:
+      213: -8266114772678614608
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_88
+  - first:
+      213: 4141298043181353554
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_89
+  - first:
+      213: -127447782423977019
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_90
+  - first:
+      213: -5120956998810433884
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_91
+  - first:
+      213: 1362474706078924109
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_92
+  - first:
+      213: 9018296280637802557
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_93
+  - first:
+      213: 594329601161815105
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_94
+  - first:
+      213: 6719798957568753702
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_95
+  - first:
+      213: -2825332815907314134
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_96
+  - first:
+      213: -5944864176965386486
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_97
+  - first:
+      213: -3562182363056151603
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_98
+  - first:
+      213: -7011731599888193199
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_99
+  - first:
+      213: 3297615242503861308
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_100
+  - first:
+      213: -2338658383036874770
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_101
+  - first:
+      213: 163246898065183647
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_102
+  - first:
+      213: 5989390415151210306
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_103
+  - first:
+      213: -6830878483342576884
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_104
+  - first:
+      213: 6265720066683049280
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_105
+  - first:
+      213: -1388430702675046425
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_106
+  - first:
+      213: 6067434395169846985
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_107
+  - first:
+      213: 1476156610988577509
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_108
+  - first:
+      213: -50732208494396992
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_109
+  - first:
+      213: -4982401901249239489
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_110
+  - first:
+      213: 5162291541961036938
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_111
+  - first:
+      213: -8858946626796597007
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_112
+  - first:
+      213: 2119896757935174496
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_113
+  - first:
+      213: -7633819790475002595
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_114
+  - first:
+      213: 7502248904640162471
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_115
+  - first:
+      213: 5369624078353393081
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_116
+  - first:
+      213: -6364482281201388502
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_117
+  - first:
+      213: -518469786743651616
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_118
+  - first:
+      213: -8677243504333579773
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_119
+  - first:
+      213: -5648169783648108577
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_120
+  - first:
+      213: -3780866150104466117
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_121
+  - first:
+      213: -1302065837815438786
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_122
+  - first:
+      213: -5232935466800546306
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_123
+  - first:
+      213: 7414141051530630992
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_124
+  - first:
+      213: -6098727861088426582
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_125
+  - first:
+      213: -5649621788368482318
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_126
+  - first:
+      213: 7663195313445191969
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_127
+  - first:
+      213: 8753691937765864675
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_128
+  - first:
+      213: 3855245248008483430
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_129
+  - first:
+      213: -2585344857822402304
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_130
+  - first:
+      213: -2831259800669543127
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_131
+  - first:
+      213: -8313343919308413709
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_132
+  - first:
+      213: -1351674643664443811
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_133
+  - first:
+      213: 1732512949055458088
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_134
+  - first:
+      213: -3694286251255810105
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_135
+  - first:
+      213: 2466410791397325816
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_136
+  - first:
+      213: 8952437635322005784
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_137
+  - first:
+      213: 2410068669940190434
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_138
+  - first:
+      213: -5603751873133904330
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_139
+  - first:
+      213: 7724720325542038347
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_140
+  - first:
+      213: -1456239989623957677
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_141
+  - first:
+      213: -7701520186195287391
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_142
+  - first:
+      213: 1056945772371628590
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_143
+  - first:
+      213: 4565297768638950966
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_144
+  - first:
+      213: 2474941098822925055
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_145
+  - first:
+      213: 7029645261302159981
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_146
+  - first:
+      213: -2157239167081291601
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_147
+  - first:
+      213: 8744043221454681588
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_148
+  - first:
+      213: -1098310910623935758
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_149
+  - first:
+      213: -7018129022690594613
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_150
+  - first:
+      213: -2634324016493617655
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_151
+  - first:
+      213: 7348719115033153065
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_152
+  - first:
+      213: 5114537209825646682
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_153
+  - first:
+      213: -2501396225375172248
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_154
+  - first:
+      213: -7112942097311363863
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_155
+  - first:
+      213: -1491766845146604353
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_156
+  - first:
+      213: 8366707443006088094
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_157
+  - first:
+      213: -4384334279254252516
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_158
+  - first:
+      213: -6206739022276887748
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_159
+  - first:
+      213: 57378329238414702
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_160
+  - first:
+      213: 5084791805216088190
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_161
+  - first:
+      213: 5678926017422373774
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_162
+  - first:
+      213: 4454882954689663986
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_163
+  - first:
+      213: -8854705035307592213
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_164
+  - first:
+      213: -6466378796899707031
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_165
+  - first:
+      213: 1267516826545814072
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_166
+  - first:
+      213: -8067567070073915929
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_167
+  - first:
+      213: 2753225383704836186
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_168
+  - first:
+      213: 7509693612977093744
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_169
+  - first:
+      213: -8021589085326942014
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_170
+  - first:
+      213: -7336151486421964723
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_171
+  - first:
+      213: 7535611753167121652
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_172
+  - first:
+      213: -6669991085877005353
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_173
+  - first:
+      213: -3009953372247639291
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_174
+  - first:
+      213: -7873979997561140267
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_175
+  - first:
+      213: -6311610164817365441
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_176
+  - first:
+      213: -4269668547468975079
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_177
+  - first:
+      213: -4821832887273891294
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_178
+  - first:
+      213: -2599483400040284698
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_179
+  - first:
+      213: -932579189610740481
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_180
+  - first:
+      213: -5907452240563047202
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_181
+  - first:
+      213: 5970089768368306902
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_182
+  - first:
+      213: -6346922885757858818
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_183
+  - first:
+      213: 3020451926766746313
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_184
+  - first:
+      213: -7472828860785842123
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_185
+  - first:
+      213: -6628738824337070850
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_186
+  - first:
+      213: 4872339402038193762
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_187
+  - first:
+      213: -6742334371155007375
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_188
+  - first:
+      213: 1609941432266613267
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_189
+  - first:
+      213: -7197194893052612632
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_190
+  - first:
+      213: -5845346024175648627
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_191
+  - first:
+      213: -6849944804988204417
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_192
+  - first:
+      213: 4981184065888324790
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_193
+  - first:
+      213: -6247108741720018111
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_194
+  - first:
+      213: 7278516647388344707
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_195
+  - first:
+      213: -1043763780585998457
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_196
+  - first:
+      213: -6930599832983571305
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_197
+  - first:
+      213: -458555885664165561
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_198
+  - first:
+      213: -9042955822027566009
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_199
+  - first:
+      213: -4188277879404833599
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_200
+  - first:
+      213: 348488994390476363
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_201
+  - first:
+      213: 2509739641743530108
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_202
+  - first:
+      213: 5443878316524760248
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_203
+  - first:
+      213: -7763801402905132460
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_204
+  - first:
+      213: -6438218773673264259
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_205
+  - first:
+      213: 7110242866987880301
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_206
+  - first:
+      213: -4317199461836983711
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_207
+  - first:
+      213: -6177672672339171732
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_208
+  - first:
+      213: -8844100239071963127
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_209
+  - first:
+      213: 4624220438630672666
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_210
+  - first:
+      213: -6646400021211597098
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_211
+  - first:
+      213: -6449099423995861254
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_212
+  - first:
+      213: -6206905154801068659
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_213
+  - first:
+      213: -1742192055173703300
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_214
+  - first:
+      213: -4956182807666702406
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_215
+  - first:
+      213: 3249408238280941654
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_216
+  - first:
+      213: -5618487076291477854
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_217
+  - first:
+      213: 8435962389359169302
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_218
+  - first:
+      213: 1576208661560776460
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_219
+  - first:
+      213: -1170314820262196095
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_220
+  - first:
+      213: -866414644303330342
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_221
+  - first:
+      213: -775757240818354733
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_222
+  - first:
+      213: 1355381075325542050
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_223
+  - first:
+      213: 259571854291463593
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_224
+  - first:
+      213: -6426760211831475616
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_225
+  - first:
+      213: 9205720077805741521
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_226
+  - first:
+      213: 968651374769710206
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_227
+  - first:
+      213: 4342305192483519544
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_228
+  - first:
+      213: -8019476343638671388
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_229
+  - first:
+      213: -95247572984397855
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_230
+  - first:
+      213: -7695121601868106863
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_231
+  - first:
+      213: -8899066128984743994
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_232
+  - first:
+      213: 2023672995041998424
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_233
+  - first:
+      213: -3353507351354343227
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_234
+  - first:
+      213: 575854926569344612
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_235
+  - first:
+      213: -8951463024198404912
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_236
+  - first:
+      213: 8305705248573073299
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_237
+  - first:
+      213: 9066567629101952432
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_238
+  - first:
+      213: 2871134335584170352
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_239
+  - first:
+      213: -3161426417573364349
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_240
+  - first:
+      213: -8787052406241182034
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_241
+  - first:
+      213: 7655661411506825039
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_242
+  - first:
+      213: -2152835691137029934
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_243
+  - first:
+      213: -7120752799672695708
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_244
+  - first:
+      213: -3614271721116529341
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_245
+  - first:
+      213: 6259142177820995657
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_246
+  - first:
+      213: 7975791238529189874
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_247
+  - first:
+      213: -466751503544061243
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_248
+  - first:
+      213: -1810346015226908676
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_249
+  - first:
+      213: -2242828662170615155
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_250
+  - first:
+      213: 5757179818562009467
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_251
+  - first:
+      213: 5579142663305950144
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_252
+  - first:
+      213: -3448411247343504171
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_253
+  - first:
+      213: 8740721513731434699
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_254
+  - first:
+      213: -1865487646944242523
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_255
+  - first:
+      213: -9213777825487781915
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_256
+  - first:
+      213: 5140944985533598416
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_257
+  - first:
+      213: -789696459615447306
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_258
+  - first:
+      213: -2082038313122251333
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_259
+  - first:
+      213: 850460206710358392
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_260
+  - first:
+      213: 4101061804710053803
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_261
+  - first:
+      213: 3003902258244570662
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_262
+  - first:
+      213: 4334353940477203596
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_263
+  - first:
+      213: 430938911152706492
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_264
+  - first:
+      213: 55792026849073809
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_265
+  - first:
+      213: -4627208078596264594
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_266
+  - first:
+      213: 5420616846537148788
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_267
+  - first:
+      213: 1864314450536795386
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_268
+  - first:
+      213: 2600638604627983647
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_269
+  - first:
+      213: -6642483382850160015
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_270
+  - first:
+      213: -1895787946065060856
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_271
+  - first:
+      213: 6300635161722203816
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_272
+  - first:
+      213: -2822529038438047983
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_273
+  - first:
+      213: -4162085998482283695
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_274
+  - first:
+      213: -7875202823670763744
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_275
+  - first:
+      213: -8630831075644503234
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_276
+  - first:
+      213: -7704621522708105935
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_277
+  - first:
+      213: 6834453738748985809
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_278
+  - first:
+      213: -859087726747479638
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_279
+  - first:
+      213: 7696215023717025707
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_280
+  - first:
+      213: -1249839484310969216
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_281
+  - first:
+      213: 893792615184686312
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_282
+  - first:
+      213: -6569653021088702622
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_283
+  - first:
+      213: 2274547563117770594
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_284
+  - first:
+      213: -6304300641350332876
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_285
+  - first:
+      213: -6192119185507996137
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_286
+  - first:
+      213: -5147380061146562832
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_287
+  - first:
+      213: 5036902775707120241
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_288
+  - first:
+      213: 2218922915518684766
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_289
+  - first:
+      213: -5225170610064396073
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_290
+  - first:
+      213: -7907615611468915454
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_291
+  - first:
+      213: 849117222978472014
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_292
+  - first:
+      213: 9038760661675967808
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_293
+  - first:
+      213: -1570830921939633486
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_294
+  - first:
+      213: 5083896399972784599
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_295
+  - first:
+      213: 5460538593997615445
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_296
+  - first:
+      213: -5930130444663411285
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_297
+  - first:
+      213: 6565147134181202524
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_298
+  - first:
+      213: 801752776376306528
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_299
+  - first:
+      213: 6471660546009688114
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_300
+  - first:
+      213: 8686561490631508008
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_301
+  - first:
+      213: 6259385746852060130
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_302
+  - first:
+      213: 1392340978369467799
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_303
+  - first:
+      213: 978833926790766327
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_304
+  - first:
+      213: 3794663165533459995
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_305
+  - first:
+      213: 6482073958832806449
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_306
+  - first:
+      213: 1406314427602119180
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_307
+  - first:
+      213: -6632732860936187225
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_308
+  - first:
+      213: -8766282433204930369
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_309
+  - first:
+      213: 6132444597854967029
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_310
+  - first:
+      213: 3161918515150020708
+    second: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_311
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 381
+        width: 626
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1857bcdf1ee1e1e60800000000000000
+      internalID: 7934813549447837057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 640
+        width: 1056
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef0654cb276307c0800000000000000
+      internalID: -4106324997556531230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Neo Geo NGCD - Metal Slug 2 Metal Slug X - Mission 2-2_2
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 447
+        width: 64
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f06f2c0ea60af20800000000000000
+      internalID: 3431860429632442156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

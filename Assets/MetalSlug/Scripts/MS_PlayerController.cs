@@ -13,7 +13,9 @@ public class MS_PlayerController : MonoBehaviour
 
     public bool startGame;  //게임 시작상태 bool
     public bool clear; //클리어 여부 
-    public bool dead;
+    public bool isDead;
+    public bool isLoaded;
+
     private float maxSpeed = 5f; // Player Speed
     //public int jumpForce = 450; // Player jump force
     private int height = 15; // Player jump force
@@ -31,15 +33,21 @@ public class MS_PlayerController : MonoBehaviour
     private bool groundLineCheck = false;
     private bool groundColCheck = false;
     public bool GM_isdead, GM_goal, GM_clear; //게임매니저 수신용
-    private float fireRate = 0.6f;
+    private float fireRate = 0.2f;
     private float nextFire = 0f;
     private float throwRate = 2f;
     private float nextThrow = 0f;
+
+
     public Transform muzzle;
     public Transform grenade;
     public GameObject bulletPrefab;
     public GameObject grenadePrefab;
+
     public AudioClip audioKnife_rope;
+    public AudioClip audioGun_fire;
+    public AudioClip audioDie;
+    public AudioClip audioAmmo;
 
     void Awake()
     {
@@ -55,7 +63,8 @@ public class MS_PlayerController : MonoBehaviour
     {
         startGame = false;
         clear = false;
-        dead = false;
+        isDead = false;
+        isLoaded = false;
         originPosition = this.gameObject.transform.position;
         groundCheck = gameObject.transform.Find("GroundCheck");
         Physics2D.IgnoreLayerCollision(playerLayerNum, enemyLayerNum, true);
@@ -77,19 +86,21 @@ public class MS_PlayerController : MonoBehaviour
         {
             useKnife();
             clear = true;
+            GM_goal = true;
             Invoke("eri_clear", 1.2f);
         }
 
-        if (collision.gameObject.layer == E_BulletLayerNum && !dead)
+        if (collision.gameObject.layer == E_BulletLayerNum && !isDead)
         {
             startGame = false;
             rigid.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Die");
             GM_isdead = true;
-            col.isTrigger = true;
+            PlaySound(audioDie);
+            //col.isTrigger = true;
             // 여기에 플레이어 죽는 애니메이션
             //Debug.Log(collision.gameObject.name);
-            dead = true;
+            isDead = true;
             //anim.SetBool("IsDead", true);
             //Invoke("stopScene", 1.0f);
         }
@@ -105,6 +116,12 @@ public class MS_PlayerController : MonoBehaviour
                     //throwGrenade();
                 }
             }
+        }
+
+        if(collision.name == "Ammo")
+        {
+            PlaySound(audioAmmo);
+            isLoaded = true;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -184,12 +201,12 @@ public class MS_PlayerController : MonoBehaviour
     void eri_move()
     {
         //게임 시작상태에서만 움직임 활성화
-        if (startGame && !clear)
+        if (startGame && !clear && !isDead)
         {
             rigid.AddForce(Vector2.right * 1f, ForceMode2D.Impulse);
         }
 
-        if (Mathf.Abs(rigid.velocity.x) > 0.3)
+        if (Mathf.Abs(rigid.velocity.x) > 0.3 && !isDead)
         {
             anim.SetBool("IsRunning", true);
         }
@@ -198,7 +215,7 @@ public class MS_PlayerController : MonoBehaviour
     }
     void eri_speed()
     {
-        if (startGame)
+        if (startGame && !isDead)
         {
             //최대속력 설정
             if (rigid.velocity.x > maxSpeed && !clear)
@@ -209,38 +226,40 @@ public class MS_PlayerController : MonoBehaviour
         
 
         //클리어 시 정지
-        if (clear || dead)
+        if (clear)
             rigid.velocity = new Vector2(0, 0);
     }
     void eri_jump()
     {
-
-        if (anim.GetBool("IsJump") && rigid.velocity.y > 0)
+        if(startGame && !isDead)
         {
-            Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, true);
-        }
-        else if (anim.GetBool("IsJump") && rigid.velocity.y < 0)
-        {
-            Debug.DrawRay(groundCheck.position, Vector2.down * 0.5f, new Color(0, 255, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.5f, LayerMask.GetMask("Ground"));
-            if (rayHit.collider != null)
+            if (anim.GetBool("IsJump") && rigid.velocity.y > 0)
             {
-                Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
+                Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, true);
             }
-        }
-
-
-        if(!anim.GetBool("IsJump") && rigid.velocity.y < 0 && onGround == false)
-        {
-            RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
-            if (rayHit.collider == null)
+            else if (anim.GetBool("IsJump") && rigid.velocity.y < 0)
             {
-                anim.SetBool("IsFall", true);
+                Debug.DrawRay(groundCheck.position, Vector2.down * 0.5f, new Color(0, 255, 0));
+                RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.5f, LayerMask.GetMask("Ground"));
+                if (rayHit.collider != null)
+                {
+                    Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
+                }
             }
-        }
-        else if(onGround == true)
-        {
-            anim.SetBool("IsFall", false);
+
+
+            if (!anim.GetBool("IsJump") && rigid.velocity.y < 0 && onGround == false)
+            {
+                RaycastHit2D rayHit = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, LayerMask.GetMask("Ground"));
+                if (rayHit.collider == null)
+                {
+                    anim.SetBool("IsFall", true);
+                }
+            }
+            else if (onGround == true)
+            {
+                anim.SetBool("IsFall", false);
+            }
         }
     }
     void eri_clear()
@@ -282,23 +301,31 @@ public class MS_PlayerController : MonoBehaviour
         anim.SetBool("IsJump", false);
         anim.SetBool("IsClear", false);
         anim.SetBool("IsFall", false);
+        anim.SetBool("IsDead", false);
+        anim.SetBool("IsFire", false);
+        anim.SetTrigger("Reset");
+        isLoaded = false;
+        isDead = false;
         gameObject.transform.position = originPosition;
         Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
         startGame = false;
     }
 
     //GameManager나 다른 오브젝트에서 플레이어의 상태를 조회
-    public string getState()
-    {
-        if (GM_clear)
-        {
-            return "clear";
-        }
-        else
-        {
-            return "null";
-        }
-    }
+    //public string getState()
+    //{
+    //    if (GM_clear)
+    //    {
+    //        return "clear";
+    //    }else if (GM_isdead)
+    //    {
+    //        return "dead";
+    //    }
+    //    else
+    //    {
+    //        return "null";
+    //    }
+    //}
     private void useKnife()
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Knife"))
@@ -324,20 +351,75 @@ public class MS_PlayerController : MonoBehaviour
     {
         Debug.DrawRay(this.gameObject.transform.position, Vector2.right * 12f, new Color(0, 255, 0));
         RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.right, 12f, LayerMask.GetMask("Enemy"));
-        if (rayHit.collider != null && startGame && onGround && Time.time > nextFire)
+        //RaycastHit2D rayHit = Physics2D.Raycast(muzzle.transform.position, Vector2.right, 12f);
+        //Debug.Log(rayHit.collider);
+
+        if(rayHit.collider != null && startGame && isLoaded && onGround)
         {
-            Debug.Log(startGame);
-            //anim.SetTrigger("Fire");
+            
             anim.SetBool("IsFire", true);
-            nextFire = Time.time + fireRate;
-            GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
-            //tempBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
+            if (Time.time > nextFire)
+            {
+                PlaySound(audioGun_fire);
+                nextFire = Time.time + fireRate;
+                //fireBullet();
+                Invoke("fireBullet", 0.2f);
+            }
+                    
+                //anim.SetTrigger("Fire");
+                    
+                //
+                    
+                //    //GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+                  
+                
+
+            //if (startGame && anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Running") && isLoaded && Time.time > nextFire)
+            //{
+            //    if (rayHit.collider.name == "Arabian" || rayHit.collider.name == "Soldier" && !anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Fire"))
+            //    {
+            //        anim.SetTrigger("Fire");
+            //        PlaySound(audioGun_fire);
+            //        //anim.SetBool("IsFire", true);
+            //        nextFire = Time.time + fireRate;
+            //        //    //GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+            //        Invoke("fireBullet", 0.2f);
+            //    }
+            //    else
+            //    {
+            //        anim.SetBool("IsFire", false);
+            //    }
+            //}
+            //else
+            //{
+            //    anim.SetBool("IsFire", false);
+            //}
+
         }
         else
         {
             anim.SetBool("IsFire", false);
-            //anim.SetBool("IsAttack", false);
         }
+        //if (rayHit.collider != null && startGame && onGround && Time.time > nextFire)
+        //{
+        //    Debug.Log(rayHit.collider.name);
+        //    //anim.SetTrigger("Fire");
+        //    anim.SetBool("IsFire", true);
+        //    nextFire = Time.time + fireRate;
+        //    //GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+        //    Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+        //    //tempBullet.transform.eulerAngles = new Vector3(0, 0, 180f);
+        //}
+        //else
+        //{
+        //    anim.SetBool("IsFire", false);
+        //    //anim.SetBool("IsAttack", false);
+        //}
+    }
+
+    void fireBullet()
+    {
+        Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
     }
 
     private void throwGrenade()

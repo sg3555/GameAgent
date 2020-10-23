@@ -8,11 +8,15 @@ public class MS_Enemy_Bullet : MonoBehaviour
     float speed = 12f;
     float destroyTime = 1.5f;
     bool isHit;
+    private int enemyLayerNum = 23;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         Destroy(gameObject, destroyTime);
         isHit = false;
+
+        Physics2D.IgnoreLayerCollision(gameObject.layer, enemyLayerNum, true);
     }
 
     void FixedUpdate()
@@ -29,7 +33,12 @@ public class MS_Enemy_Bullet : MonoBehaviour
         //anim.SetTrigger("Hit");
         //Invoke("DestroyBullet", 0.4f);
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isHit = true;
+        transform.Translate(Vector3.left * 0.7f);
+        destroyBullet();
+    }
     void destroyBullet()
     {
         Destroy(gameObject);

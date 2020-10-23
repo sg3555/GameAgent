@@ -23,7 +23,9 @@ public class MS_Player_Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Debug.Log(collision);
         isHit = true;
+        //Destroy(gameObject);
         transform.Translate(Vector3.right * 0.7f);
         anim.SetTrigger("Hit");
         Invoke("destroyBullet", 0.4f);

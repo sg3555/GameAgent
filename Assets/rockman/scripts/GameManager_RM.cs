@@ -139,15 +139,7 @@ public class GameManager_RM : MonoBehaviour
         ClearUI.SetActive(true);
     }
 
-    public void Next_Metal()
-    {
-        SceneManager.LoadScene("MetalSlug_1");
-    }
 
-    public void GameRestart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
     public void disableButton()
     {
         Btn[0].interactable = false;

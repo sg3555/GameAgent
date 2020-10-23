@@ -13,7 +13,7 @@ public class MS_PlayerController : MonoBehaviour
 
     public bool startGame;  //게임 시작상태 bool
     public bool clear; //클리어 여부 
-    public bool dead;
+    public bool isDead;
     public bool isLoaded;
 
     private float maxSpeed = 5f; // Player Speed
@@ -33,7 +33,7 @@ public class MS_PlayerController : MonoBehaviour
     private bool groundLineCheck = false;
     private bool groundColCheck = false;
     public bool GM_isdead, GM_goal, GM_clear; //게임매니저 수신용
-    private float fireRate = 0.4f;
+    private float fireRate = 0.2f;
     private float nextFire = 0f;
     private float throwRate = 2f;
     private float nextThrow = 0f;
@@ -63,7 +63,7 @@ public class MS_PlayerController : MonoBehaviour
     {
         startGame = false;
         clear = false;
-        dead = false;
+        isDead = false;
         isLoaded = false;
         originPosition = this.gameObject.transform.position;
         groundCheck = gameObject.transform.Find("GroundCheck");
@@ -90,7 +90,7 @@ public class MS_PlayerController : MonoBehaviour
             Invoke("eri_clear", 1.2f);
         }
 
-        if (collision.gameObject.layer == E_BulletLayerNum && !dead)
+        if (collision.gameObject.layer == E_BulletLayerNum && !isDead)
         {
             startGame = false;
             rigid.bodyType = RigidbodyType2D.Static;
@@ -100,7 +100,7 @@ public class MS_PlayerController : MonoBehaviour
             //col.isTrigger = true;
             // 여기에 플레이어 죽는 애니메이션
             //Debug.Log(collision.gameObject.name);
-            dead = true;
+            isDead = true;
             //anim.SetBool("IsDead", true);
             //Invoke("stopScene", 1.0f);
         }
@@ -201,12 +201,12 @@ public class MS_PlayerController : MonoBehaviour
     void eri_move()
     {
         //게임 시작상태에서만 움직임 활성화
-        if (startGame && !clear && !dead)
+        if (startGame && !clear && !isDead)
         {
             rigid.AddForce(Vector2.right * 1f, ForceMode2D.Impulse);
         }
 
-        if (Mathf.Abs(rigid.velocity.x) > 0.3 && !dead)
+        if (Mathf.Abs(rigid.velocity.x) > 0.3 && !isDead)
         {
             anim.SetBool("IsRunning", true);
         }
@@ -215,7 +215,7 @@ public class MS_PlayerController : MonoBehaviour
     }
     void eri_speed()
     {
-        if (startGame && !dead)
+        if (startGame && !isDead)
         {
             //최대속력 설정
             if (rigid.velocity.x > maxSpeed && !clear)
@@ -231,7 +231,7 @@ public class MS_PlayerController : MonoBehaviour
     }
     void eri_jump()
     {
-        if(startGame && !dead)
+        if(startGame && !isDead)
         {
             if (anim.GetBool("IsJump") && rigid.velocity.y > 0)
             {
@@ -305,7 +305,7 @@ public class MS_PlayerController : MonoBehaviour
         anim.SetBool("IsFire", false);
         anim.SetTrigger("Reset");
         isLoaded = false;
-        dead = false;
+        isDead = false;
         gameObject.transform.position = originPosition;
         Physics2D.IgnoreLayerCollision(playerLayerNum, groundLayerNum, false);
         startGame = false;
@@ -350,32 +350,55 @@ public class MS_PlayerController : MonoBehaviour
     private void fire()
     {
         Debug.DrawRay(this.gameObject.transform.position, Vector2.right * 12f, new Color(0, 255, 0));
-        //RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.right, 12f, LayerMask.GetMask("Enemy"));
-        RaycastHit2D rayHit = Physics2D.Raycast(muzzle.transform.position, Vector2.right, 12f);
+        RaycastHit2D rayHit = Physics2D.Raycast(this.gameObject.transform.position, Vector2.right, 12f, LayerMask.GetMask("Enemy"));
+        //RaycastHit2D rayHit = Physics2D.Raycast(muzzle.transform.position, Vector2.right, 12f);
         //Debug.Log(rayHit.collider);
 
-        if(rayHit.collider != null)
+        if(rayHit.collider != null && startGame && isLoaded)
         {
-            if(startGame && anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Running") && isLoaded && Time.time > nextFire)
+            
+            anim.SetBool("IsFire", true);
+            if (Time.time > nextFire)
             {
-                if(rayHit.collider.name == "Arabian" || rayHit.collider.name == "Soldier" && !anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Fire"))
-                {
-                    anim.SetTrigger("Fire");
-                    PlaySound(audioGun_fire);
-                    //anim.SetBool("IsFire", true);
-                    nextFire = Time.time + fireRate;
-                    //    //GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
-                    Invoke("fireBullet", 0.2f);
-                }
-                else
-                {
-                    anim.SetBool("IsFire", false);
-                }
+                PlaySound(audioGun_fire);
+                nextFire = Time.time + fireRate;
+                fireBullet();
+                //Invoke("fireBullet", 0.2f);
             }
-            else
-            {
-                anim.SetBool("IsFire", false);
-            }
+                    
+                //anim.SetTrigger("Fire");
+                    
+                //
+                    
+                //    //GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+                  
+                
+
+            //if (startGame && anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Running") && isLoaded && Time.time > nextFire)
+            //{
+            //    if (rayHit.collider.name == "Arabian" || rayHit.collider.name == "Soldier" && !anim.GetCurrentAnimatorStateInfo(0).IsName("Eri_Fire"))
+            //    {
+            //        anim.SetTrigger("Fire");
+            //        PlaySound(audioGun_fire);
+            //        //anim.SetBool("IsFire", true);
+            //        nextFire = Time.time + fireRate;
+            //        //    //GameObject tempBullet = Instantiate(bulletPrefab, muzzle.position, muzzle.rotation);
+            //        Invoke("fireBullet", 0.2f);
+            //    }
+            //    else
+            //    {
+            //        anim.SetBool("IsFire", false);
+            //    }
+            //}
+            //else
+            //{
+            //    anim.SetBool("IsFire", false);
+            //}
+
+        }
+        else
+        {
+            anim.SetBool("IsFire", false);
         }
         //if (rayHit.collider != null && startGame && onGround && Time.time > nextFire)
         //{

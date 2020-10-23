@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originHealth: 0
-  Health: 10
+  Health: 30
 --- !u!1 &1198524561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,7 +3972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGame: 0
   clear: 0
-  dead: 0
+  isDead: 0
   isLoaded: 0
   knife: {fileID: 1580139403}
   GM_isdead: 0

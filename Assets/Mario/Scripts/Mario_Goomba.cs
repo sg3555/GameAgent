@@ -41,7 +41,11 @@ public class Mario_Goomba : MonoBehaviour
     void FixedUpdate()
     {
         if(startGame)
+        {
             rigid.velocity = new Vector2(maxSpeed * direc, rigid.velocity.y);
+            if (Mathf.Abs(rigid.velocity.x) > 3)
+                direc *= -1;
+        }
 
         RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, new Vector3(direc, 0, 0), 0.6f, LayerMask.GetMask("Platform"));
         if(rayHit.collider != null)

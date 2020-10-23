@@ -203,6 +203,8 @@ public class Drager : MonoBehaviour
                 objec.color = new Color(255, 255, 255, 0.3f);
             colid.isTrigger = true;
         }
+        if (this.name.Contains("platform"))
+            this.gameObject.layer = 8;
     }
     
     public void StopGame()

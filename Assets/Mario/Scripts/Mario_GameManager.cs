@@ -67,6 +67,7 @@ public class Mario_GameManager : MonoBehaviour
     //캐릭터 사망시 행동
     public void deadAction()
     {
+        mainCam.StopGame();
         //메인 배경음 볼륨 0으로 줄이고 사망 배경음 재생
         MainBGM.SetVolume(0);
         DeadBGM.PlaySound();

@@ -76,6 +76,7 @@ public class Mario : MonoBehaviour
     //떨어지는 마리오
     void mario_fall()
     {
+
         //점프후 바닥에 착지시 점프애니메이션 종료
         if (rigid.velocity.y < 0)
         {
@@ -216,6 +217,7 @@ public class Mario : MonoBehaviour
         {
             Mario_Goomba enem = enemy.GetComponent<Mario_Goomba>();
             enem.OnDamaged();
+            anim.SetBool("IsJump", true);
         }
             
         

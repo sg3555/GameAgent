@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Mario/Scene/Mario_3.unity
     guid: 1f61e8408aa224c43912e8b6e84bb7ac
   - enabled: 1
+    path: Assets/Mario/Scene/Mario_4.unity
+    guid: aeabeae5c495f024fbb9441b9c376539
+  - enabled: 1
     path: Assets/rockman/Scenes/rockman_1.unity
     guid: 9fea68ad0e92b094d9006d6e23fa7e3e
   - enabled: 1

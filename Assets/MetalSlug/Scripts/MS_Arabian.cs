@@ -98,6 +98,7 @@ public class MS_Arabian : MonoBehaviour
 
     public void StartGame()
     {
+        Physics2D.IgnoreLayerCollision(this.gameObject.layer, P_BulletLayerNum, false);
         rigid.bodyType = RigidbodyType2D.Dynamic;
         colid.enabled = true;
         startGame = true;

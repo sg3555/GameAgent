@@ -280,7 +280,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 943429103}
+      - m_Target: {fileID: 943429105}
         m_MethodName: GameRestart
         m_Mode: 1
         m_Arguments:
@@ -2086,6 +2086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943429104}
   - component: {fileID: 943429103}
+  - component: {fileID: 943429105}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2118,6 +2119,8 @@ MonoBehaviour:
   mainCam: {fileID: 219798191}
   ClearUI: {fileID: 1680985905}
   ExplainUI: {fileID: 2127100007}
+  ammoBox: {fileID: 0}
+  sandBags: {fileID: 0}
 --- !u!4 &943429104
 Transform:
   m_ObjectHideFlags: 0
@@ -2132,6 +2135,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &943429105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943429102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d433a370e6e58ad45b7f7a85c883eb24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1036204619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,7 +2336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fbed7060c6d9e4c8ff793419ff995a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PBulletLayerNum: 25
   audioThanks: {fileID: 8300000, guid: de57013985d813b40be6b804c2862b47, type: 3}
 --- !u!95 &1098306879
 Animator:
@@ -3030,19 +3044,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGame: 0
   clear: 0
-  maxSpeed: 5
-  height: 450
-  groundLayerNum: 21
-  playerLayerNum: 22
-  goalLayerNum: 24
-  PBulletLayerNum: 25
-  PlatformLayerNum: 8
+  dead: 0
+  isLoaded: 0
   knife: {fileID: 1580139403}
-  isKnife: 0
   GM_isdead: 0
   GM_goal: 0
   GM_clear: 0
+  muzzle: {fileID: 0}
+  grenade: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  grenadePrefab: {fileID: 0}
   audioKnife_rope: {fileID: 8300000, guid: ee348d995e61864439cc8fe46d82fa9f, type: 3}
+  audioGun_fire: {fileID: 0}
+  audioDie: {fileID: 0}
+  audioAmmo: {fileID: 0}
 --- !u!4 &1234427926
 Transform:
   m_ObjectHideFlags: 0
@@ -4069,7 +4084,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1991611718}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 943429105}
+        m_MethodName: ChangeScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MetalSlug_2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1991611718
 MonoBehaviour:
   m_ObjectHideFlags: 0

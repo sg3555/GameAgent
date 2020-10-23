@@ -38,4 +38,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MetalSlug/Scenes/MetalSlug_1.unity
     guid: f58780644afa86141aa5b8acb7acc34d
+  - enabled: 1
+    path: Assets/MetalSlug/Scenes/MetalSlug_2.unity
+    guid: fca62c98ca0045e438eb0ee291bb8c25
+  - enabled: 1
+    path: Assets/MetalSlug/Scenes/MetalSlug_3.unity
+    guid: a6b4101eba97bd24d926b2b22f7a6576
+  - enabled: 1
+    path: Assets/MetalSlug/Scenes/MetalSlug_4.unity
+    guid: 6d067b05b0c40974fa6d48bbefab2025
   m_configObjects: {}

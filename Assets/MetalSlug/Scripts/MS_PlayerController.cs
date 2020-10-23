@@ -130,7 +130,7 @@ public class MS_PlayerController : MonoBehaviour
         {
             if (collision.name.Contains("Sign_Up"))
             {
-                if (!anim.GetBool("IsJump") && startGame)
+                if (startGame && !anim.GetBool("IsJump") && !anim.GetBool("IsFall"))
                 {
                     rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
                     anim.SetBool("IsJump", true);
@@ -150,7 +150,7 @@ public class MS_PlayerController : MonoBehaviour
             }
             if (collision.name.Contains("Sign_A"))
             {
-                if (!anim.GetBool("IsJump") && startGame)
+                if (startGame && !anim.GetBool("IsJump") && !anim.GetBool("IsFall"))
                 {
                     rigid.AddForce(Vector2.up * height, ForceMode2D.Impulse);
                     anim.SetBool("IsJump", true);

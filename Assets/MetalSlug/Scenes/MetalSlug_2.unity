@@ -917,8 +917,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29, y: -5.5499}
-  m_SizeDelta: {x: 252.4, y: 352.2}
+  m_AnchoredPosition: {x: -29, y: -15}
+  m_SizeDelta: {x: 252.4, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &213213739
 MonoBehaviour:
@@ -951,8 +951,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD328\uB110 A \n\uC810\uD504\n\n\uD328\uB110 B \n\uD30C\uC774\uC5B4\uBC1C\uC0AC\n(\uD30C\uC774\uC5B4\uB9C8\uB9AC\uC624\uC0C1\uD0DC)\n\n\uD328\uB110
-    X\n\uC810\uD504\n\n\uD328\uB110 Y\n\uD30C\uC774\uC5B4\uBC1C\uC0AC\n(\uD30C\uC774\uC5B4\uB9C8\uB9AC\uC624\uC0C1\uD0DC)\n"
+  m_Text: "\uD328\uB110 \u2191\n\uC810\uD504\n\n\uD0C4\uC57D\uBC15\uC2A4\n\uC804\uBC29\uC5D0
+    \uC801\uC774 \uC788\uC73C\uBA74 \uC790\uB3D9\uACF5\uACA9"
 --- !u!222 &213213740
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5500,8 +5500,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -195.8999, y: -162.56995}
-  m_SizeDelta: {x: 337.1, y: 363.3}
+  m_AnchoredPosition: {x: -195.8999, y: -83}
+  m_SizeDelta: {x: 337.1, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2127100009
 MonoBehaviour:

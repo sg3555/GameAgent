@@ -679,7 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271066799}
   - component: {fileID: 271066800}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bulletpos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 401656951}
   - component: {fileID: 401656950}
   - component: {fileID: 401656949}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sign_Up
   m_TagString: Sign
   m_Icon: {fileID: 0}
@@ -1142,7 +1142,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.22672272, y: 0.1717906}
+  m_Offset: {x: 0.28521585, y: 0.1717906}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1153,7 +1153,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5478153, y: 0.6355772}
+  m_Size: {x: 0.43082905, y: 0.6355772}
   m_EdgeRadius: 0
 --- !u!1 &423552338
 GameObject:
@@ -1309,7 +1309,7 @@ GameObject:
   - component: {fileID: 455022804}
   - component: {fileID: 455022803}
   - component: {fileID: 455022802}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sign_A
   m_TagString: Sign
   m_Icon: {fileID: 0}
@@ -1360,7 +1360,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11830926, y: 0.122831345}
+  m_Offset: {x: 0.14755571, y: 0.122831345}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1371,7 +1371,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.44294024, y: 0.7543373}
+  m_Size: {x: 0.38444734, y: 0.7543373}
   m_EdgeRadius: 0
 --- !u!50 &455022804
 Rigidbody2D:
@@ -2168,7 +2168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 792362272}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2788,7 +2788,7 @@ GameObject:
   - component: {fileID: 1194989821}
   - component: {fileID: 1194989820}
   - component: {fileID: 1194989819}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sign_Up (1)
   m_TagString: Sign
   m_Icon: {fileID: 0}
@@ -2846,7 +2846,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.24078274, y: 0.119823456}
+  m_Offset: {x: 0.29927588, y: 0.119823456}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2857,7 +2857,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5007982, y: 0.7395115}
+  m_Size: {x: 0.38381195, y: 0.7395115}
   m_EdgeRadius: 0
 --- !u!212 &1194989822
 SpriteRenderer:
@@ -5055,7 +5055,7 @@ GameObject:
   - component: {fileID: 1879180679}
   - component: {fileID: 1879180683}
   - component: {fileID: 1879180684}
-  m_Layer: 8
+  m_Layer: 19
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5674,7 +5674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2012943436}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: MovableItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

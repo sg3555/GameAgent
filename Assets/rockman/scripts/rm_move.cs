@@ -189,7 +189,7 @@ public class rm_move : MonoBehaviour
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 7,LayerMask.GetMask("ground"));
-            Physics2D.IgnoreLayerCollision(playerLayerNum, SignLayerNum, false);
+           
             if (rayHit.collider != null)
             {
                     if (rayHit.distance <= 1f)

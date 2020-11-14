@@ -36,30 +36,48 @@ public class rm_Signcheck : MonoBehaviour
     {
         if (collision.tag == "Sign")
         {
-         
-            if (collision.name.Contains("Sign_Up"))
-            {
-                rm.rockman_jump();
-            }
-            
+
+
             if (collision.name.Contains("Sign_A"))
             {
                 rp.rockman_Attack();
-              
+
+            }
+        
+
+        }
+
+
+
+
+
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Sign")
+        {
+
+            if (collision.name.Contains("Sign_Up"))
+            {
+                RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 2f, LayerMask.GetMask("ground"));
+                if (rayHit.collider != null && rigid.velocity.y == 0)
+                {
+                    Debug.Log(rayHit.collider);
+                    rm.rockman_jump();
+                }
             }
             if (collision.name.Contains("Sign_DoubleUp"))
             {
-
-                doubleup = true;
-                rm.rockman_jump();
+                RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 2f, LayerMask.GetMask("ground"));
+                if (rayHit.collider != null && rigid.velocity.y == 0)
+                {
+                    Debug.Log(rayHit.collider);
+                    doubleup = true;
+                    rm.rockman_jump();
+                }
             }
-            
         }
      
-        
-          
-        
-            
-    }
 
+    }
 }

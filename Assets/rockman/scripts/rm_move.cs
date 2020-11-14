@@ -29,8 +29,6 @@ public class rm_move : MonoBehaviour
     public rm_enemy[] enemy;
     public bool isladder = false;
     public float distance;
-    private int SignLayerNum = 13; // ground의 레이어 번호
-    private int playerLayerNum = 19;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -56,6 +54,7 @@ public class rm_move : MonoBehaviour
         
         gameObject.SetActive(true);
         anim.SetBool("isstart", true);
+        anim.SetBool("isjump", false);
         rigid.gravityScale = 5;
         gameObject.transform.position = originPosition;
         rigid.bodyType = RigidbodyType2D.Static;

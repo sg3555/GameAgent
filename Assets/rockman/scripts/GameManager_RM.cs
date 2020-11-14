@@ -12,6 +12,7 @@ public class GameManager_RM : MonoBehaviour
     //public GameObject Enemy;
     public rm_enemy[] enemy;
     public rm_move rm;
+    Animator anim;
     public bool start = false;
     public CamControl mainCam; //카메라
     public Button[] Btn = new Button[3];
@@ -36,6 +37,7 @@ public class GameManager_RM : MonoBehaviour
         enemy= GameObject.Find("Enemy").GetComponentsInChildren<rm_enemy>();
         obj = GameObject.Find("Obj").GetComponentsInChildren<rm_obj>();
         buttonArea = GameObject.Find("ButtonArea").GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -110,6 +112,7 @@ public class GameManager_RM : MonoBehaviour
             ob.Active();
         rm.movestart = false;
         buttonArea.enabled = true;
+
     }
     public void deadAction()
     {
